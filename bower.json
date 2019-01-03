@@ -1,0 +1,28 @@
+{
+  "name": "Cheers",
+  "version": "0.8.9",
+  "homepage": "http://Cheers.com",
+  "authors": [
+    "Holger Koenemann <office@holgerkoenemann.de>"
+  ],
+  "description": "Cheers is a Bootstrap and underscores based WordPress theme",
+  "moduleType": "globals",
+  "main": [
+    "sass/theme.scss"
+  ],
+  "keywords": [
+    "bootstrap",
+    "underscores",
+    "wordpress",
+    "_s",
+    "sass"
+  ],
+  "license": "GPL-2.0",
+  "ignore": [
+    "**/.*",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}
