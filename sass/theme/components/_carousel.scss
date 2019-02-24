@@ -1,0 +1,51 @@
+#cheersCarousel {
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+.carousel-caption {
+    bottom: 0;
+    padding-bottom: 0;
+}
+
+.carousel-item {
+    height: 180px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-width: 380px;
+
+    &-title {
+        color: #fff;
+        padding: 10px;
+        &:hover {
+            text-decoration: none;
+            color: #fff;
+            background: $grey;
+        }
+    }
+}
+
+@media screen and (min-width: 567px) {
+    .carousel-item {
+        height: 200px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-item {
+        height: 220px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .carousel-item {
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .carousel-item {
+        height: 360px;
+    }
+}
