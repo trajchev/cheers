@@ -1,0 +1,15 @@
+body {
+    font-size: 13px;
+}
+
+.dwn-rounded {
+    @include borderRadius(0, 0, 8px, 8px);
+}
+
+.up-rounded {
+    @include borderRadius(8px, 8px, 0, 0);
+}
+
+.grey-gradient {
+    background: linear-gradient($grey, $darkGrey); 
+}

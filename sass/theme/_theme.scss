@@ -1,7 +1,11 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 
+// Helper styles
+@import "helpers/variables";
+@import "helpers/mixins";
+
 // Base styles
-// @import "base/base";
+@import "base/base";
 
 // Main Sections Header and Footer
 @import "layout/header";

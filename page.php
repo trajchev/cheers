@@ -31,6 +31,8 @@ $container = get_theme_mod( 'Cheers_container_type' );
 
 			<main class="site-main" id="main">
 
+				<h2><i class="fa fa-road"></i></h2>
+
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
