@@ -1,0 +1,21 @@
+.article {
+    &-block {
+        width: 100%;
+        max-width: 680px;
+    }
+
+    &-header {
+        h2 {
+            color: $brown;
+        }
+
+        h3 {
+            color: $lightGrey;
+            font-style: italic;
+        }
+    }
+
+    &-content {
+        color: $paleGrey;
+    }
+}
