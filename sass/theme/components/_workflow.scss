@@ -15,6 +15,14 @@
         background-color: transparent;
         border-top: none;
     }
+
+    &-content {
+        color: $paleGrey;
+
+        p {
+            text-wrap: no-wrap;
+        }
+    }
 }
 
 .slider-tabs {

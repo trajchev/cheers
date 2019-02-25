@@ -4,3 +4,21 @@
     @include borderRadius(4px, 4px, 4px, 4px);
     border: 1px solid $lightGrey;
 }
+
+.btn-brown {
+    color: #fff;
+    background: linear-gradient($lightBrown, $brown);
+    @include borderRadius(4px, 4px, 4px, 4px);
+    border: 1px solid $lightBrown;
+    padding: .2rem 1rem;
+
+    &:hover {
+        color: $banana;
+    }
+}
+
+.append-border-white {
+    border: 1px solid $paleGrey;
+    border-left: none;
+    @include borderRadius(0, 4px, 4px, 0);
+}

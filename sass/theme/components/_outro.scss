@@ -1,0 +1,58 @@
+.bordered-image {
+    border: 5px solid $brown;
+    float: right;
+    margin-left: 1rem;
+}
+
+.block-heading {
+    font-family: $exo;
+    color: $brown;
+    font-style: italic;
+    clear: right;
+}
+
+.pale-border {
+    border-color: $paleGrey;
+
+    &:focus {
+        outline: none;
+        border-color: $banana;
+        box-shadow: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .border {
+        &-right {
+            &-brown {
+                position: relative;
+                border-right: 1px solid $brown;
+    
+                &:before,
+                &:after {
+                    position: absolute;
+                    content: '';
+                    top: 50%;
+                    border-radius: 1rem;
+                }
+    
+                &:before {
+                    margin-top: -.5rem;
+                    right: -.5rem; 
+                    width: 1rem;
+                    height: 1rem;
+                    border: 2px solid $brown;
+                    background-color: $grey;
+                }
+    
+                &:after {
+                    margin-top: -.25rem;
+                    right: -.25rem; 
+                    width: .5rem;
+                    height: .5rem;
+                    background-color: $brown;
+                }
+            }
+        }
+    }
+}
