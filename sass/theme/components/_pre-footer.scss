@@ -1,0 +1,30 @@
+.bordered-boxes {
+    list-style-type: none;
+    text-align: center;
+
+    &-item {
+        float: left;
+        width: 68px;
+        height: 68px;
+        border: 5px solid $brown;
+        margin: 4px;
+        background-color: $grey;
+    }
+}
+
+.pre-footer-menu {
+    li {
+        list-style-type: none;
+        padding-bottom: 7px;
+
+        a {
+            color: $grey;
+            @include transition(.3s, color);
+
+            &:hover {
+                text-decoration: none;
+                color: $brown;
+            }
+        }
+    }
+}
