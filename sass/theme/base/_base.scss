@@ -14,3 +14,11 @@ body {
 .grey-gradient {
     background: linear-gradient($grey, $darkGrey); 
 }
+
+.top-border-14 {
+    border-top: 14px solid $brown;
+}
+
+.bg-banana {
+    background-color: $banana;
+}

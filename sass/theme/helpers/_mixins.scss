@@ -3,3 +3,9 @@
     -moz-border-radius: $topLeft $topRight $bottomRight $bottomLeft;
     border-radius: $topLeft $topRight $bottomRight $bottomLeft;
 }
+
+@mixin transition($interval, $property) {
+    -webkit-transition: $interval $property;
+    -moz-transition: $interval $property;
+    transition: $interval $property;
+}

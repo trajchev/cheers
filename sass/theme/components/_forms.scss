@@ -1,0 +1,6 @@
+.btn-dark {
+    color: #fff;
+    background: linear-gradient($grey, $darkGrey);
+    @include borderRadius(4px, 4px, 4px, 4px);
+    border: 1px solid $lightGrey;
+}
