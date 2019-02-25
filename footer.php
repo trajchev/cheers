@@ -11,38 +11,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-$container = get_theme_mod( 'Cheers_container_type' );
 ?>
 
-<?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 
-<div class="wrapper" id="wrapper-footer">
-
-	<div class="<?php echo esc_attr( $container ); ?>">
-
-		<div class="row">
-
-			<div class="col-md-12">
-
-				<footer class="site-footer" id="colophon">
-
-					<div class="site-info">
-
-						<?php Cheers_site_info(); ?>
-
-					</div><!-- .site-info -->
-
-				</footer><!-- #colophon -->
-
-			</div><!--col end -->
-
-		</div><!-- row end -->
-
-	</div><!-- container end -->
-
-</div><!-- wrapper end -->
-
-</div><!-- #page we need this extra closing tag here -->
+	<footer id="site-footer">
+        <div class="container">
+            <div class="dwn-rounded py-2 grey-gradient mb-4">
+                <div class="row">
+                    <div class="col-sm-12">
+						<p class="copyright-text py-2 my-0 px-4 text-white text-center">
+							Copyright &copy; <?php echo date('Y'); ?> <?php echo get_bloginfo('name'); ?>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 
 <?php wp_footer(); ?>
 

@@ -3,6 +3,10 @@ body {
     background: $brown url('../img/main/body-back.jpg');
 }
 
+.wrapper {
+    padding: 0;
+}
+
 .dwn-rounded {
     @include borderRadius(0, 0, 8px, 8px);
 }

@@ -197,7 +197,7 @@ get_header();
 
     <section id="pre-footer">
         <div class="container">
-            <div class="bg-banana top-border-14 pt-2 pb-4">
+            <div class="bg-banana top-border-10 pt-2 pb-4">
                 <div class="row">
                     <div class="col-sm-6 col-md-4">
                         <div class="card">
