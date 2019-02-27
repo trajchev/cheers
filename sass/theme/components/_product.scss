@@ -28,4 +28,14 @@
             }
         }
     }
+
+    &-stats {
+        list-style-type: none;
+        color: $paleGrey;
+        li {
+            span {
+                color: $brown;
+            }
+        }
+    }
 }

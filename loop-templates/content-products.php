@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <a href="<?php the_permalink(); ?>">
 
 	
-    <div class="entry-thumbnail-list">
+    <div class="entry-thumbnail">
         <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
     </div>
     <header class="entry-header-archive">
