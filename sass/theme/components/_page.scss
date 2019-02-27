@@ -1,0 +1,63 @@
+.cheers {
+    &-page-content {
+        .entry {
+            &-header {
+                padding: 10px;
+            }
+
+            &-title {
+                color: #fff;
+                font-family: $exo;
+                font-size: 1.693em;
+                text-align: center;
+                font-style: italic;
+            }
+
+            &-content {
+                padding: 10px;
+                color: #7b7a6d;
+                font-family: $exo;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .cheers {
+        &-page-content {
+            .entry {
+                &-header {
+                    padding: 20px 10px;
+                }
+    
+                &-title {
+                    font-size: 2.693em;
+                }
+    
+                &-content {
+                    padding: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .cheers {
+        &-page-content {
+            .entry {
+                &-header {
+                    padding: 30px 10px;
+                }
+    
+                &-title {
+                    font-size: 3.693em;
+                }
+    
+                &-content {
+                    padding: 60px 100px;
+                }
+            }
+        }
+    }
+}

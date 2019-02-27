@@ -32,7 +32,7 @@ $container = get_theme_mod( 'Cheers_container_type' );
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'Cheers' ); ?></a>
 
 		<nav class="navbar navbar-expand-md navbar-dark">
-			<div class="container grey-gradient dwn-rounded py-2">
+			<div class="container grey-gradient dwn-rounded py-2 contained">
 					<!-- Your site title as branding in the menu -->
 					<?php if ( ! has_custom_logo() ) { ?>
 

@@ -16,22 +16,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
-$container = get_theme_mod( 'Cheers_container_type' );
-
 ?>
 
 <div class="wrapper" id="page-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div class="container" id="content" tabindex="-1">
 
-		<div class="row">
-
-			<!-- Do the left sidebar check -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+		
 
 			<main class="site-main" id="main">
-
-				<h2><i class="fa fa-road"></i></h2>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
@@ -48,12 +41,12 @@ $container = get_theme_mod( 'Cheers_container_type' );
 
 			</main><!-- #main -->
 
-			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
-
-		</div><!-- .row -->
+		
 
 	</div><!-- #content -->
+	<?php get_template_part( 'partials/_workflow' ); ?>
+	<?php get_template_part( 'partials/_outro' ); ?>
+	<?php get_template_part( 'partials/_pre-footer' ); ?>
 
 </div><!-- #page-wrapper -->
 
