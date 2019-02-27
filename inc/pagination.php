@@ -22,9 +22,9 @@ if ( ! function_exists( 'Cheers_pagination' ) ) {
 			array(
 				'mid_size'           => 2,
 				'prev_next'          => true,
-				'prev_text'          => __( '&laquo;', 'Cheers' ),
-				'next_text'          => __( '&raquo;', 'Cheers' ),
-				'screen_reader_text' => __( 'Posts navigation', 'Cheers' ),
+				'prev_text'          => __( '&laquo;', 'cheers' ),
+				'next_text'          => __( '&raquo;', 'cheers' ),
+				'screen_reader_text' => __( 'Posts navigation', 'cheers' ),
 				'type'               => 'array',
 				'current'            => max( 1, get_query_var( 'paged' ) ),
 			)
@@ -34,9 +34,9 @@ if ( ! function_exists( 'Cheers_pagination' ) ) {
 
 		?>
 
-		<nav aria-label="<?php echo $args['screen_reader_text']; ?>">
+		<nav class="archive-pagination" aria-label="<?php echo $args['screen_reader_text']; ?>">
 
-			<ul class="pagination">
+			<ul class="pagination justify-content-center">
 
 				<?php
 				foreach ( $links as $key => $link ) {

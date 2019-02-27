@@ -1,0 +1,31 @@
+.product {
+    &-filter {
+        padding: 20px 10px;
+        .nav {
+            &-item {
+                &:first-of-type {
+                    border-radius: 4px 0 0 4px;
+                    border-left: 1px solid #222;
+                }
+                border-top: 1px solid #222;
+                border-bottom: 1px solid #222;
+
+                &:last-of-type {
+                    border-radius: 0 4px 4px 0;
+                    border-right: 1px solid #222;
+                }
+            }
+
+            &-link {
+                color: $paleGrey;
+                &:hover {
+                    color: #fff;
+                }
+            }
+
+            .active {
+                color: #fff;
+            }
+        }
+    }
+}

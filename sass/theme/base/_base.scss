@@ -16,7 +16,10 @@ body {
 }
 
 .grey-gradient {
-    background: linear-gradient($grey, $darkGrey); 
+    background: linear-gradient($grey, $darkGrey);
+    &-inverse {
+        background: linear-gradient($pitchGrey, $grey);
+    }
 }
 
 .top-border {
