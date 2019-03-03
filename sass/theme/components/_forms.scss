@@ -22,3 +22,31 @@
     border-left: none;
     @include borderRadius(0, 4px, 4px, 0);
 }
+
+.form-group {
+    label {
+        color: $paleGrey;
+    }
+
+    input,
+    textarea {
+        background-color: transparent;
+        color: #fff;
+        border: 1px solid $lightGrey;
+        &:focus {
+            outline: none;
+            border: 1px solid $banana;
+            box-shadow: 0 0 1px $banana;
+            background-color: transparent;
+        }
+    }
+}
+
+#submit {
+    background: linear-gradient($lightBrown, $brown);
+    border: 1px solid $brown;
+    &:focus {
+        outline: 0;
+        box-shadow: 0 0 1px $banana;
+    }
+}

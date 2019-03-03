@@ -3,12 +3,10 @@
 }
 
 .edit-link {
-    display: block;
-    background-color: $brown;
     padding: 10px;
     text-align: center;
 
     a {
-        color: #fff;
+        color: $white;
     }
 }

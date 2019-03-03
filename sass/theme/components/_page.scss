@@ -6,8 +6,7 @@
             }
 
             &-title {
-                color: #fff;
-                font-family: $exo;
+                color: $white;
                 font-size: 1.693em;
                 text-align: center;
                 font-style: italic;
@@ -15,8 +14,7 @@
 
             &-content {
                 padding: 10px;
-                color: #7b7a6d;
-                font-family: $exo;
+                color: $paleGrey;
             }
         }
     }
@@ -29,11 +27,11 @@
                 text-decoration: none;
                 .entry {
                     &-title {
-                        color: #fff;
+                        color: $white;
                     }
         
                     &-content {
-                        color: #fff;
+                        color: $white;
                     }
                 }
             }
@@ -51,7 +49,6 @@
 
             &-title {
                 color: $brown;
-                font-family: $exo;
                 font-size: 2rem;
             }
         }
@@ -74,8 +71,7 @@
 
     &-title-single,
     &-title {
-        color: #fff;
-        font-family: $exo;
+        color: $white;
         font-weight: 700;
         color: $brown;
         line-height: 140%;
@@ -102,7 +98,51 @@
             color: $paleGrey;
 
             span {
-                color: #fff;
+                color: $white;
+            }
+        }
+    }
+
+    &-footer {
+        position: relative;
+        border-top: 1px solid $paleGrey;
+        color: $white;
+        .fa {
+            position: absolute;
+            top: 1rem;
+            left: 0;
+            font-size: 1.4rem;
+            color: $paleGrey;
+        }
+
+        .post-categories {
+            list-style-type: none;
+            li {
+                display: inline-block;
+
+                a {
+                    color: $brown;
+                }
+            }
+        }
+
+        .tag-cloud {
+            padding: 0;
+            margin: 0;
+            .tag {
+                position: relative;
+                display: inline-block;
+                background: linear-gradient($lightBrown, $brown);
+                padding: .4rem 1rem;
+                margin: 2px 4px 2px 0;
+                @include borderRadius(4px, 4px, 4px, 4px);
+                a {
+                    color: $banana;
+                    &:hover {
+                        text-decoration: none;
+                        color: $white;
+                    }
+                }
             }
         }
     }
@@ -114,15 +154,14 @@
     }
 
     &-title {
-        color: #fff;
-        font-family: $exo;
+        color: $white;
         font-size: 1.693em;
         text-align: center;
         font-style: italic;
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $widthMD) {
     .cheers {
         &-page-content {
             .entry {
@@ -156,7 +195,7 @@
     }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: $widthLG) {
     .cheers {
         &-page-content {
             .entry {

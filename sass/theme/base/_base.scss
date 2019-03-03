@@ -54,7 +54,21 @@ body {
     }
 }
 
-@media screen and (min-width: 768px) {
+a {
+    color: $brown;
+    @include transition(.3s, color);
+    &:hover {
+        color: $banana;
+    }
+}
+
+h {
+    &1, &2, &3, &4, &5, &6 {
+        font-family: $exo;
+    }
+}
+
+@media screen and (min-width: $widthMD) {
     .padded-left-mobile {
         padding-left: 0;
     }

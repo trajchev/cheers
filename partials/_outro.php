@@ -27,7 +27,7 @@
                             </p>
                             <form action="" class="py-2">
                                 <div class="input-group">
-                                    <input type="text" class="form-control grey-gradient pale-border" placeholder="email">
+                                    <input type="text" class="form-control grey-gradient" placeholder="email">
                                     <div class="input-group-append append-border-white">
                                         <button class="btn btn-brown">Subscribe</button>
                                     </div>

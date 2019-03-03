@@ -5,26 +5,26 @@
             &-item {
                 &:first-of-type {
                     border-radius: 4px 0 0 4px;
-                    border-left: 1px solid #222;
+                    border-left: 1px solid $darkGrey;
                 }
-                border-top: 1px solid #222;
-                border-bottom: 1px solid #222;
+                border-top: 1px solid $darkGrey;
+                border-bottom: 1px solid $darkGrey;
 
                 &:last-of-type {
                     border-radius: 0 4px 4px 0;
-                    border-right: 1px solid #222;
+                    border-right: 1px solid $darkGrey;
                 }
             }
 
             &-link {
                 color: $paleGrey;
                 &:hover {
-                    color: #fff;
+                    color: $white;
                 }
             }
 
             .active {
-                color: #fff;
+                color: $white;
             }
         }
     }

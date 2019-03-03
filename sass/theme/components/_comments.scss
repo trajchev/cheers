@@ -1,0 +1,115 @@
+.comments {
+    &-area {
+        padding: 10px 0;
+    }
+
+    &-title {
+        color: $white;
+    }
+}
+
+.comment {
+
+    &-reply-title {
+        color: $white;
+        font-style: italic;
+        font-size: 2rem;
+    }
+
+    &-notes {
+        color: $banana;
+    }
+
+    &-list {
+        margin: 0;
+        padding: 1rem 0;
+    }
+
+    &-author {
+        position: relative;
+        img {
+            border: .2rem solid $brown;
+        }
+
+        .fn {
+            color: $paleGrey;
+        }
+
+        .says {
+            color: $banana;
+        }
+
+    }
+
+    &-content {
+        color: $white;
+    }
+
+    &-body {
+        position: relative;
+        border-bottom: 1px solid $banana;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+
+        .reply {
+            a {
+                font-weight: 700;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.children {
+    position: relative;
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        background-color: $banana;
+    }
+    &:before {
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 1rem;
+    }
+
+    &:after {
+        top: 1rem;
+        left: 0;
+        width: 1rem;
+        height: 1px;
+    }
+}
+
+@media screen and (min-width: $widthMD) {
+    .comments {
+        &-area {
+            padding: 20px 10px; 
+        }
+    }
+
+    .comment {
+        &-meta {
+            position: relative;
+        }
+    
+        &-metadata {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}
+
+@media screen and (min-width: $widthLG) {
+    .comments {
+        &-area {
+            padding: 10px 25px;
+        }
+    }
+}

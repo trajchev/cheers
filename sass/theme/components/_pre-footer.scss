@@ -19,7 +19,6 @@
 
         a {
             color: $grey;
-            @include transition(.3s, color);
 
             &:hover {
                 text-decoration: none;

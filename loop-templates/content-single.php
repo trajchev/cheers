@@ -10,41 +10,29 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class('cheers-post-content'); ?> id="post-<?php the_ID(); ?>">
 
-	<header class="entry-header">
+    <div class="entry-thumbnail">
+        <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+    </div>
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	<header class="entry-header-single">
 
-		<div class="entry-meta">
-
-			<?php Cheers_posted_on(); ?>
-
-		</div><!-- .entry-meta -->
+        <?php the_title( '<h1 class="entry-title-single">', '</h1>' ); ?>
+		<h4 class="mb-0"><?php the_field('description'); ?></h4>
 
 	</header><!-- .entry-header -->
-
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
 	<div class="entry-content">
 
 		<?php the_content(); ?>
 
-		<?php
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'Cheers' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-
-		<?php Cheers_entry_footer(); ?>
-
+	<footer class="entry-footer pt-3">
+		<i class="fa fa-folder"></i>
+		<?php the_category(); ?>
+			<?php the_tags('<ul class="tag-cloud"><li class="tag">', '</li><li class="tag">', '</li></ul>'); ?>
 	</footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->

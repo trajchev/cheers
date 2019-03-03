@@ -15,38 +15,36 @@ $container = get_theme_mod( 'Cheers_container_type' );
 
 <div class="wrapper" id="single-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div class="container" id="content" tabindex="-1">
 
-		<div class="row">
+			<main class="site-main grey-gradient up-rounded" id="main">
 
-			<!-- Do the left sidebar check -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <?php while ( have_posts() ) : the_post(); ?>
 
-			<main class="site-main" id="main">
+                            <?php get_template_part( 'loop-templates/content', 'single' ); ?>
 
-				<?php while ( have_posts() ) : the_post(); ?>
+                            <?php
+                                // If comments are open or we have at least one comment, load up the comment template.
+                                if ( comments_open() || get_comments_number() ) :
+                                    comments_template();
+                                endif;
+                            ?>
 
-					<?php get_template_part( 'loop-templates/content', 'single' ); ?>
-
-					<?php Cheers_post_nav(); ?>
-
-					<?php
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-					?>
-
-				<?php endwhile; // end of the loop. ?>
+                            <?php endwhile; // end of the loop. ?>
+                        </div>
+                        <div class="col-md-4">
+			                <?php get_template_part( 'sidebar-templates/sidebar-right' ); ?>
+                        </div>
+                    </div>
+                </div>
 
 			</main><!-- #main -->
-
-			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
-
-		</div><!-- .row -->
-
-	</div><!-- #content -->
+    </div><!-- #content -->
+    <?php get_template_part( 'partials/_outro' ); ?>
+    <?php get_template_part( 'partials/_pre-footer' ); ?>
 
 </div><!-- #single-wrapper -->
 

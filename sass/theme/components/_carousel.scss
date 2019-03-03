@@ -16,11 +16,11 @@
     max-width: 380px;
 
     &-title {
-        color: #fff;
+        color: $white;
         padding: 10px;
         &:hover {
             text-decoration: none;
-            color: #fff;
+            color: $white;
             background: $grey;
         }
     }
@@ -32,19 +32,19 @@
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $widthMD) {
     .carousel-item {
         height: 220px;
     }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: $widthLG) {
     .carousel-item {
         height: 300px;
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $widthXL) {
     .carousel-item {
         height: 360px;
     }

@@ -4,6 +4,7 @@ $exo: 'Exo 2', sans-serif;
 
 
 // Colors
+$white: #ffffff;
 $pitchGrey: #1b1d1f;
 $grey: #272a2c;
 $darkGrey: #202224;
@@ -12,3 +13,11 @@ $paleGrey: #7b7a6d;
 $brown: #8e4423;
 $lightBrown: #b0592e;
 $banana: #e6e3bb;
+
+$transparentBlack: rgba(0,0,0,.15);
+
+
+// Widths
+$widthMD: 768px;
+$widthLG: 992px;
+$widthXL: 1200px;
