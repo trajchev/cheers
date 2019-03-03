@@ -21,13 +21,14 @@
         }
     }
 
+    &-blog-post,
     &-archive-content {
         padding: 10px;
         a {
             &:hover {
                 text-decoration: none;
                 .entry {
-                    &-title-archive {
+                    &-title {
                         color: #fff;
                     }
         
@@ -58,9 +59,10 @@
 }
 
 .entry {
+    &-header-blog,
     &-header-single,
-    &-header-archive {
-       padding: 15px 0;
+    &-header-archive
+     {
 
         h4 {
             color: $paleGrey;
@@ -71,11 +73,12 @@
     }
 
     &-title-single,
-    &-title-archive {
+    &-title {
+        color: #fff;
         font-family: $exo;
         font-weight: 700;
         color: $brown;
-        line-height: 100%;
+        line-height: 140%;
     }
 
     &-thumbnail {
@@ -86,6 +89,22 @@
 
     &-content {
         color: $paleGrey;
+    }
+
+    &-meta {
+
+        h6 {
+            font-size: 1rem;
+            color: $brown;
+        }
+
+        p {
+            color: $paleGrey;
+
+            span {
+                color: #fff;
+            }
+        }
     }
 }
 
@@ -167,6 +186,24 @@
 
         &-title {
             font-size: 3.693em;
+        }
+    }
+
+
+
+    .entry {
+    
+        &-header-blog {
+            position: relative;
+            padding-right: 14rem;
+        }
+    
+        &-meta {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 10rem;
+            text-align: right;
         }
     }
 }

@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
     </div>
     <header class="entry-header-archive">
-        <?php the_title( '<h2 class="entry-title-archive">', '</h2>' ); ?>
+        <?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
         <h4 class="mb-0"><?php the_field('description'); ?></h4>
 	</header><!-- .entry-header -->
 

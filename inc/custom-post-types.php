@@ -93,5 +93,3 @@ function product_updated_messages( $messages ) {
 
 	return $messages;
 }
-
-?>
