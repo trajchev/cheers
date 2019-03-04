@@ -14,6 +14,36 @@
 
     &-content {
         color: $paleGrey;
+
+        &-list {
+            list-style-type: none;
+            padding: 10px 0;
+            margin: 0;
+        }
+    }
+
+    &-box {
+        header {
+            h2 {
+                color: $brown;
+            }
+
+            h5 {
+                color: $brown;
+                margin-bottom: 0;
+            }
+
+            h6 {
+                color: $lightGrey;
+                font-style: italic;
+                font-size: .8rem;
+            }
+        }
+
+        .content {
+            font-size: 1rem;
+            color: $banana;
+        }
     }
 }
 
@@ -40,6 +70,14 @@
         .nav {
             &-link {
                 padding: .5rem 1rem;
+            }
+        }
+    }
+
+    .card {
+        &-box {
+            .content {
+                padding-right: 2rem;
             }
         }
     }

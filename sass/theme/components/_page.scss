@@ -161,6 +161,10 @@
     }
 }
 
+#map {
+    height: 400px;
+}
+
 @media screen and (min-width: $widthMD) {
     .cheers {
         &-page-content {
