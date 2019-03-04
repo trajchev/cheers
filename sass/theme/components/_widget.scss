@@ -1,0 +1,53 @@
+.widget {
+    position: relative;
+    padding: 20px 0;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: .1rem;
+        background-color: $banana;
+    }
+
+    &:last-of-type {
+        &:after {
+            content: none;
+        }
+    }
+
+    &-title {
+        color: $white;
+        font-size: 1.2rem;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            color: $paleGrey;
+        }
+    }
+}
+
+@media screen and (min-width: $widthMD) {
+    .widget {
+        padding: 20px 10px;
+        &:after {
+            left: 10px;
+            right: 10px;
+        }
+    }
+}
+
+@media screen and (min-width: $widthLG) {
+    .widget {
+        &:first-of-type {
+            padding: 40px 10px 20px 10px;
+        }
+    }
+}

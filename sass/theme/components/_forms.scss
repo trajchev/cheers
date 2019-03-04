@@ -23,6 +23,7 @@
     @include borderRadius(0, 4px, 4px, 0);
 }
 
+.input-group,
 .form-group {
     label {
         color: $paleGrey;
@@ -42,6 +43,7 @@
     }
 }
 
+#searchsubmit,
 #submit {
     background: linear-gradient($lightBrown, $brown);
     border: 1px solid $brown;
