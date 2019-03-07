@@ -3,45 +3,34 @@
     <div class="container">
         <div class="bg-banana top-border-14 py-2">
             <div class="row">
+                <?php
+                    $args = array(
+                    'post_parent' => 26,
+                    'post_type' => 'page',
+                    'posts_per_page' => 3,
+                    'orderby' => 'menu_order'
+                    );
+
+                    $child_query = new WP_Query( $args );
+                ?>
+
+                <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
                 <div class="col-md-4">
                     <div class="card text-center container mb-4">
                         <header class="card-header">
-                            <h3>Research</h3>
+                            <h3><?php the_title(); ?></h3>
                         </header>
-                        <p>
-                            Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend orci. Nam tincidunt vestibulum lacus nec pharetra. Nunc commodo aliquam lectus quis bibendum.
-                        </p>
+                        <?php the_excerpt(); ?>
                         <footer class="card-footer">
-                            <a href="#" class="btn btn-dark">learn more</a>
+                            <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>" class="btn btn-dark"><?php _e('learn more', 'cheers'); ?></a>
                         </footer>
                     </div>
                 </div>
-                <div class="col-md-4">
-                <div class="card text-center container mb-4">
-                        <header class="card-header">
-                            <h3>Work</h3>
-                        </header>
-                        <p>
-                            Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend orci. Nam tincidunt vestibulum lacus nec pharetra. Nunc commodo aliquam lectus quis bibendum.
-                        </p>
-                        <footer class="card-footer">
-                            <a href="#" class="btn btn-dark">learn more</a>
-                        </footer>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card text-center container mb-4">
-                        <header class="card-header">
-                            <h3>Deliver</h3>
-                        </header>
-                        <p>
-                            Donec pellentesque, justo eget imperdiet viverra, lectus mi ornare arcu, non laoreet lacus lacus eleifend orci. Nam tincidunt vestibulum lacus nec pharetra. Nunc commodo aliquam lectus quis bibendum.
-                        </p>
-                        <footer class="card-footer">
-                            <a href="#" class="btn btn-dark">learn more</a>
-                        </footer>
-                    </div>
-                </div>
+                <?php 
+                    endwhile; 
+                    wp_reset_postdata();    
+                ?>
+                
             </div>
 
             <!-- <div class="row"> -->
