@@ -43,6 +43,51 @@ function product_post_type() {
 	register_post_type( 'product', $args );
 }
 
+
+add_action( 'init', 'testimonial_post_type' );
+/**
+ * Register a testimonial post type.
+ *
+ * @link http://codex.wordpress.org/Function_Reference/register_post_type
+ */
+function testimonial_post_type() {
+	$labels = array(
+		'name'               => _x( 'Testimonial', 'Test', 'cheers' ),
+		'singular_name'      => _x( 'Testimonial', 'post type singular name', 'cheers' ),
+		'menu_name'          => _x( 'Testimonials', 'admin menu', 'cheers' ),
+		'name_admin_bar'     => _x( 'Testimonial', 'add new on admin bar', 'cheers' ),
+		'add_new'            => _x( 'Add New', 'testimonial', 'cheers' ),
+		'add_new_item'       => __( 'Add New Testimonial', 'cheers' ),
+		'new_item'           => __( 'New Testimonial', 'cheers' ),
+		'edit_item'          => __( 'Edit Testimonial', 'cheers' ),
+		'view_item'          => __( 'View Testimonial', 'cheers' ),
+		'all_items'          => __( 'All Testimonials', 'cheers' ),
+		'search_items'       => __( 'Search Testimonials', 'cheers' ),
+		'parent_item_colon'  => __( 'Parent Testimonial:', 'cheers' ),
+		'not_found'          => __( 'No testimonials found.', 'cheers' ),
+		'not_found_in_trash' => __( 'No testimonials found in Trash.', 'cheers' )
+	);
+
+	$args = array(
+		'labels'             => $labels,
+        'description'        => __( 'Description.', 'cheers' ),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'testimonials' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 5,
+        'supports'           => array( 'title', 'author', 'thumbnail', 'excerpt', 'comments' ),
+        'taxonomies'          => array( 'category' ),
+	);
+
+	register_post_type( 'testimonial', $args );
+}
+
 add_filter( 'post_updated_messages', 'product_updated_messages' );
 /**
  * Product update messages.
