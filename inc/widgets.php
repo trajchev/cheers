@@ -168,5 +168,17 @@ if ( ! function_exists( 'Cheers_widgets_init' ) ) {
 			)
 		);
 
+		register_sidebar(
+			array(
+				'name'          => __( 'Prefooter', 'cheers' ),
+				'id'            => 'prefooter',
+				'description'   => __( 'Full sized pre footer', 'cheers' ),
+				'before_widget' => '<div id="%1$s" class="footer-widget col-sm-6 col-md-3"><div class="card">',
+				'after_widget'  => '</div><!-- .card-content --></div></div><!-- .footer-widget -->',
+				'before_title'  => '<header class="card-header border-bottom-grey"><h3 class="h5 block-heading text-center pb-2">',
+				'after_title'   => '</h3></header><div class="card-content">',
+			)
+		);
+
 	}
 } // endif function_exists( 'Cheers_widgets_init' ).

@@ -30,40 +30,37 @@
                     endwhile; 
                     wp_reset_postdata();    
                 ?>
-                
             </div>
 
-            <!-- <div class="row"> -->
-                <div class="container">
-                    <!-- Nav tabs -->
-                    <ul class="nav nav-tabs slider-tabs" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link grey-gradient up-rounded active" data-toggle="tab" href="#home">Latest Press</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link grey-gradient up-rounded" data-toggle="tab" href="#menu1">Testimonials</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link grey-gradient up-rounded" data-toggle="tab" href="#menu2">Blog Posts</a>
-                        </li>
-                    </ul>
+            <div class="container">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs slider-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link grey-gradient up-rounded active" data-toggle="tab" href="#home">Latest Press</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link grey-gradient up-rounded" data-toggle="tab" href="#menu1">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link grey-gradient up-rounded" data-toggle="tab" href="#menu2">Blog Posts</a>
+                    </li>
+                </ul>
 
-                    <!-- Tab panes -->
-                    <div class="tab-content grey-gradient up-rounded">
-                        <div id="home" class="container tab-pane active"><br>
-                            <h3>Latest Posts</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        </div>
-                        <div id="menu1" class="container tab-pane fade"><br>
-                            <h3>Testimonials</h3>
-                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                        <div id="menu2" class="container tab-pane fade"><br>
-                            <h3>Blog Posts</h3>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-                        </div>
+                <!-- Tab panes -->
+                <div class="tab-content grey-gradient up-rounded">
+                    <div id="home" class="container tab-pane active"><br>
+                        <h3>Latest Posts</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
-                <!-- </div> -->
+                    <div id="menu1" class="container tab-pane fade"><br>
+                        <h3>Testimonials</h3>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    <div id="menu2" class="container tab-pane fade"><br>
+                        <h3>Blog Posts</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
