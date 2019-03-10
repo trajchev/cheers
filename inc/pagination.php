@@ -9,9 +9,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-if ( ! function_exists( 'Cheers_pagination' ) ) {
+if ( ! function_exists( 'cheers_pagination' ) ) {
 
-	function Cheers_pagination( $args = array(), $class = 'pagination' ) {
+	function cheers_pagination( $args = array(), $class = 'pagination' ) {
 
 		if ( $GLOBALS['wp_query']->max_num_pages <= 1 ) {
 			return;

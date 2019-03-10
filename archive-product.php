@@ -18,7 +18,7 @@ get_header();
 <div class="wrapper" id="archive-wrapper">
 	<div class="container" id="content" tabindex="-1">
 
-			<main class="site-main" id="main">
+			<main class="site-main" id="main" ng-app="products">
 
 				<?php if ( have_posts() ) : ?>
 
@@ -32,25 +32,25 @@ get_header();
                                 <nav class="product-filter">
                                     <ul class="nav justify-content-center">
                                         <li class="nav-item">
-                                            <a class="nav-link grey-gradient active" href="#">All</a>
+                                            <a class="nav-link grey-gradient active" onclick="getProducts('all')" href="javascript:void(0)">All</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link grey-gradient-inverse" href="#">Wine</a>
+                                            <a class="nav-link grey-gradient-inverse" onclick="getProducts('wine')" href="javascript:void(0)">Wine</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link grey-gradient-inverse" href="#">Whiskey</a>
+                                            <a class="nav-link grey-gradient-inverse" onclick="getProducts('whiskey')" href="javascript:void(0)">Whiskey</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link grey-gradient-inverse" href="#">Vodka</a>
+                                            <a class="nav-link grey-gradient-inverse" onclick="getProducts('vodka')" href="javascript:void(0)">Vodka</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link grey-gradient-inverse" href="#">Beer</a>
+                                            <a class="nav-link grey-gradient-inverse" onclick="getProducts('beer')" href="javascript:void(0)">Beer</a>
                                         </li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
-                        <div class="row" id="products-listed">
+                        <div class="row" id="products-listed" ng-controller="main-ctrl">
                         <?php while ( have_posts() ) : ?>
                             <div class="col-sm-6">
                             <?php the_post(); ?>
@@ -66,7 +66,7 @@ get_header();
                             <?php endwhile; ?>
                         </div>
                         <!-- The pagination component -->
-			            <?php cheers_pagination(); ?>
+                        <?php cheers_pagination(); ?>
                     </div>
 
 				<?php else : ?>
