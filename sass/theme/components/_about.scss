@@ -1,7 +1,7 @@
 .article {
     &-block {
         width: 100%;
-        max-width: 680px;
+        max-width: $widthMD;
     }
 
     &-header {
