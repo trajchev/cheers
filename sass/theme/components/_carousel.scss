@@ -1,5 +1,4 @@
 #cheersCarousel {
-    max-width: 360px;
     margin: 0 auto;
 }
 
@@ -9,43 +8,45 @@
 }
 
 .carousel-item {
-    height: 180px;
+    min-height: 16rem;
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
-    max-width: 380px;
 
     &-title {
         color: $white;
-        padding: 10px;
+        padding: .5rem;
+        max-width: 24rem;
+        margin: 0 auto;
         &:hover {
             text-decoration: none;
             color: $white;
             background: $grey;
+            cursor: default;
         }
     }
 }
 
-@media screen and (min-width: 567px) {
+@media screen and (min-width: $widthSM) {
     .carousel-item {
-        height: 200px;
+        min-height: 20rem;
     }
 }
 
 @media screen and (min-width: $widthMD) {
     .carousel-item {
-        height: 220px;
+        min-height: 27rem;
     }
 }
 
 @media screen and (min-width: $widthLG) {
     .carousel-item {
-        height: 300px;
+        min-height: 35rem;
     }
 }
 
 @media screen and (min-width: $widthXL) {
     .carousel-item {
-        height: 360px;
+        min-height: 40rem;
     }
 }
