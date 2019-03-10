@@ -50,7 +50,7 @@ get_header();
                                 </nav>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row" id="products-listed">
                         <?php while ( have_posts() ) : ?>
                             <div class="col-sm-6">
                             <?php the_post(); ?>

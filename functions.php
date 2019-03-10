@@ -25,6 +25,7 @@ $Cheers_includes = array(
 	'/class-wp-bootstrap-navwalker.php',    // Load custom WordPress nav walker.
 	'/woocommerce.php',                     // Load WooCommerce functions.
 	'/editor.php',                          // Load Editor functions.
+	'/rest-api.php',                        // Load ReST API functions.
 );
 
 foreach ( $Cheers_includes as $file ) {

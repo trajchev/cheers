@@ -36,6 +36,7 @@ function product_post_type() {
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => 5,
+		'show_in_rest'		 => true,
         'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
         'taxonomies'          => array( 'category' ),
 	);

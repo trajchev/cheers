@@ -31,8 +31,9 @@ get_header();
                     );
                 if ( $basic->have_posts() ) : ?>
                     <div class="row">
-                        <?php while ( $basic->have_posts() ) : ?>
                         <div class="col-lg-8">
+                            <?php while ( $basic->have_posts() ) : ?>
+                        
                             <?php $basic->the_post(); ?>
                                 <?php
                                 /*
@@ -42,11 +43,17 @@ get_header();
                                 */
                                 get_template_part( 'loop-templates/content-blog', get_post_format() );
                                 ?>
+                            <?php endwhile;  wp_reset_query(); ?>
+
+                            <!-- The pagination component -->
+                            <?php cheers_pagination(); ?>
+                            
                         </div>
-                        <?php endwhile;  wp_reset_query(); ?>
+                        <div class="col-md-4">
+			                <?php get_template_part( 'sidebar-templates/sidebar-right' ); ?>
+                        </div>
                     </div>
-                    <!-- The pagination component -->
-                    <?php cheers_pagination(); ?>
+                    
                 </div>
 
 				<?php else : ?>

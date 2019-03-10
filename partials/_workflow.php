@@ -36,7 +36,7 @@
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs slider-tabs" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link grey-gradient up-rounded active" data-toggle="tab" href="#home">Latest Press</a>
+                        <a class="nav-link grey-gradient up-rounded active" data-toggle="tab" href="#home">Brand New</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link grey-gradient up-rounded" data-toggle="tab" href="#testimonials">Testimonials</a>
@@ -48,9 +48,33 @@
 
                 <!-- Tab panes -->
                 <div class="tab-content grey-gradient up-rounded">
-                    <div id="home" class="container tab-pane active"><br>
-                        <h3>Latest Posts</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div id="home" class="container tab-pane active">
+                        <?php
+                            $args = array(
+                            'post_type' => array('post', 'product'),
+                            'posts_per_page' => 3,
+                            'orderby' => 'menu_order'
+                            );
+
+                            $child_query = new WP_Query( $args );
+                        ?>
+                        <div class="row">
+                            <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="card text-center text-white container mb-4">
+                                    <header class="card-header">
+                                        <h3><?php the_title(); ?></h3>
+                                    </header>
+                                    <article class="card-content">
+                                        <?php the_excerpt(); ?>
+                                    </article>
+                                </div>
+                            </div>
+                            <?php 
+                                endwhile; 
+                                wp_reset_postdata();    
+                            ?>
+                        </div>
                     </div>
                     <div id="testimonials" class="container tab-pane fade pt-4">
                         <?php
@@ -78,9 +102,33 @@
                             ?>
                         </div>
                     </div>
-                    <div id="menu2" class="container tab-pane fade"><br>
-                        <h3>Blog Posts</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                    <div id="menu2" class="container tab-pane fade">
+                        <?php
+                            $args = array(
+                            'post_type' => 'post',
+                            'posts_per_page' => 3,
+                            'orderby' => 'menu_order'
+                            );
+
+                            $child_query = new WP_Query( $args );
+                        ?>
+                        <div class="row">
+                            <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="card text-center text-white container mb-4">
+                                    <header class="card-header">
+                                        <h3><?php the_title(); ?></h3>
+                                    </header>
+                                    <article class="card-content">
+                                        <?php the_excerpt(); ?>
+                                    </article>
+                                </div>
+                            </div>
+                            <?php 
+                                endwhile; 
+                                wp_reset_postdata();    
+                            ?>
+                        </div>
                     </div>
                 </div>
             </div>

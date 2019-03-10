@@ -21,11 +21,13 @@ get_header();
 
 <div class="wrapper" id="home-wrapper">
 
-    <?php get_template_part( 'partials/_carousel' ); ?>
-    <?php get_template_part( 'partials/_about' ); ?>
-    <?php get_template_part( 'partials/_workflow' ); ?>
-    <?php get_template_part( 'partials/_outro' ); ?>
-    <?php get_template_part( 'partials/_pre-footer' ); ?>
+    <?php   
+        get_template_part( 'partials/_carousel' ); 
+        get_template_part( 'partials/_about' );
+        get_template_part( 'partials/_workflow' );
+        get_template_part( 'partials/_outro' );
+        get_template_part( 'partials/_pre-footer' );
+    ?>
     
 </div><!-- #index-wrapper -->
 

@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <article <?php post_class('cheers-post-content'); ?> id="post-<?php the_ID(); ?>">
 
     <div class="entry-thumbnail">
-        <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+        <?php the_post_thumbnail(); ?>
     </div>
 
 	<header class="entry-header-single">
@@ -22,13 +22,11 @@ if ( ! defined( 'ABSPATH' ) ) {
         <h4 class="mb-0"><?php the_field('description'); ?></h4>
 
         <ul class="product-stats m-0 px-0 pt-2">
-            <li>Year <span class="value">1968</span></li>
-            <li>Origin <span class="value">France</span></li>
+            <li>Year <span class="value"><?php the_field('production_year'); ?></span></li>
+            <li>Origin <span class="value"><?php the_field('production_region'); ?></span></li>
         </ul>
 
 	</header><!-- .entry-header -->
-
-	
 
 	<div class="entry-content">
 
