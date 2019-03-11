@@ -1,17 +1,3 @@
-.bordered-boxes {
-    list-style-type: none;
-    text-align: center;
-
-    &-item {
-        float: left;
-        width: 5.230rem;
-        height: 5.230rem;
-        border: .384rem solid $brown;
-        margin: .3rem;
-        background-color: $grey;
-    }
-}
-
 .pre-footer-menu {
     li {
         list-style-type: none;

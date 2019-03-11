@@ -39,12 +39,14 @@ if ( ! defined( 'ABSPATH' ) ) {
                             <h6><?php the_sub_field('office_description'); ?></h6>
                         </header>
                         <div class="card-content">
+                            <address>
                             <ul class="card-content-list">
                                 <li><strong><?php the_sub_field('office_address'); ?></strong></li>
                                 <li><?php _e('Email:', 'cheers'); ?> <a href="mailto:<?php the_sub_field('office_email'); ?>"><?php the_sub_field('office_email'); ?></a></li>
                                 <li><?php _e('Phone:', 'cheers'); ?> <a href="tel:<?php the_sub_field('office_phone'); ?>"><?php the_sub_field('office_phone'); ?></a></li>
                                 <li><?php _e('Fax:', 'cheers'); ?> <a href="tel:<?php the_sub_field('office_fax'); ?>"><?php the_sub_field('office_fax'); ?></a></li>
                             </ul>
+                            </address>
                         </div>
                     </div>
                 </div>

@@ -12,11 +12,12 @@
 @import "layout/footer";
 
 // Components
+@import "components/utils";
 @import "components/forms";
 @import "components/carousel";
-@import "components/about";
-@import "components/workflow";
-@import "components/outro";
+@import "components/entry";
+@import "components/card";
+@import "components/tabs";
 @import "components/pre-footer";
 @import "components/page";
 @import "components/product";

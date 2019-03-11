@@ -17,7 +17,7 @@ get_header();
 
 	<div class="container" id="content" tabindex="-1">
 
-			<main class="site-main grey-gradient up-rounded" id="main">
+			<main class="site-main grey-gradient up-rounded py-3" id="main">
 
                 <div class="container">
                     <div class="row">

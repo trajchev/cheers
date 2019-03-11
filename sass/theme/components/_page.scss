@@ -21,7 +21,7 @@
 
     &-blog-post,
     &-archive-content {
-        padding: .769rem;
+        padding: 0 0 .769rem 0;
         a {
             &:hover {
                 text-decoration: none;
@@ -40,11 +40,10 @@
     }
 
     &-post-content {
-        padding: .769rem 0;
 
         .entry {
             &-header {
-                padding: 3.076rem 0;
+                padding: 0;
             }
 
             &-title {
@@ -105,7 +104,6 @@
 
     &-footer {
         position: relative;
-        border-top: .076rem solid $paleGrey;
         color: $white;
         .fa {
             position: absolute;
@@ -162,7 +160,7 @@
 }
 
 #map {
-    height: 30.76rem;
+    height: 30rem;
 }
 
 @media screen and (min-width: $widthMD) {
@@ -174,17 +172,17 @@
                 }
     
                 &-title {
-                    font-size: 2.693em;
+                    font-size: 2rem;
                 }
     
                 &-content {
-                    padding: 3.076rem;
+                    padding: 2rem;
                 }
             }
         }
 
         &-post-content {
-            padding: 1.538rem .769rem;
+            padding: 0;
         }
     }
 
@@ -215,10 +213,6 @@
                     padding: 4.615rem 7.69rem;
                 }
             }
-        }
-
-        &-post-content {
-            padding: 3.076rem 1.923rem;
         }
     }
 

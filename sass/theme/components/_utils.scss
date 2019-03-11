@@ -4,6 +4,20 @@
     margin-left: 1rem;
 }
 
+.bordered-boxes {
+    list-style-type: none;
+    text-align: center;
+
+    &-item {
+        float: left;
+        width: 5.230rem;
+        height: 5.230rem;
+        border: .384rem solid $brown;
+        margin: .3rem;
+        background-color: $grey;
+    }
+}
+
 .block-heading {
     font-family: $exo;
     color: $brown;

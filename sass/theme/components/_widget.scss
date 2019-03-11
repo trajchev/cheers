@@ -1,6 +1,8 @@
 .widget {
     position: relative;
-    padding: 1.538rem 0;
+    padding: 1.538rem 1rem;
+    color: $lightBrown;
+    background: $transparentBlack;
 
     &:after {
         content: '';
@@ -34,20 +36,30 @@
     }
 }
 
-@media screen and (min-width: $widthMD) {
-    .widget {
-        padding: 1.538rem .769rem;
-        &:after {
-            left: .769rem;
-            right: .769rem;
+.footer {
+    &-widget {
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+    
+            li {
+                text-align: center;
+            }
+        }
+        a {
+            &:hover {
+                color: $brown;
+            }
         }
     }
 }
 
-@media screen and (min-width: $widthLG) {
+@media screen and (min-width: $widthMD) {
     .widget {
-        &:first-of-type {
-            padding: 3.076rem .769rem 1.538rem .769rem;
+        &:after {
+            left: .769rem;
+            right: .769rem;
         }
     }
 }
