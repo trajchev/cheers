@@ -27,7 +27,7 @@ get_header();
 					</header><!-- .page-header -->
                     
                     <div class="container grey-gradient up-rounded py-3">
-                        <div class="row">
+                        <div class="row" id="products-listed">
                             <div class="col-md-12">
                                 <nav class="product-filter">
                                     <ul class="nav justify-content-center">
