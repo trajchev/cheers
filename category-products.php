@@ -23,33 +23,10 @@ get_header();
 				<?php if ( have_posts() ) : ?>
 
 					<header class="page-header">
-                        <h1 class="page-title"><?php echo __('Products', 'cheers'); ?>
+                        <h1 class="page-title"><?php echo __('Products Ivan', 'cheers'); ?>
 					</header><!-- .page-header -->
                     
                     <div class="container grey-gradient up-rounded py-3">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <nav class="product-filter">
-                                    <ul class="nav justify-content-center">
-                                        <li class="nav-item">
-                                            <a class="nav-link grey-gradient active" onclick="getProducts('all')" href="javascript:void(0)">All</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link grey-gradient-inverse" onclick="getProducts('wine')" href="javascript:void(0)">Wine</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link grey-gradient-inverse" onclick="getProducts('whiskey')" href="javascript:void(0)">Whiskey</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link grey-gradient-inverse" onclick="getProducts('vodka')" href="javascript:void(0)">Vodka</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link grey-gradient-inverse" onclick="getProducts('beer')" href="javascript:void(0)">Beer</a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
                         <div class="row" id="products-listed">
                         <?php while ( have_posts() ) : ?>
                             <div class="col-sm-6">

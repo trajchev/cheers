@@ -18,11 +18,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 
 ?>
-
-<div class="wrapper" id="home-wrapper">
-
     <?php   
-        get_template_part( 'partials/_carousel' ); 
+        get_template_part( 'partials/_intro' ); 
         get_template_part( 'partials/_about' );
         get_template_part( 'partials/_workflow' );
         get_template_part( 'partials/_outro' );
