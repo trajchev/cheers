@@ -14,15 +14,10 @@ get_header();
 ?>
 
 <div class="wrapper" id="search-wrapper">
-
 	<div class="container" id="content" tabindex="-1">
-
 		<main class="site-main" id="main">
-
 			<?php if ( have_posts() ) : ?>
-
 				<header class="page-header">
-
 					<h1 class="page-title">
 						<?php
 						printf(
@@ -32,7 +27,6 @@ get_header();
 						);
 						?>
 					</h1>
-
 				</header><!-- .page-header -->
 
 				<div class="container grey-gradient up-rounded py-3">
@@ -55,20 +49,13 @@ get_header();
 					</div>
 				</div>
 				<?php else : ?>
-
 					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
-
 				<?php endif; ?>
-
 			</main><!-- #main -->
-
 			<!-- The pagination component -->
 			<?php cheers_pagination(); ?>
-
 		</main><!-- main -->
-
 	</div><!-- #content -->
-
 </div><!-- #search-wrapper -->
 
 <?php get_footer(); ?>
