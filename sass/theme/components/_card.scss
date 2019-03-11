@@ -48,6 +48,22 @@
     }
 }
 
+a {
+    &:hover {
+        text-decoration: none;
+        .card {
+            &-header {
+                @include transition(.3s, color);
+                color: $brown;
+            }
+            &-content {
+                @include transition(.3s, color);
+                color: $banana;
+            }
+        }
+    }
+}
+
 @media screen and (min-width: $widthMD) {
     .card {
         &-box {

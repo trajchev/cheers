@@ -36,13 +36,13 @@
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs slider-tabs" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link grey-gradient up-rounded active" data-toggle="tab" href="#home">Brand New</a>
+                        <a class="nav-link grey-gradient up-rounded active" data-toggle="tab" href="#home"><?php _e('Brand New', 'cheers'); ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link grey-gradient up-rounded" data-toggle="tab" href="#testimonials">Testimonials</a>
+                        <a class="nav-link grey-gradient up-rounded" data-toggle="tab" href="#testimonials"><?php _e('Testimonials', 'cheers'); ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link grey-gradient up-rounded" data-toggle="tab" href="#menu2">Blog Posts</a>
+                        <a class="nav-link grey-gradient up-rounded" data-toggle="tab" href="#menu2"><?php _e('Blog Posts', 'cheers'); ?></a>
                     </li>
                 </ul>
 
@@ -61,7 +61,8 @@
                         <div class="row">
                             <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
                             <div class="col-sm-6 col-md-4">
-                                <div class="card text-center text-white container mb-4">
+                                <a href="<?php the_permalink(); ?>">
+                                <div class="card text-center text-white container mb-4 pt-4">
                                     <header class="card-header">
                                         <h3><?php the_title(); ?></h3>
                                     </header>
@@ -69,6 +70,7 @@
                                         <?php the_excerpt(); ?>
                                     </article>
                                 </div>
+                                </a>
                             </div>
                             <?php 
                                 endwhile; 
@@ -89,10 +91,10 @@
                         <div class="row">
                             <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
                             <div class="col-sm-6 col-md-4">
-                                <blockquote class="card text-right text-white container mb-4">
+                                <blockquote class="card text-right container mb-4 py-4">
                                     <?php the_excerpt(); ?>
                                     <cite>
-                                        <?php the_field('client'); ?> <?php the_field('position'); ?>
+                                        <?php the_field('client'); ?> <span><?php the_field('position'); ?></span>
                                     </cite>
                                 </blockquote>
                             </div>
@@ -115,7 +117,8 @@
                         <div class="row">
                             <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
                             <div class="col-sm-6 col-md-4">
-                                <div class="card text-center text-white container mb-4">
+                                <a href="<?php the_permalink(); ?>">
+                                <div class="card text-center text-white container mb-4 py-4">
                                     <header class="card-header">
                                         <h3><?php the_title(); ?></h3>
                                     </header>
@@ -123,6 +126,7 @@
                                         <?php the_excerpt(); ?>
                                     </article>
                                 </div>
+                                </a>
                             </div>
                             <?php 
                                 endwhile; 

@@ -20,8 +20,8 @@
                 </div>
 
                 <div class="col-sm-12 col-md-7">
-                    <div class="card py-4 padded-left-mobile">
-                        <div class="card-content pr-4">
+                    <div class="card py-4">
+                        <div class="card-content px-4">
                             <h4 class="block-heading"><?php the_field('custom_subheading'); ?></h4>
                             <?php the_excerpt(); ?>
                             <form action="" class="py-2">

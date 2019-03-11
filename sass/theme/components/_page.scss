@@ -27,16 +27,17 @@
                 text-decoration: none;
                 .entry {
                     &-title {
+                        @include transition(.3s, color);
                         color: $white;
                     }
         
                     &-content {
+                        @include transition(.3s, color);
                         color: $white;
                     }
                 }
             }
         }
-        
     }
 
     &-post-content {

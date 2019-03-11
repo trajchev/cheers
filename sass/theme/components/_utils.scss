@@ -25,6 +25,16 @@
     clear: right;
 }
 
+blockquote {
+    color: $banana;
+    cite {
+        color: $brown;
+        span {
+            color: $lightGrey;
+        }
+    }
+}
+
 @media screen and (min-width: $widthMD) {
     .border {
         &-right {
