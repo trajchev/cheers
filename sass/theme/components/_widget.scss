@@ -1,6 +1,6 @@
 .widget {
     position: relative;
-    padding: 20px 0;
+    padding: 1.538rem 0;
 
     &:after {
         content: '';
@@ -36,10 +36,10 @@
 
 @media screen and (min-width: $widthMD) {
     .widget {
-        padding: 20px 10px;
+        padding: 1.538rem .769rem;
         &:after {
-            left: 10px;
-            right: 10px;
+            left: .769rem;
+            right: .769rem;
         }
     }
 }
@@ -47,7 +47,7 @@
 @media screen and (min-width: $widthLG) {
     .widget {
         &:first-of-type {
-            padding: 40px 10px 20px 10px;
+            padding: 3.076rem .769rem 1.538rem .769rem;
         }
     }
 }

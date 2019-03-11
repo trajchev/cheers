@@ -3,7 +3,7 @@
 }
 
 .navbar-brand {
-    color: #fff;
+    color: $white;
     font-family: $exo;
     font-style: italic;
     padding-left: 1rem;
@@ -21,7 +21,7 @@
 
 .navbar-toggler {
     .navbar-toggler-icon {
-        color: #fff !important;
+        color: $white !important;
     }
 }
 
@@ -30,7 +30,7 @@
     li {
         a {
             font-size: 1rem;
-            color: #fff;
+            color: $white;
             &:hover {
                 color: $brown;
             }
@@ -71,33 +71,33 @@
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $widthMD) {
 
     .dropdown-menu {
         position: relative;
-        font-size: 1em;
+        font-size: .769rem;
         min-width: 6rem;
         background-image: linear-gradient($grey, $darkGrey);
-        border-width: 1px;
+        border-width: .076rem;
 
         &:before,
         &:after {
             position: absolute;
             left: 50%;
-            margin-left: -2px;
+            margin-left: -.153rem;
             content: ' ';
             width: 0; 
             height: 0;
-            border-left: 7px solid transparent;
-            border-right: 7px solid transparent;
+            border-left: .538rem solid transparent;
+            border-right: .538rem solid transparent;
         }
         &:after {
             top: -5px;
-            border-bottom: 7px solid $grey;
+            border-bottom: .538rem solid $grey;
         }
         &:before {
             top: -6px;
-            border-bottom: 7px solid $transparentBlack;
+            border-bottom: .538rem solid $transparentBlack;
         }
     }
 
@@ -112,19 +112,19 @@
     }
 
     .contained {
-        max-width: 690px;
+        max-width: 43.125rem;
     }
 }
 
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: $widthLG) {
     .contained {
-        max-width: 930px;
+        max-width: 58.125rem;
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $widthXL) {
     .contained {
-        max-width: 1110px;
+        max-width: 69.375rem;
     }
 }

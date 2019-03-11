@@ -4,10 +4,10 @@
 
     &-item {
         float: left;
-        width: 68px;
-        height: 68px;
-        border: 5px solid $brown;
-        margin: 4px;
+        width: 5.230rem;
+        height: 5.230rem;
+        border: .384rem solid $brown;
+        margin: .3rem;
         background-color: $grey;
     }
 }
@@ -15,7 +15,7 @@
 .pre-footer-menu {
     li {
         list-style-type: none;
-        padding-bottom: 7px;
+        padding-bottom: .538rem;
 
         a {
             color: $grey;

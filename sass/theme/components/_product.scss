@@ -1,18 +1,18 @@
 .product {
     &-filter {
-        padding: 20px 10px;
+        padding: 1.538rem .0769rem;
         .nav {
             &-item {
                 &:first-of-type {
-                    border-radius: 4px 0 0 4px;
-                    border-left: 1px solid $darkGrey;
+                    @include borderRadius(.3rem, 0, 0, .3rem);
+                    border-left: .076rem solid $darkGrey;
                 }
-                border-top: 1px solid $darkGrey;
-                border-bottom: 1px solid $darkGrey;
+                border-top: .076rem solid $darkGrey;
+                border-bottom: .076rem solid $darkGrey;
 
                 &:last-of-type {
-                    border-radius: 0 4px 4px 0;
-                    border-right: 1px solid $darkGrey;
+                    @include borderRadius(.0, 3rem, .3rem, 0);
+                    border-right: .076rem solid $darkGrey;
                 }
             }
 

@@ -18,7 +18,7 @@
 
         &-list {
             list-style-type: none;
-            padding: 10px 0;
+            padding: .769rem 0;
             margin: 0;
         }
     }
@@ -50,7 +50,7 @@
 
 .slider-tabs {
     margin: 0 auto;
-    max-width: 240px;
+    max-width: 15rem;
     .nav {
 
         &-link {
@@ -67,7 +67,7 @@
 
 @media screen and (min-width: $widthMD) {
     .slider-tabs {
-        max-width: 286px;
+        max-width: 18rem;
         .nav {
             &-link {
                 padding: .5rem 1rem;
