@@ -23,7 +23,6 @@ $Cheers_includes = array(
 	'/custom-post-types.php',               // Custom Post Types file.
 	'/jetpack.php',                         // Load Jetpack compatibility file.
 	'/class-wp-bootstrap-navwalker.php',    // Load custom WordPress nav walker.
-	'/woocommerce.php',                     // Load WooCommerce functions.
 	'/editor.php',                          // Load Editor functions.
 	'/rest-api.php',                        // Load ReST API functions.
 );

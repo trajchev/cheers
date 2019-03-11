@@ -27,7 +27,6 @@
   },
   "homepage": "https://Cheers.com",
   "dependencies": {
-    "angular": "^1.7.7",
     "bootstrap": "4.2.1",
     "browser-sync": "^2.26.3",
     "del": "^3.0.0",

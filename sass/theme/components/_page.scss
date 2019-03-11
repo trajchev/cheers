@@ -2,7 +2,7 @@
     &-page-content {
         .entry {
             &-header {
-                padding: 10px;
+                padding: .769rem;
             }
 
             &-title {
@@ -13,7 +13,7 @@
             }
 
             &-content {
-                padding: 10px;
+                padding: .769rem;
                 color: $paleGrey;
             }
         }
@@ -21,7 +21,7 @@
 
     &-blog-post,
     &-archive-content {
-        padding: 10px;
+        padding: .769rem;
         a {
             &:hover {
                 text-decoration: none;
@@ -40,11 +40,11 @@
     }
 
     &-post-content {
-        padding: 10px 0;
+        padding: .769rem 0;
 
         .entry {
             &-header {
-                padding: 40px 0;
+                padding: 3.076rem 0;
             }
 
             &-title {
@@ -79,7 +79,7 @@
 
     &-thumbnail {
         width: 100%;
-        border: 5px solid $brown;
+        border: .384rem solid $brown;
         text-align: center;
     }
 
@@ -105,7 +105,7 @@
 
     &-footer {
         position: relative;
-        border-top: 1px solid $paleGrey;
+        border-top: .076rem solid $paleGrey;
         color: $white;
         .fa {
             position: absolute;
@@ -134,8 +134,8 @@
                 display: inline-block;
                 background: linear-gradient($lightBrown, $brown);
                 padding: .4rem 1rem;
-                margin: 2px 4px 2px 0;
-                @include borderRadius(4px, 4px, 4px, 4px);
+                margin: .153rem .3rem .153rem 0;
+                @include borderRadiusUni(.3rem);
                 a {
                     color: $banana;
                     &:hover {
@@ -150,7 +150,7 @@
 
 .page {
     &-header {
-        padding: 10px;
+        padding: .769rem;
     }
 
     &-title {
@@ -162,7 +162,7 @@
 }
 
 #map {
-    height: 400px;
+    height: 30.76rem;
 }
 
 @media screen and (min-width: $widthMD) {
@@ -170,7 +170,7 @@
         &-page-content {
             .entry {
                 &-header {
-                    padding: 20px 10px;
+                    padding: 1.538rem .769rem;
                 }
     
                 &-title {
@@ -178,19 +178,19 @@
                 }
     
                 &-content {
-                    padding: 40px;
+                    padding: 3.076rem;
                 }
             }
         }
 
         &-post-content {
-            padding: 20px 10px;
+            padding: 1.538rem .769rem;
         }
     }
 
     .page {
         &-header {
-            padding: 20px 10px;
+            padding: 1.538rem .769rem;
         }
 
         &-title {
@@ -204,7 +204,7 @@
         &-page-content {
             .entry {
                 &-header {
-                    padding: 30px 10px;
+                    padding: 2.307rem .769rem;
                 }
     
                 &-title {
@@ -212,19 +212,19 @@
                 }
     
                 &-content {
-                    padding: 60px 100px;
+                    padding: 4.615rem 7.69rem;
                 }
             }
         }
 
         &-post-content {
-            padding: 40px 25px;
+            padding: 3.076rem 1.923rem;
         }
     }
 
     .page {
         &-header {
-            padding: 30px 10px;
+            padding: 2.307rem .769rem;
         }
 
         &-title {
