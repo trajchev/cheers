@@ -19,3 +19,11 @@
         color: $paleGrey;
     }
 }
+
+.content {
+    &-none {
+        h3 {
+            color: $banana;
+        }
+    }
+}

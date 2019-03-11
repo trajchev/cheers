@@ -20,28 +20,29 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	</header><!-- .page-header -->
 
-	<div class="page-content">
-
+	<div class="page-content container grey-gradient up-rounded py-4">
+		<section class="content-none">
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-			<p><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'Cheers' ), array(
+			<h3 class="py-3"><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'Cheers' ), array(
 	'a' => array(
 		'href' => array(),
 	),
-) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
+) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></h3>
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'Cheers' ); ?></p>
+			<h3 class="py-3"><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'Cheers' ); ?></h3>
 			<?php
 				get_search_form();
 		else : ?>
 
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'Cheers' ); ?></p>
+			<h3 class="py-3"><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'Cheers' ); ?></h3>
 			<?php
 				get_search_form();
 		endif; ?>
+		</section>
 	</div><!-- .page-content -->
 	
 </section><!-- .no-results -->

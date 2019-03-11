@@ -1,0 +1,21 @@
+.search {
+    &-entry {
+        &-meta {
+            @include transition(.3s, color);
+            color: $lightGrey;
+            border-bottom: 1px solid $lightGrey;
+        }
+    }
+}
+
+a {
+    &:hover {
+        .search {
+            &-entry {
+                &-meta {
+                    color: $banana;
+                }
+            }
+        }
+    }
+}
