@@ -24,9 +24,9 @@
                         <div class="card-content px-4">
                             <h4 class="block-heading"><?php the_field('custom_subheading'); ?></h4>
                             <?php the_excerpt(); ?>
-                            <form action="" class="py-2">
+                            <form action="subscribe.php" class="py-2">
                                 <div class="input-group">
-                                    <input type="text" class="form-control grey-gradient" placeholder="email">
+                                    <input type="text" class="form-control grey-gradient" placeholder="email" data-validation="length email" data-validation-length="min8">
                                     <div class="input-group-append append-border-white">
                                         <button class="btn btn-brown"><?php _e('Subscribe', 'cheers'); ?></button>
                                     </div>

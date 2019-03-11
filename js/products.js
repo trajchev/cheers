@@ -39,3 +39,10 @@ jQuery('.product-filter .nav-link').on('click', function(e) {
     });
     jQuery(this).removeClass('grey-gradient-inverse').addClass('active').addClass('grey-gradient');
 });
+
+jQuery.validate({
+    lang: 'es',
+    modules : 'toggleDisabled',
+    disabledFormFilter : 'form.toggle-disabled',
+    showErrorDialogs : false
+});
