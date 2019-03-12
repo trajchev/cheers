@@ -1,8 +1,6 @@
 <?php
 /**
- * The template for displaying archive pages.
- *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ * Template for displaying Category pages
  *
  * @package Cheers
  */
@@ -15,21 +13,21 @@ get_header();
 
 ?>
 
-<div class="wrapper" id="archive-wrapper">
+<div class="wrapper" id="category-wrapper">
 	<div class="container" id="content" tabindex="-1">
 
-			<main class="site-main" id="main" ng-app="products">
-
+			<main class="site-main" id="main">
                 <header class="page-header">
-                    <h1 class="page-title"><?php the_title(); ?></h1>
+                    <h1 class="page-title"><?php the_archive_title(); ?>
                 </header><!-- .page-header -->
 
-				<?php if ( have_posts() ) : ?>
-                    
-                    <div class="container grey-gradient up-rounded py-3">
-                        <div class="row" id="products-listed">
-                        <?php while ( have_posts() ) : ?>
-                            <div class="col-sm-6">
+                <div class="container grey-gradient up-rounded py-3">
+                <?php
+                if ( have_posts() ) : ?>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <?php while ( have_posts() ) : ?>
+                        
                             <?php the_post(); ?>
                                 <?php
                                 /*
@@ -37,14 +35,20 @@ get_header();
                                 * If you want to override this in a child theme, then include a file
                                 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
                                 */
-                                get_template_part( 'loop-templates/content-products', get_post_format() );
+                                get_template_part( 'loop-templates/content-blog', get_post_format() );
                                 ?>
-                            </div>
-                            <?php endwhile; ?>
+                            <?php endwhile;  wp_reset_query(); ?>
+
+                            <!-- The pagination component -->
+                            <?php cheers_pagination(); ?>
+                            
                         </div>
-                        <!-- The pagination component -->
-                        <?php cheers_pagination(); ?>
+                        <div class="col-md-4">
+			                <?php get_template_part( 'sidebar-templates/sidebar-right' ); ?>
+                        </div>
                     </div>
+                    
+                </div>
 
 				<?php else : ?>
 
@@ -56,7 +60,6 @@ get_header();
 
     </div><!-- #content -->
     
-    <?php get_template_part( 'partials/_workflow' ); ?>
 	<?php get_template_part( 'partials/_outro' ); ?>
 	<?php get_template_part( 'partials/_pre-footer' ); ?>
 

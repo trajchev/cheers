@@ -59,8 +59,8 @@ function getProducts(product, page) {
                                     ${data[i].thumbnail}
                                 </div>
                                 <header class="entry-header-single">
-                                    <h1 class="entry-title-single">${data[i].title}</h1>
-                                    <h4 class="mb-0">${data[i].subheading}</h4>
+                                    <h2 class="entry-title">${data[i].title}</h2>
+                                    <h4 class="mb-1">${data[i].subheading}</h4>
                                 </header><!-- .entry-header -->
                                 <div class="entry-content">
                                 ${data[i].description}
@@ -80,20 +80,12 @@ var navWrapper = jQuery('#pagination-content');
 var totalPosts = 0;
 var container = jQuery('#products-listed');
 
-
 jQuery('.product-filter .nav-link').on('click', function(e) {
     e.preventDefault();
     jQuery('.product-filter .nav-link').each(function() {
         jQuery(this).removeClass('active').removeClass('grey-gradient').addClass('grey-gradient-inverse');
     });
     jQuery(this).removeClass('grey-gradient-inverse').addClass('active').addClass('grey-gradient');
-});
-
-jQuery.validate({
-    lang: 'es',
-    modules : 'toggleDisabled',
-    disabledFormFilter : 'form.toggle-disabled',
-    showErrorDialogs : false
 });
 
 getProducts('all');

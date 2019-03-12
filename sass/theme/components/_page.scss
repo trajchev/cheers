@@ -1,10 +1,6 @@
 .cheers {
     &-page-content {
         .entry {
-            &-header {
-                padding: .769rem;
-            }
-
             &-title {
                 color: $white;
                 font-size: 1.693em;
@@ -13,7 +9,6 @@
             }
 
             &-content {
-                padding: .769rem;
                 color: $paleGrey;
             }
         }
@@ -21,7 +16,7 @@
 
     &-blog-post,
     &-archive-content {
-        padding: 0 0 .769rem 0;
+        padding: 0 0 1rem 0;
         a {
             &:hover {
                 text-decoration: none;
@@ -43,9 +38,6 @@
     &-post-content {
 
         .entry {
-            &-header {
-                padding: 0;
-            }
 
             &-title {
                 color: $brown;
@@ -172,10 +164,6 @@
     .cheers {
         &-page-content {
             .entry {
-                &-header {
-                    padding: 1.538rem .769rem;
-                }
-    
                 &-title {
                     font-size: 2rem;
                 }
@@ -206,16 +194,9 @@
     .cheers {
         &-page-content {
             .entry {
-                &-header {
-                    padding: 2.307rem .769rem;
-                }
     
                 &-title {
                     font-size: 3.693em;
-                }
-    
-                &-content {
-                    padding: 4.615rem 7.69rem;
                 }
             }
         }
@@ -231,10 +212,8 @@
         }
     }
 
-
-
     .entry {
-    
+
         &-header-blog {
             position: relative;
             padding-right: 14rem;

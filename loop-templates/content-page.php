@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
-	<div class="entry-content up-rounded grey-gradient">
+	<div class="entry-content">
 
 		<?php the_content(); ?>
 

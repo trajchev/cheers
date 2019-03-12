@@ -47,13 +47,13 @@ get_header();
 							<?php get_template_part( 'sidebar-templates/sidebar-right' ); ?>
 						</div>
 					</div>
+					<!-- The pagination component -->
+					<?php cheers_pagination(); ?>
 				</div>
 				<?php else : ?>
 					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
 				<?php endif; ?>
 			</main><!-- #main -->
-			<!-- The pagination component -->
-			<?php cheers_pagination(); ?>
 		</main><!-- main -->
 	</div><!-- #content -->
 </div><!-- #search-wrapper -->

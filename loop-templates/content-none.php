@@ -13,13 +13,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <section class="no-results not-found">
-
 	<header class="page-header">
-
 		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'Cheers' ); ?></h1>
-
 	</header><!-- .page-header -->
-
 	<div class="page-content container grey-gradient up-rounded py-4">
 		<section class="content-none">
 		<?php
@@ -44,5 +40,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 		endif; ?>
 		</section>
 	</div><!-- .page-content -->
-	
 </section><!-- .no-results -->

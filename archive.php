@@ -1,8 +1,6 @@
 <?php
 /**
- * The template for displaying archive pages.
- *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ * Template for displaying archive pages
  *
  * @package Cheers
  */
@@ -13,43 +11,44 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
-$container = get_theme_mod( 'Cheers_container_type' );
 ?>
 
 <div class="wrapper" id="archive-wrapper">
-
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
-
-		<div class="row">
-
-			<!-- Do the left sidebar check -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+	<div class="container" id="content" tabindex="-1">
 
 			<main class="site-main" id="main">
+                <header class="page-header">
+                    <h1 class="page-title"><?php the_archive_title(); ?>
+                </header><!-- .page-header -->
 
-				<?php if ( have_posts() ) : ?>
+                <div class="container grey-gradient up-rounded py-3">
+                <?php
+                if ( have_posts() ) : ?>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <?php while ( have_posts() ) : ?>
+                        
+                            <?php the_post(); ?>
+                                <?php
+                                /*
+                                * Include the Post-Format-specific template for the content.
+                                * If you want to override this in a child theme, then include a file
+                                * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+                                */
+                                get_template_part( 'loop-templates/content-blog', get_post_format() );
+                                ?>
+                            <?php endwhile;  wp_reset_query(); ?>
 
-					<header class="page-header">
-						<?php
-						the_archive_title( '<h1 class="page-title">', '</h1>' );
-						the_archive_description( '<div class="taxonomy-description">', '</div>' );
-						?>
-					</header><!-- .page-header -->
-
-					<?php /* Start the Loop */ ?>
-					<?php while ( have_posts() ) : the_post(); ?>
-
-						<?php
-
-						/*
-						 * Include the Post-Format-specific template for the content.
-						 * If you want to override this in a child theme, then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'loop-templates/content', get_post_format() );
-						?>
-
-					<?php endwhile; ?>
+                            <!-- The pagination component -->
+                            <?php cheers_pagination(); ?>
+                            
+                        </div>
+                        <div class="col-md-4">
+			                <?php get_template_part( 'sidebar-templates/sidebar-right' ); ?>
+                        </div>
+                    </div>
+                    
+                </div>
 
 				<?php else : ?>
 
@@ -59,16 +58,11 @@ $container = get_theme_mod( 'Cheers_container_type' );
 
 			</main><!-- #main -->
 
-			<!-- The pagination component -->
-			<?php cheers_pagination(); ?>
+    </div><!-- #content -->
+    
+	<?php get_template_part( 'partials/_outro' ); ?>
+	<?php get_template_part( 'partials/_pre-footer' ); ?>
 
-			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
-
-		</div> <!-- .row -->
-
-	</div><!-- #content -->
-
-	</div><!-- #archive-wrapper -->
+</div><!-- #archive-wrapper -->
 
 <?php get_footer(); ?>

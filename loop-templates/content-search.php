@@ -11,18 +11,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <article <?php post_class('cheers-blog-post'); ?> id="post-<?php the_ID(); ?>">
-	<a href="<?php the_permalink(); ?>">
-		<header class="entry-header-blog py-2">
+	<header class="entry-header-blog py-2">
+		<a href="<?php the_permalink(); ?>">
 			<h2 class="entry-title"><?php the_title(); ?></h2>
-		</header><!-- .entry-header -->
+		</a>
+	</header><!-- .entry-header -->
 
-		<footer class="search-entry-footer py-2">
-			<?php if ( 'post' == get_post_type() ) : ?>
-			<div class="search-entry-meta">
-				<h6><?php the_date(); ?></h6>
-				<p><?php _e('posted by ', 'cheers'); ?> <span><?php the_author(); ?></span></p>
-			</div><!-- .entry-meta -->
-			<?php endif; ?>
-		</footer><!-- .entry-footer -->
-	</a>
+	<?php if ( 'post' == get_post_type() ) : ?>
+	<footer class="search-entry-footer py-2">
+		<div class="search-entry-meta">
+			<h6><?php the_date(); ?></h6>
+			<p><?php _e('posted by ', 'cheers'); ?> <span><?php the_author(); ?></span></p>
+		</div><!-- .entry-meta -->
+	</footer><!-- .entry-footer -->
+	<?php endif; ?>
 </article><!-- #post-## -->
