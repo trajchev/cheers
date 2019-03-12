@@ -143,8 +143,6 @@ if ( ! defined( 'ABSPATH' ) ) {
             markers.push(newMarker);
             //Append the data to the marker
             newMarker.office = office;
-            //Adds the infowindow
-            addInfoWindow(newMarker, office);
         }
     }
 
@@ -153,33 +151,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 
             position: new google.maps.LatLng(office.lat, office.lon),
             map: map,
-            title: 'Office Headquarters',
             icon: {
-                url: '<?php echo get_template_directory_uri(); ?>/img/main/pin.png',
+                url: '<?php echo get_template_directory_uri(); ?>/img/main/pin-active.png',
                 size: new google.maps.Size(32, 32),
                 origin: new google.maps.Point(0,0),
                 anchor: new google.maps.Point(16, 32),
                 scaledSize: new google.maps.Size(32, 32)
             },
-            clickable: true,
+            clickable: false,
         });
-
         return marker;
     };
-
-    // Associate info with marker
-    function addInfoWindow(marker) {
-        google.maps.event.addListener(marker, 'click', function() {
-            setIconOnAllMarkers();
-            marker.setIcon('<?php echo get_template_directory_uri(); ?>/img/main/pin-active.png');
-        });
-    }
-
-    function setIconOnAllMarkers() {
-        for (var i = 0; i < markers.length; i++) {
-            markers[i].setIcon('<?php echo get_template_directory_uri(); ?>/img/main/pin.png');
-        }
-    }
 
     google.maps.event.addDomListener(window, 'load', loadMap());
 
