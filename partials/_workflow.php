@@ -60,7 +60,7 @@
                         ?>
                         <div class="row">
                             <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
-                            <div class="col-sm-6 col-md-4">
+                            <div class="col-sm-6 col-lg-4">
                                 <a href="<?php the_permalink(); ?>">
                                 <div class="card text-center text-white container mb-4 pt-4">
                                     <header class="card-header">
@@ -90,7 +90,7 @@
                         ?>
                         <div class="row">
                             <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
-                            <div class="col-sm-6 col-md-4">
+                            <div class="col-sm-6 col-lg-4">
                                 <blockquote class="card text-right container mb-4 py-4">
                                     <?php the_excerpt(); ?>
                                     <cite>
@@ -116,7 +116,7 @@
                         ?>
                         <div class="row">
                             <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
-                            <div class="col-sm-6 col-md-4">
+                            <div class="col-sm-6 col-lg-4">
                                 <a href="<?php the_permalink(); ?>">
                                 <div class="card text-center text-white container mb-4 py-4">
                                     <header class="card-header">

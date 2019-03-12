@@ -1,6 +1,10 @@
 body {
-    font-size: 13px;
+    font-size: 14px;
     background: $brown url('../img/main/body-back.jpg');
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 ::-moz-selection { 

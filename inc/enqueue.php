@@ -26,8 +26,7 @@ if ( ! function_exists( 'cheers_scripts' ) ) {
 		wp_enqueue_script( 'validator', get_template_directory_uri() . '/js/validator.min.js', array('jquery'), $js_version, true );
 		$js_version = $theme_version . '.' . filemtime( get_template_directory() . '/js/theme.min.js' );
 		wp_enqueue_script( 'cheers-scripts', get_template_directory_uri() . '/js/theme.min.js', array(), $js_version, true );
-		wp_enqueue_script( 'anime', get_template_directory_uri() . '/src/js/anime.min.js', array(), $js_version, true );
-		wp_enqueue_script( 'cheers-animation', get_template_directory_uri() . '/js/animation.js', array('anime'), $js_version, true );
+		wp_enqueue_script( 'app', get_template_directory_uri() . '/js/app.js', array('jquery'), $js_version, true );
 		wp_enqueue_script( 'cheers-products', get_template_directory_uri() . '/js/products.js', array('jquery'), $js_version, true );
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
