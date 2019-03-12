@@ -81,6 +81,10 @@
         width: 100%;
         border: .384rem solid $brown;
         text-align: center;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     }
 
     &-content {

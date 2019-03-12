@@ -8,9 +8,11 @@ function getProducts(product, page) {
         page = 1;
     }
 
-    container.html('');
-    navWrapper.html('');
+    jQuery('#products-listed div').fadeOut(4000);
+
     jQuery.getJSON(`http://localhost/cheers/wp-json/product/list?${category}page=${page}`, function(data) {
+        container.html('');
+        navWrapper.html('');
         for (var i = 0; i < data.length; i++) {
 
             if (i === 0) {
@@ -50,8 +52,8 @@ function getProducts(product, page) {
                 }
             } else {
                 container.append(`
-                    <div class="col-sm-6">
-                        <article class="cheers-archive-content">
+                    <div class="col-md-6">
+                        <article class="cheers-archive-content pb-4 mb-4">
                             <a href="${data[i].permalink}">
                                 <div class="entry-thumbnail">
                                     ${data[i].thumbnail}
