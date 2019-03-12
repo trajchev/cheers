@@ -36,7 +36,7 @@ if ( ! function_exists( 'cheers_pagination' ) ) {
 
 		<nav class="archive-pagination" aria-label="<?php echo $args['screen_reader_text']; ?>">
 
-			<ul class="pagination justify-content-center">
+			<ul class="pagination justify-content-center" id="pagination-content">
 
 				<?php
 				foreach ( $links as $key => $link ) {
