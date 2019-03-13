@@ -1,6 +1,22 @@
 body {
     font-size: 14px;
     background: $brown url('../img/main/body-back.jpg');
+
+    &::-webkit {
+        &-scrollbar {
+            width: .5rem;
+
+            &-track {
+                -webkit-box-shadow: inset 0 0 6px $black;
+            }
+
+            &-thumb {
+                background-color: $lightBrown;
+                outline: 1px solid $banana;
+                @include borderRadiusUni(.4rem);
+            }
+        }
+    }
 }
 
 html {
@@ -15,20 +31,6 @@ html {
 ::selection {
     background: $banana;
     color: $darkGrey
-}
-
-body::-webkit-scrollbar {
-    width: .5rem;
-}
- 
-body::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
- 
-body::-webkit-scrollbar-thumb {
-  background-color: $lightBrown;
-  outline: 1px solid $banana;
-  @include borderRadiusUni(.4rem);
 }
 
 .wrapper {
@@ -46,7 +48,7 @@ body::-webkit-scrollbar-thumb {
 .grey-gradient {
     background: linear-gradient($grey, $darkGrey);
     &-inverse {
-        background: linear-gradient($pitchGrey, $grey);
+        background: linear-gradient($lightBlack, $grey);
     }
 }
 

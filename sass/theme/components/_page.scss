@@ -9,7 +9,7 @@
             }
 
             &-content {
-                color: $paleGrey;
+                color: $lightGrey;
             }
         }
     }
@@ -54,7 +54,7 @@
      {
 
         h4 {
-            color: $paleGrey;
+            color: $lightGrey;
             font-size: 1rem;
             line-height: 1rem;
             font-style: italic;
@@ -80,7 +80,7 @@
     }
 
     &-content {
-        color: $paleGrey;
+        color: $lightGrey;
     }
 
     &-meta {
@@ -91,7 +91,7 @@
         }
 
         p {
-            color: $paleGrey;
+            color: $lightGrey;
 
             span {
                 color: $white;
@@ -107,7 +107,7 @@
             top: 1rem;
             left: 0;
             font-size: 1.4rem;
-            color: $paleGrey;
+            color: $lightGrey;
         }
 
         .post-categories {

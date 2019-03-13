@@ -25,7 +25,7 @@
 }
 
 .append-border-white {
-    border: .07rem solid $paleGrey;
+    border: .07rem solid $lightGrey;
     border-left: none;
     @include borderRadius(0, .3rem, .3rem, 0);
 }
@@ -33,7 +33,7 @@
 .input-group,
 .form-group {
     label {
-        color: $paleGrey;
+        color: $lightGrey;
     }
 
     input,
