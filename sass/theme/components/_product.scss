@@ -1,6 +1,6 @@
 .product {
     &-filter {
-        padding: 1.538rem .0769rem;
+        padding: 1.5rem .07rem;
         .nav {
             &-item {
                 width: 100%;
@@ -9,11 +9,11 @@
                     @include borderRadius(.3rem, .3rem, 0, 0);
                     
                 }
-                border-left: .076rem solid $darkGrey;
-                border-right: .076rem solid $darkGrey;
+                border-left: .07rem solid $darkGrey;
+                border-right: .07rem solid $darkGrey;
 
                 &:last-of-type {
-                    border-bottom: .076rem solid $darkGrey;
+                    border-bottom: .07rem solid $darkGrey;
                     @include borderRadius(0, 0, .3rem, .3rem);
                 }
             }
@@ -47,14 +47,14 @@
                     width: auto;
                     &:first-of-type {
                         @include borderRadius(.3rem, 0, 0, .3rem);
-                        border-left: .076rem solid $darkGrey;
+                        border-left: .07rem solid $darkGrey;
                     }
-                    border-top: .076rem solid $darkGrey;
-                    border-bottom: .076rem solid $darkGrey;
+                    border-top: .07rem solid $darkGrey;
+                    border-bottom: .07rem solid $darkGrey;
     
                     &:last-of-type {
                         @include borderRadius(.0, .3rem, .3rem, 0);
-                        border-right: .076rem solid $darkGrey;
+                        border-right: .07rem solid $darkGrey;
                     }
                 }
     

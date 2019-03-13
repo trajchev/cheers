@@ -50,14 +50,15 @@ get_header();
 					<!-- The pagination component -->
 					<?php cheers_pagination(); ?>
 				</div>
-				<?php
-				
-					else :
-						get_template_part( 'loop-templates/content', 'none' );
-					endif;
-
-				?>
-			</main><!-- #main -->
+			<?php else : ?>
+				<div class="container grey-gradient up-rounded py-3">
+					<div class="row">
+						<div class="col-md-12">
+							<?php get_template_part( 'loop-templates/content', 'none' ); ?>
+						</div>
+					</div>
+				</div>
+			<?php endif; ?>
 		</main><!-- main -->
 	</div><!-- #content -->
 </div><!-- #search-wrapper -->

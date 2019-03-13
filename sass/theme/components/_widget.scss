@@ -1,6 +1,6 @@
 .widget {
     position: relative;
-    padding: 1.538rem 1rem;
+    padding: 1.5rem 1rem;
     color: $lightBrown;
     background: $transparentBlack;
 
@@ -58,8 +58,8 @@
 @media screen and (min-width: $widthMD) {
     .widget {
         &:after {
-            left: .769rem;
-            right: .769rem;
+            left: .7rem;
+            right: .7rem;
         }
     }
 }

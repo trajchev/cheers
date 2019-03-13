@@ -9,7 +9,7 @@
     color: $white;
     background: linear-gradient($grey, $darkGrey);
     @include borderRadiusUni(.3rem);
-    border: 1px solid $lightGrey;
+    border: .07rem solid $lightGrey;
 }
 
 .btn-brown {

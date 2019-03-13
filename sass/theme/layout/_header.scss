@@ -57,9 +57,9 @@
             @include transition(.3s, all);
             &:after {
                 border-top: 0;
-                border-right: .3em solid transparent;
-                border-left: .3em solid transparent;
-                border-bottom: .3em solid;
+                border-right: .3rem solid transparent;
+                border-left: .3rem solid transparent;
+                border-bottom: .3rem solid;
             }
         }
     }
@@ -90,36 +90,36 @@
 
     .dropdown-menu {
         position: relative;
-        font-size: .769rem;
+        font-size: .7rem;
         min-width: 6rem;
         background-image: linear-gradient($grey, $darkGrey);
-        border-width: .076rem;
+        border-width: .07rem;
 
         &:before,
         &:after {
             position: absolute;
             left: 50%;
-            margin-left: -.153rem;
+            margin-left: -.15rem;
             content: ' ';
             width: 0; 
             height: 0;
-            border-left: .538rem solid transparent;
-            border-right: .538rem solid transparent;
+            border-left: .5rem solid transparent;
+            border-right: .5rem solid transparent;
         }
         &:after {
             top: -5px;
-            border-bottom: .538rem solid $grey;
+            border-bottom: .5rem solid $grey;
         }
         &:before {
             top: -6px;
-            border-bottom: .538rem solid $transparentBlack;
+            border-bottom: .5rem solid $transparentBlack;
         }
     }
 
     #main-menu {
         li {
             a {
-                font-size: 1em;
+                font-size: 1rem;
                 padding-left: 1rem;
                 padding-right: 1rem;
             }
@@ -127,19 +127,19 @@
     }
 
     .contained {
-        max-width: 43.125rem;
+        max-width: 43rem;
     }
 }
 
 
 @media screen and (min-width: $widthLG) {
     .contained {
-        max-width: 58.125rem;
+        max-width: 58rem;
     }
 }
 
 @media screen and (min-width: $widthXL) {
     .contained {
-        max-width: 69.375rem;
+        max-width: 69rem;
     }
 }

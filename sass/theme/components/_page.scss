@@ -140,6 +140,23 @@
                 }
             }
         }
+
+        .entry {
+            &-meta {
+                position: relative;
+                width: 100%;
+                text-align: left;
+                border-bottom: .07rem solid $lightGrey;
+
+                h6, p {
+                    display: inline-block;
+                }
+
+                p {
+                    float: right;
+                }
+            }
+        }
     }
 }
 
@@ -181,11 +198,11 @@
 
     .page {
         &-header {
-            padding: 1.538rem .769rem;
+            padding: 1.5rem .7rem;
         }
 
         &-title {
-            font-size: 2.693em;
+            font-size: 2.6em;
         }
     }
 }
@@ -196,7 +213,7 @@
             .entry {
     
                 &-title {
-                    font-size: 3.693em;
+                    font-size: 3.6em;
                 }
             }
         }
@@ -204,11 +221,11 @@
 
     .page {
         &-header {
-            padding: 2.307rem .769rem;
+            padding: 2rem .7rem;
         }
 
         &-title {
-            font-size: 3.693em;
+            font-size: 3.5em;
         }
     }
 

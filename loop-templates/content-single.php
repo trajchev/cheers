@@ -18,8 +18,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<header class="entry-header-single">
 
-        <?php the_title( '<h1 class="entry-title-single">', '</h1>' ); ?>
-		<h4 class="mb-0"><?php the_field('description'); ?></h4>
+		<?php the_title( '<h1 class="entry-title-single">', '</h1>' ); ?>
+		<?php if (get_field('description')) : ?>
+			<h4 class="mb-0"><?php the_field('description'); ?></h4>
+		<?php endif; ?>
 
 	</header><!-- .entry-header -->
 

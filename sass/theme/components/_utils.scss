@@ -10,9 +10,9 @@
 
     &-item {
         float: left;
-        width: 5.230rem;
-        height: 5.230rem;
-        border: .384rem solid $brown;
+        width: 5.2rem;
+        height: 5.2rem;
+        border: .3rem solid $brown;
         margin: .3rem;
         background-color: $grey;
     }
@@ -44,7 +44,7 @@ blockquote {
         &-right {
             &-brown {
                 position: relative;
-                border-right: .076rem solid $brown;
+                border-right: .07rem solid $brown;
     
                 &:before,
                 &:after {

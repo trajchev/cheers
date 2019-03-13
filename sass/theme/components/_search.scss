@@ -3,7 +3,7 @@
         &-meta {
             @include transition(.3s, color);
             color: $lightGrey;
-            border-bottom: 1px solid $lightGrey;
+            border-bottom: .07rem solid $lightGrey;
         }
     }
 }

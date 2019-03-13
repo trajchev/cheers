@@ -1,7 +1,7 @@
 .comments {
 
     &-area {
-        padding: .769rem 0;
+        padding: .7rem 0;
     }
 
     &-title {
@@ -48,7 +48,7 @@
 
     &-body {
         position: relative;
-        border-bottom: .076rem solid $banana;
+        border-bottom: .07rem solid $banana;
         padding-bottom: 1rem;
         margin-bottom: 1rem;
 
@@ -76,7 +76,7 @@
     &:before {
         top: 0;
         left: 0;
-        width: .076rem;
+        width: .07rem;
         height: 1rem;
     }
 
@@ -84,14 +84,14 @@
         top: 1rem;
         left: 0;
         width: 1rem;
-        height: .076rem;
+        height: .07rem;
     }
 }
 
 @media screen and (min-width: $widthMD) {
     .comments {
         &-area {
-            padding: 1.538rem .769rem; 
+            padding: 1.5rem .7rem; 
         }
     }
 
@@ -111,7 +111,7 @@
 @media screen and (min-width: $widthLG) {
     .comments {
         &-area {
-            padding: .769rem 1.923rem;
+            padding: .7rem 1.9rem;
         }
     }
 }

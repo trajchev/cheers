@@ -19,7 +19,7 @@
   }
   
   @keyframes wave {
-    0% { x: -400px; }
+    0% { x: -28.5rem; }
     100% { x: 0; }
   }
   
@@ -27,11 +27,11 @@
   @keyframes fill-up {
     0% {
       height: 0;
-      y: 130px;
+      y: 10rem;
     }
     100% {
-      height: 160px;
-      y: -30px;
+      height: 11rem;
+      y: -2rem;
     }
   }
 
