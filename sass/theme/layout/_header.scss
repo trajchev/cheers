@@ -27,6 +27,21 @@
 
 #main-menu {
     padding-left: 1rem;
+
+    .dropdown {
+        &:hover {
+            > .dropdown-menu {
+                display: block;
+            }
+        }
+
+        > &-toggle {
+            &:active {
+                pointer-events: none;
+            }
+        }
+    }
+
     li {
         a {
             font-size: 1rem;
