@@ -50,9 +50,13 @@ get_header();
 					<!-- The pagination component -->
 					<?php cheers_pagination(); ?>
 				</div>
-				<?php else : ?>
-					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
-				<?php endif; ?>
+				<?php
+				
+					else :
+						get_template_part( 'loop-templates/content', 'none' );
+					endif;
+
+				?>
 			</main><!-- #main -->
 		</main><!-- main -->
 	</div><!-- #content -->

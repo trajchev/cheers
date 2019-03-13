@@ -20,7 +20,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
     <header class="entry-header-archive">
         <?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
-        <h4 class="mb-0"><?php the_field('description'); ?></h4>
+        <?php if (get_field('description')) : ?>
+            <h4 class="mb-0"><?php the_field('description'); ?></h4>
+        <?php endif; ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

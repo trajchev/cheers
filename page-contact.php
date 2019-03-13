@@ -18,19 +18,25 @@ get_header();
 
 		<main class="site-main" id="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php 
+			
+				while ( have_posts() ) : the_post();
+					get_template_part( 'loop-templates/content', 'contact' );
+				endwhile;
 
-				<?php get_template_part( 'loop-templates/content', 'contact' ); ?>
-
-			<?php endwhile; // end of the loop. ?>
+			?>
 
 		</main><!-- #main -->
 
 	</div><!-- #content -->
-	<?php get_template_part( 'partials/_workflow' ); ?>
-	<?php get_template_part( 'partials/_outro' ); ?>
-	<?php get_template_part( 'partials/_pre-footer' ); ?>
-
+	<?php
+	
+		get_template_part( 'partials/_workflow' );
+		get_template_part( 'partials/_outro' );
+		get_template_part( 'partials/_pre-footer' );
+		
+	?>
+	
 </div><!-- #page-wrapper -->
 
 <?php get_footer(); ?>

@@ -27,15 +27,19 @@ get_header();
 			<div class="container grey-gradient up-rounded py-3">
 				<div class="row">
 					<div class="col-lg-8">
-						<?php while ( have_posts() ) : the_post(); ?>
-						<?php get_template_part( 'loop-templates/content', 'page' ); ?>
 						<?php
-						// If comments are open or we have at least one comment, load up the comment template.
-						if ( comments_open() || get_comments_number() ) :
-							comments_template();
-						endif;
+
+							while ( have_posts() ) : the_post();
+
+							get_template_part( 'loop-templates/content', 'page' );
+
+							// If comments are open or we have at least one comment, load up the comment template.
+							if ( comments_open() || get_comments_number() ) :
+								comments_template();
+							endif;
+
+							endwhile; // end of the loop.
 						?>
-						<?php endwhile; // end of the loop. ?>
 					</div>
 					<div class="col-md-4">
 						<?php get_template_part( 'sidebar-templates/sidebar-right' ); ?>
@@ -44,9 +48,13 @@ get_header();
 			</div>
 		</main><!-- #main -->
 	</div><!-- #content -->
-	<?php get_template_part( 'partials/_workflow' ); ?>
-	<?php get_template_part( 'partials/_outro' ); ?>
-	<?php get_template_part( 'partials/_pre-footer' ); ?>
+	<?php
+	
+		get_template_part( 'partials/_workflow' );
+		get_template_part( 'partials/_outro' );
+		get_template_part( 'partials/_pre-footer' );
+		
+	?>
 
 </div><!-- #page-wrapper -->
 

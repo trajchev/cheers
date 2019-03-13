@@ -62,14 +62,14 @@
                             <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
                             <div class="col-sm-6 col-lg-4">
                                 <a href="<?php the_permalink(); ?>">
-                                <div class="card text-center text-white container mb-4 pt-4">
+                                <article class="card text-center text-white container mb-4 pt-4">
                                     <header class="card-header">
                                         <h3><?php the_title(); ?></h3>
                                     </header>
-                                    <article class="card-content">
+                                    <div class="card-content">
                                         <?php the_excerpt(); ?>
-                                    </article>
-                                </div>
+                                    </div>
+                                </article>
                                 </a>
                             </div>
                             <?php 
@@ -118,14 +118,14 @@
                             <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
                             <div class="col-sm-6 col-lg-4">
                                 <a href="<?php the_permalink(); ?>">
-                                <div class="card text-center text-white container mb-4 py-4">
+                                <article class="card text-center text-white container mb-4 py-4">
                                     <header class="card-header">
                                         <h3><?php the_title(); ?></h3>
                                     </header>
-                                    <article class="card-content">
+                                    <div class="card-content">
                                         <?php the_excerpt(); ?>
-                                    </article>
-                                </div>
+                                    </div>
+                                </article>
                                 </a>
                             </div>
                             <?php 

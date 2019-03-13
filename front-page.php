@@ -18,14 +18,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 
 ?>
-    <?php   
+    <?php
+
         get_template_part( 'partials/_intro' ); 
         get_template_part( 'partials/_about' );
         get_template_part( 'partials/_workflow' );
         get_template_part( 'partials/_outro' );
         get_template_part( 'partials/_pre-footer' );
+        
     ?>
-    
-</div><!-- #index-wrapper -->
 
 <?php get_footer(); ?>

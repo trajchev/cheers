@@ -1,4 +1,4 @@
-<section id="intro-section">
+<div id="intro-section">
     <div class="container text-center">
         <svg class="loading" version="1.1" id="intro-item" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             width="420px" height="140px" viewBox="0 0 420 140" enable-background="new 0 0 420 140" xml:space="preserve">
@@ -15,4 +15,4 @@
             <rect class="water-fill" mask="url(#text_mask)" fill="url(#water)" x="-400" y="0" width="1600" height="120"/>
         </svg>
     </div>
-</section>
+</div>

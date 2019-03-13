@@ -28,7 +28,7 @@ get_header();
 	<div class="container" id="content" tabindex="-1">
 		<main class="site-main" id="main">
 			<header class="page-header">
-				<h1 class="page-title"><?php the_archive_title(); ?>
+				<h1 class="page-title"><?php the_title(); ?></h1>
 			</header><!-- .page-header -->
 
 			<div class="container grey-gradient up-rounded py-3">
@@ -36,16 +36,21 @@ get_header();
 			if ( have_posts() ) : ?>
 				<div class="row">
 					<div class="col-lg-8">
-						<?php while ( have_posts() ) : the_post(); ?>
-							<?php
+						<?php
+
+							while ( have_posts() ) : the_post();
+
 							/*
 							* Include the Post-Format-specific template for the content.
 							* If you want to override this in a child theme, then include a file
 							* called content-___.php (where ___ is the Post Format name) and that will be used instead.
 							*/
 							get_template_part( 'loop-templates/content-blog', get_post_format() );
-							?>
-						<?php endwhile;  wp_reset_query(); ?>
+
+							endwhile;  
+							wp_reset_query();
+						
+						?>
 
 						<!-- The pagination component -->
 						<?php cheers_pagination(); ?>
@@ -56,12 +61,20 @@ get_header();
 					</div>
 				</div>	
 			</div>
-			<?php else : ?>
-				<?php get_template_part( 'loop-templates/content', 'none' ); ?>
-			<?php endif; ?>
+			<?php
+			
+				else : 
+					get_template_part( 'loop-templates/content', 'none' );
+				endif;
+			
+			?>
 		</main><!-- #main -->
 	</div><!-- #content -->
-	<?php get_template_part( 'partials/_outro' ); ?>
-	<?php get_template_part( 'partials/_pre-footer' ); ?>
+	<?php
+	
+		get_template_part( 'partials/_outro' ); 
+		get_template_part( 'partials/_pre-footer' );
+		
+	?>
 </div><!-- #index-wrapper -->
 <?php get_footer(); ?>

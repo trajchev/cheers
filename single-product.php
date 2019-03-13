@@ -22,11 +22,13 @@ get_header();
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8">
-                            <?php while ( have_posts() ) : the_post(); ?>
+                            <?php
+                            
+                                while ( have_posts() ) : the_post();
+                                    get_template_part( 'loop-templates/content', 'product' );
+                                endwhile; // end of the loop.
 
-                            <?php get_template_part( 'loop-templates/content', 'product' ); ?>
-
-                            <?php endwhile; // end of the loop. ?>
+                            ?>
                         </div>
                         <div class="col-md-4">
 			                <?php get_template_part( 'sidebar-templates/sidebar-right' ); ?>
@@ -36,9 +38,12 @@ get_header();
 
 			</main><!-- #main -->
     </div><!-- #content -->
-    <?php get_template_part( 'partials/_outro' ); ?>
-    <?php get_template_part( 'partials/_pre-footer' ); ?>
-
+    <?php
+    
+        get_template_part( 'partials/_outro' );
+        get_template_part( 'partials/_pre-footer' );
+        
+    ?>
 </div><!-- #single-wrapper -->
 
 <?php get_footer(); ?>

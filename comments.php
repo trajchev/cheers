@@ -60,7 +60,7 @@ if ( post_password_required() ) {
 
 			<nav class="comment-navigation" id="comment-nav-above">
 
-				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'Cheers' ); ?></h1>
+				<h3 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'Cheers' ); ?></h3>
 
 				<?php if ( get_previous_comments_link() ) { ?>
 					<div class="nav-previous">

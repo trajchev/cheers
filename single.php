@@ -21,18 +21,17 @@ get_header();
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8">
-                            <?php while ( have_posts() ) : the_post(); ?>
-
-                            <?php get_template_part( 'loop-templates/content', 'single' ); ?>
-
                             <?php
-                                // If comments are open or we have at least one comment, load up the comment template.
-                                if ( comments_open() || get_comments_number() ) :
-                                    comments_template();
-                                endif;
-                            ?>
+                                while ( have_posts() ) : the_post();
+                                    get_template_part( 'loop-templates/content', 'single' );
 
-                            <?php endwhile; // end of the loop. ?>
+                                    // If comments are open or we have at least one comment, load up the comment template.
+                                    if ( comments_open() || get_comments_number() ) :
+                                        comments_template();
+                                    endif;
+
+                                endwhile;
+                            ?>
                         </div>
                         <div class="col-md-4">
 			                <?php get_template_part( 'sidebar-templates/sidebar-right' ); ?>
@@ -42,9 +41,12 @@ get_header();
 
 			</main><!-- #main -->
     </div><!-- #content -->
-    <?php get_template_part( 'partials/_outro' ); ?>
-    <?php get_template_part( 'partials/_pre-footer' ); ?>
+    <?php
 
+        get_template_part( 'partials/_outro' ); 
+        get_template_part( 'partials/_pre-footer' );
+        
+    ?>
 </div><!-- #single-wrapper -->
 
 <?php get_footer(); ?>
