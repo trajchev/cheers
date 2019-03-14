@@ -5,8 +5,7 @@
             <div class="row">
                 <?php
                     $args = array(
-                    'post_parent' => 26,
-                    'post_type' => 'page',
+                    'post_type' => 'recipe',
                     'posts_per_page' => 3,
                     'orderby' => 'menu_order'
                     );
