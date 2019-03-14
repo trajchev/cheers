@@ -1,9 +1,13 @@
 .cheers {
+
+    &-post-content,
     &-page-content {
+
         .entry {
+
             &-title {
-                color: $white;
-                font-size: 1.693em;
+                color: $brown;
+                font-size: 2rem;
                 text-align: center;
                 font-style: italic;
             }
@@ -11,156 +15,20 @@
             &-content {
                 color: $lightGrey;
             }
+
         }
+
     }
 
     &-blog-post,
     &-archive-content {
         padding: 0 0 1rem 0;
-        a {
-            &:hover {
-                text-decoration: none;
-                .entry {
-                    &-title {
-                        @include transition(.3s, color);
-                        color: $white;
-                    }
-        
-                    &-content {
-                        @include transition(.3s, color);
-                        color: $white;
-                    }
-                }
-            }
-        }
     }
 
-    &-post-content {
-
-        .entry {
-
-            &-title {
-                color: $brown;
-                font-size: 2rem;
-            }
-        }
-    }
-}
-
-.entry {
-    &-header-blog,
-    &-header-single,
-    &-header-archive
-     {
-
-        h4 {
-            color: $lightGrey;
-            font-size: 1rem;
-            line-height: 1rem;
-            font-style: italic;
-        }
-    }
-
-    &-title-single,
-    &-title {
-        color: $white;
-        font-weight: 700;
-        color: $brown;
-        line-height: 140%;
-    }
-
-    &-thumbnail {
-        width: 100%;
-        border: .384rem solid $brown;
-        text-align: center;
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-    }
-
-    &-content {
-        color: $lightGrey;
-    }
-
-    &-meta {
-
-        h6 {
-            font-size: 1rem;
-            color: $brown;
-        }
-
-        p {
-            color: $lightGrey;
-
-            span {
-                color: $white;
-            }
-        }
-    }
-
-    &-footer {
-        position: relative;
-        color: $white;
-        .fa {
-            position: absolute;
-            top: 1rem;
-            left: 0;
-            font-size: 1.4rem;
-            color: $lightGrey;
-        }
-
-        .post-categories {
-            list-style-type: none;
-            li {
-                display: inline-block;
-
-                a {
-                    color: $brown;
-                }
-            }
-        }
-
-        .tag-cloud {
-            padding: 0;
-            margin: 0;
-            .tag {
-                position: relative;
-                display: inline-block;
-                background: linear-gradient($lightBrown, $brown);
-                padding: .4rem 1rem;
-                margin: .153rem .3rem .153rem 0;
-                @include borderRadiusUni(.3rem);
-                a {
-                    color: $banana;
-                    &:hover {
-                        text-decoration: none;
-                        color: $white;
-                    }
-                }
-            }
-        }
-
-        .entry {
-            &-meta {
-                position: relative;
-                width: 100%;
-                text-align: left;
-                border-bottom: .07rem solid $lightGrey;
-
-                h6, p {
-                    display: inline-block;
-                }
-
-                p {
-                    float: right;
-                }
-            }
-        }
-    }
 }
 
 .page {
+
     &-header {
         padding: .769rem;
     }
@@ -171,6 +39,7 @@
         text-align: center;
         font-style: italic;
     }
+
 }
 
 #map {
@@ -178,25 +47,9 @@
 }
 
 @media screen and (min-width: $widthMD) {
-    .cheers {
-        &-page-content {
-            .entry {
-                &-title {
-                    font-size: 2rem;
-                }
     
-                &-content {
-                    padding: 2rem;
-                }
-            }
-        }
-
-        &-post-content {
-            padding: 0;
-        }
-    }
-
     .page {
+
         &-header {
             padding: 1.5rem .7rem;
         }
@@ -204,22 +57,15 @@
         &-title {
             font-size: 2.6em;
         }
+
     }
+
 }
 
 @media screen and (min-width: $widthLG) {
-    .cheers {
-        &-page-content {
-            .entry {
-    
-                &-title {
-                    font-size: 3.6em;
-                }
-            }
-        }
-    }
 
     .page {
+
         &-header {
             padding: 2rem .7rem;
         }
@@ -227,21 +73,7 @@
         &-title {
             font-size: 3.5em;
         }
+
     }
 
-    .entry {
-
-        &-header-blog {
-            position: relative;
-            padding-right: 14rem;
-        }
-    
-        &-meta {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 10rem;
-            text-align: right;
-        }
-    }
 }

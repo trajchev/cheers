@@ -3,6 +3,7 @@ body {
     background: $brown url('../img/main/body-back.jpg');
 
     &::-webkit {
+
         &-scrollbar {
             width: .5rem;
 
@@ -15,8 +16,11 @@ body {
                 outline: .07rem solid $banana;
                 @include borderRadiusUni(.4rem);
             }
+
         }
+
     }
+
 }
 
 html {
@@ -37,69 +41,24 @@ html {
     padding: 0;
 }
 
-.dwn-rounded {
-    @include borderRadius(0, 0, .8rem, .8rem);
-}
-
-.up-rounded {
-    @include borderRadius(.8rem, .8rem, 0, 0);
-}
-
-.grey-gradient {
-    background: linear-gradient($grey, $darkGrey);
-    &-inverse {
-        background: linear-gradient($lightBlack, $grey);
-    }
-}
-
-.top-border {
-    &-14 {
-        border-top: 1rem solid $brown;
-    }
-
-    &-10 {
-        border-top: .8rem solid $brown;
-    }
-    
-}
-
-.bg-banana {
-    background-color: $banana;
-}
-
-.border-bottom-grey {
-    position: relative;
-    &:after {
-        content: '';
-        position: absolute;
-        bottom: 1rem;
-        left: 1.3rem;
-        right: 1.3rem;
-        height: .076rem;
-        background-color: $grey;
-    }
-}
-
 a {
     color: $brown;
     @include transition(.3s, color);
+
     &:hover {
         color: $banana;
     }
+
 }
 
 h {
+
     &1, &2, &3, &4, &5, &6 {
         font-family: $exo;
     }
+
 }
 
 img {
     max-width: 100%;
-}
-
-@media screen and (min-width: $widthMD) {
-    .padded-left-mobile {
-        padding-left: 0;
-    }
 }

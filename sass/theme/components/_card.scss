@@ -21,17 +21,15 @@
             padding: .7rem 0;
             margin: 0;
         }
+
     }
 
     &-box {
-        header {
-            h2 {
-                color: $brown;
-            }
 
-            h5 {
+        header {
+
+            h2, h5 {
                 color: $brown;
-                margin-bottom: 0;
             }
 
             h6 {
@@ -39,37 +37,51 @@
                 font-style: italic;
                 font-size: .8rem;
             }
+
         }
 
         .content {
             font-size: 1rem;
             color: $banana;
         }
-    }
-}
 
-a {
-    &:hover {
-        text-decoration: none;
-        .card {
-            &-header {
-                @include transition(.3s, color);
-                color: $brown;
-            }
-            &-content {
-                @include transition(.3s, color);
-                color: $banana;
-            }
-        }
     }
 }
 
 @media screen and (min-width: $widthMD) {
+    
     .card {
+
         &-box {
+
             .content {
                 padding-right: 2rem;
             }
+
         }
+
+    }
+
+    a {
+
+        &:hover {
+            text-decoration: none;
+
+            .card {
+
+                &-header {
+                    @include transition(.3s, color);
+                    color: $brown;
+                }
+
+                &-content {
+                    @include transition(.3s, color);
+                    color: $banana;
+                }
+
+            }
+
+        }
+
     }
 }

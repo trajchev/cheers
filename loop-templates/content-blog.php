@@ -16,8 +16,10 @@
 			<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 		</div>
 	</a>
-	<header class="entry-header-blog py-2">
-		<?php the_title( sprintf( '<h2 class="entry-title">', esc_url( get_permalink() ) ),'</h2>'); ?>
+	<header class="entry-header py-2">
+		<a href="<?php the_permalink(); ?>">
+			<?php the_title( sprintf( '<h2 class="entry-title">', esc_url( get_permalink() ) ),'</h2>'); ?>
+		</a>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content pb-4">
@@ -26,7 +28,7 @@
 
 	<?php if ( 'post' == get_post_type() ) : ?>
 	<footer class="entry-footer">
-		<div class="entry-meta py-2">
+		<div class="entry-meta pb-2">
 			<h6><?php the_date(); ?></h6>
 			<p><?php _e('posted by ', 'cheers'); ?> <span><?php the_author(); ?></span></p>
 		</div><!-- .entry-meta -->

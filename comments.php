@@ -28,7 +28,7 @@ if ( post_password_required() ) {
 
 	<?php if ( have_comments() ) : ?>
 
-		<h2 class="comments-title">
+		<h2 class="comments-title text-white">
 
 			<?php
 			$comments_number = get_comments_number();

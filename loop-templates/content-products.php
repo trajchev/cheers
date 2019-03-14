@@ -18,7 +18,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="entry-thumbnail">
         <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
     </div>
-    <header class="entry-header-archive">
+
+    <header class="entry-header">
         <?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
         <?php if (get_field('description')) : ?>
             <h4 class="mb-0"><?php the_field('description'); ?></h4>

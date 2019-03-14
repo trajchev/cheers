@@ -1,74 +1,80 @@
 .navbar {
     padding-top: 0;
-}
 
-.navbar-brand {
-    color: $white;
-    font-family: $exo;
-    font-style: italic;
-    padding-left: 1rem;
-    &:hover {
-        color: $brown;
+    &-brand {
+        color: $white;
+        font-family: $exo;
+        font-style: italic;
+        padding-left: 1rem;
     }
-}
 
-.navbar-toggler {
-    &:focus {
-        outline: none;
-    }
-    border: none;
-}
+    &-toggler {
+        border: none;
 
-.navbar-toggler {
-    .navbar-toggler-icon {
-        color: $white !important;
+        &:focus {
+            outline: none;
+        }
+
+        &-icon {
+            color: $white !important;
+        }
+
     }
+
 }
 
 #main-menu {
+
     padding-left: 1rem;
 
     .dropdown {
-        &:hover {
-            > .dropdown-menu {
-                display: block;
-            }
+
+        &-menu {
+            display: block;
         }
 
         > &-toggle {
+
             &:active {
                 pointer-events: none;
             }
+
         }
+
     }
 
     li {
+
         a {
             font-size: 1rem;
             color: $white;
-            &:hover {
-                color: $brown;
-            }
         }
+
     }
 
     .nav-item.show {
+
         .dropdown-toggle {
-            @include transition(.3s, all);
+
             &:after {
                 border-top: 0;
                 border-right: .3rem solid transparent;
                 border-left: .3rem solid transparent;
                 border-bottom: .3rem solid;
             }
+
         }
+
     }
 
     .active {
+
         > a {
             color: $brown;
         }
+
     }
+
 }
 
 .dropdown-menu {
@@ -76,17 +82,44 @@
     min-width: 5rem;
     background: transparent;
     border-width: 0;
-    li {
-        a.dropdown-item {
-            &:hover {
-                background-color: inherit;
-            }
-            
-        }
-    }
 }
 
 @media screen and (min-width: $widthMD) {
+
+    #main-menu {
+
+        .dropdown {
+
+            &-menu {
+                display: none;
+            }
+
+            &:hover {
+
+                > .dropdown-menu {
+                    display: block;
+                }
+
+            }
+
+        }
+
+        li {
+
+            a {
+                font-size: 1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+
+                &:hover {
+                    color: $brown;
+                }
+
+            }
+
+        }
+
+    }
 
     .dropdown-menu {
         position: relative;
@@ -106,40 +139,50 @@
             border-left: .5rem solid transparent;
             border-right: .5rem solid transparent;
         }
+
         &:after {
             top: -5px;
             border-bottom: .5rem solid $grey;
         }
+
         &:before {
             top: -6px;
             border-bottom: .5rem solid $transparentBlack;
         }
-    }
 
-    #main-menu {
         li {
-            a {
-                font-size: 1rem;
-                padding-left: 1rem;
-                padding-right: 1rem;
+
+            a.dropdown-item {
+
+                &:hover {
+                    background-color: inherit;
+                }
+                
             }
+
         }
+
     }
 
     .contained {
         max-width: 43rem;
     }
+
 }
 
 
 @media screen and (min-width: $widthLG) {
+
     .contained {
         max-width: 58rem;
     }
+
 }
 
 @media screen and (min-width: $widthXL) {
+
     .contained {
         max-width: 69rem;
     }
+    
 }

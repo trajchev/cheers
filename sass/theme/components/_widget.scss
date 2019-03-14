@@ -15,9 +15,11 @@
     }
 
     &:last-of-type {
+
         &:after {
             content: none;
         }
+
     }
 
     &-title {
@@ -33,11 +35,15 @@
         li {
             color: $lightGrey;
         }
+
     }
+
 }
 
 .footer {
+
     &-widget {
+
         ul {
             list-style-type: none;
             padding: 0;
@@ -46,20 +52,38 @@
             li {
                 text-align: center;
             }
+
         }
-        a {
-            &:hover {
-                color: $brown;
-            }
-        }
+
     }
+
 }
 
 @media screen and (min-width: $widthMD) {
+
     .widget {
+
         &:after {
             left: .7rem;
             right: .7rem;
         }
+
     }
+
+    .footer {
+
+        &-widget {
+
+            a {
+
+                &:hover {
+                    color: $grey;
+                }
+
+            }
+
+        }
+
+    }
+    
 }

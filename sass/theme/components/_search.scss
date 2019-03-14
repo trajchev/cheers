@@ -1,21 +1,37 @@
 .search {
+
     &-entry {
+
         &-meta {
             @include transition(.3s, color);
             color: $lightGrey;
             border-bottom: .07rem solid $lightGrey;
         }
+
     }
+
 }
 
-a {
-    &:hover {
-        .search {
-            &-entry {
-                &-meta {
-                    color: $banana;
+@media screen and (min-width: $widthMD) {
+
+    a {
+
+        &:hover {
+
+            .search {
+
+                &-entry {
+
+                    &-meta {
+                        color: $banana;
+                    }
+
                 }
+
             }
+
         }
+
     }
+    
 }

@@ -22,6 +22,7 @@
     &:hover {
         color: $banana;
     }
+
 }
 
 .append-border-white {
@@ -32,6 +33,7 @@
 
 .input-group,
 .form-group {
+
     label {
         color: $lightGrey;
     }
@@ -41,23 +43,28 @@
         background-color: transparent;
         color: $white;
         border: .07rem solid $lightGrey;
+
         &:focus {
             outline: none;
             border: .07rem solid $banana;
             box-shadow: 0 0 .07rem $banana;
             background-color: transparent;
         }
+
     }
+
 }
 
 #searchsubmit,
 #submit {
     background: linear-gradient($lightBrown, $brown);
     border: .07rem solid $brown;
+
     &:focus {
         outline: 0;
         box-shadow: 0 0 .07rem $banana;
     }
+
 }
 
 .form-error {
@@ -65,8 +72,11 @@
 }
 
 .has-success {
+
     input,
     .textarea {
+
         border-color: $successGreen;
     }
+    
 }

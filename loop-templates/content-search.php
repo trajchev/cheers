@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <article <?php post_class('cheers-blog-post'); ?> id="post-<?php the_ID(); ?>">
-	<header class="entry-header-blog py-2">
+	<header class="entry-header py-2">
 		<a href="<?php the_permalink(); ?>">
 			<h2 class="entry-title"><?php the_title(); ?></h2>
 		</a>

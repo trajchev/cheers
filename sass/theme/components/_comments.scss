@@ -1,15 +1,16 @@
-.comments {
-
-    &-area {
-        padding: .7rem 0;
-    }
-
-    &-title {
-        color: $white;
-    }
-}
-
 .comment {
+
+    &-s {
+
+        &-area {
+            padding: 1.5rem 0;
+        }
+    
+        &-title {
+            color: $white;
+        }
+
+    }
 
     &-reply-title {
         color: $white;
@@ -28,6 +29,7 @@
 
     &-author {
         position: relative;
+
         img {
             border: .2rem solid $brown;
         }
@@ -53,14 +55,15 @@
         margin-bottom: 1rem;
 
         .reply {
+
             a {
                 font-weight: 700;
-                &:hover {
-                    text-decoration: none;
-                }
             }
+
         }
+
     }
+
 }
 
 .children {
@@ -86,16 +89,13 @@
         width: 1rem;
         height: .07rem;
     }
+
 }
 
 @media screen and (min-width: $widthMD) {
-    .comments {
-        &-area {
-            padding: 1.5rem .7rem; 
-        }
-    }
 
     .comment {
+
         &-meta {
             position: relative;
         }
@@ -105,13 +105,21 @@
             top: 0;
             right: 0;
         }
-    }
-}
 
-@media screen and (min-width: $widthLG) {
-    .comments {
-        &-area {
-            padding: .7rem 1.9rem;
+        &-body {
+
+            .reply {
+
+                a {
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+
+            }
+
         }
+
     }
+    
 }

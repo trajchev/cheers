@@ -11,38 +11,53 @@
   svg {
     transform: rotate(-4deg);
   }
+
 }
 
 .water-fill {
     animation: wave 0.7s infinite linear, 
-      fill-up 6s infinite ease-out alternate;
+    fill-up 6s infinite ease-out alternate;
   }
   
   @keyframes wave {
-    0% { x: -28.5rem; }
-    100% { x: 0; }
+
+    0% {
+      x: -28.5rem; 
+    }
+
+    100% {
+      x: 0;
+    }
+
   }
   
   
   @keyframes fill-up {
+
     0% {
       height: 0;
       y: 10rem;
     }
+
     100% {
       height: 11rem;
       y: -2rem;
     }
+
   }
 
 @media screen and (min-width: $widthSM) {
+
     #text {
         font-size: 7rem;
     }
+
 }
 
 @media screen and (min-width: $widthMD) {
+
     #text {
         font-size: 8rem;
     }
+    
 }

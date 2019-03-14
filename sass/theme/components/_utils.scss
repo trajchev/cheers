@@ -16,6 +16,7 @@
         margin: .3rem;
         background-color: $grey;
     }
+
 }
 
 .help-block {
@@ -31,17 +32,72 @@
 
 blockquote {
     color: $banana;
+
     cite {
         color: $brown;
+
         span {
             color: $lightGrey;
         }
+
     }
+
+}
+
+.dwn-rounded {
+    @include borderRadius(0, 0, .8rem, .8rem);
+}
+
+.up-rounded {
+    @include borderRadius(.8rem, .8rem, 0, 0);
+}
+
+.grey-gradient {
+    background: linear-gradient($grey, $darkGrey);
+
+    &-inverse {
+        background: linear-gradient($lightBlack, $grey);
+    }
+
+}
+
+.top-border {
+
+    &-14 {
+        border-top: 1rem solid $brown;
+    }
+
+    &-10 {
+        border-top: .8rem solid $brown;
+    }
+    
+}
+
+.bg-banana {
+    background-color: $banana;
+}
+
+.border-bottom-grey {
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 1rem;
+        left: 1.3rem;
+        right: 1.3rem;
+        height: .076rem;
+        background-color: $grey;
+    }
+
 }
 
 @media screen and (min-width: $widthMD) {
+
     .border {
+
         &-right {
+
             &-brown {
                 position: relative;
                 border-right: .07rem solid $brown;
@@ -70,7 +126,11 @@ blockquote {
                     height: .5rem;
                     background-color: $brown;
                 }
+
             }
+
         }
+
     }
+
 }

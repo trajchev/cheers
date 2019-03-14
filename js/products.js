@@ -58,7 +58,7 @@ function getProducts(product, page) {
                                 <div class="entry-thumbnail">
                                     ${data[i].thumbnail}
                                 </div>
-                                <header class="entry-header-single">
+                                <header class="entry-header">
                                     <h2 class="entry-title">${data[i].title}</h2>
                                     <h4 class="mb-1">${data[i].subheading}</h4>
                                 </header><!-- .entry-header -->

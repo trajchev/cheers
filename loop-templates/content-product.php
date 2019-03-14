@@ -16,9 +16,9 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php the_post_thumbnail(); ?>
     </div>
 
-	<header class="entry-header-single">
+	<header class="entry-header pt-2">
 
-        <?php the_title( '<h1 class="entry-title-single">', '</h1>' ); ?>
+        <?php the_title( '<h1 class="entry-title text-left">', '</h1>' ); ?>
         <?php if (get_field('description')) : ?>
             <h4 class="mb-0"><?php the_field('description'); ?></h4>
         <?php endif; ?>

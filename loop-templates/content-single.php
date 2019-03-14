@@ -16,11 +16,18 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
     </div>
 
-	<header class="entry-header-single">
+	<header class="entry-header">
 
-		<?php the_title( '<h1 class="entry-title-single">', '</h1>' ); ?>
-		<?php if (get_field('description')) : ?>
-			<h4 class="mb-0"><?php the_field('description'); ?></h4>
+		<?php
+		
+			the_title( '<h1 class="entry-title text-left">', '</h1>' ); 
+			
+			if (get_field('description')) :
+			
+		?>
+
+		<h4 class="mb-0"><?php the_field('description'); ?></h4>
+
 		<?php endif; ?>
 
 	</header><!-- .entry-header -->
@@ -33,8 +40,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<footer class="entry-footer pt-3">
 		<i class="fa fa-folder"></i>
-		<?php the_category(); ?>
-			<?php the_tags('<ul class="tag-cloud"><li class="tag">', '</li><li class="tag">', '</li></ul>'); ?>
+		<?php 
+		
+			the_category();
+			
+			the_tags('<ul class="tag-cloud"><li class="tag">', '</li><li class="tag">', '</li></ul>');
+
+		?>
 	</footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->
