@@ -17,10 +17,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="page-content container py-4">
 		
 		<header class="entry-header">
+
 			<h2 class="entry-title"><?php esc_html_e( 'Nothing Found', 'Cheers' ); ?></h2>
+
 		</header>
 
 		<section class="content-none">
+
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
@@ -33,14 +36,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php elseif ( is_search() ) : ?>
 
 			<h3 class="py-3"><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'Cheers' ); ?></h3>
+
 			<?php
 				get_search_form();
 		else : ?>
 
 			<h3 class="py-3"><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'Cheers' ); ?></h3>
+
 			<?php
+				
 				get_search_form();
-		endif; ?>
+				
+			endif; ?>
+
 		</section>
+
 	</div><!-- .page-content -->
+	
 </section><!-- .no-results -->

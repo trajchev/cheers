@@ -25,69 +25,113 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div id="map"> </div>
 
         <div class="container">
+
             <div class="row">
+
                 <?php
+
                     // check if the repeater field has rows of data
                     if( have_rows('contact_location') ):
+
                     // loop through the rows of data
                     while ( have_rows('contact_location') ) : the_row(); 
+
                 ?>
+
                 <div class="col-sm-6 col-md-3">
+
                     <div class="card card-box my-4">
+
                         <header class="card-header">
+
                             <h5><?php the_sub_field('office_city'); ?></h5>
+
                             <h6><?php the_sub_field('office_description'); ?></h6>
+
                         </header>
+
                         <div class="card-content">
+
                             <address>
-                            <ul class="card-content-list">
-                                <li><strong><?php the_sub_field('office_address'); ?></strong></li>
-                                <li><?php _e('Email:', 'cheers'); ?> <a href="mailto:<?php the_sub_field('office_email'); ?>"><?php the_sub_field('office_email'); ?></a></li>
-                                <li><?php _e('Phone:', 'cheers'); ?> <a href="tel:<?php the_sub_field('office_phone'); ?>"><?php the_sub_field('office_phone'); ?></a></li>
-                                <li><?php _e('Fax:', 'cheers'); ?> <a href="tel:<?php the_sub_field('office_fax'); ?>"><?php the_sub_field('office_fax'); ?></a></li>
-                            </ul>
+
+                                <ul class="card-content-list">
+                                    <li><strong><?php the_sub_field('office_address'); ?></strong></li>
+                                    <li><?php _e('Email:', 'cheers'); ?> <a href="mailto:<?php the_sub_field('office_email'); ?>"><?php the_sub_field('office_email'); ?></a></li>
+                                    <li><?php _e('Phone:', 'cheers'); ?> <a href="tel:<?php the_sub_field('office_phone'); ?>"><?php the_sub_field('office_phone'); ?></a></li>
+                                    <li><?php _e('Fax:', 'cheers'); ?> <a href="tel:<?php the_sub_field('office_fax'); ?>"><?php the_sub_field('office_fax'); ?></a></li>
+                                </ul>
+
                             </address>
+
                         </div>
+
                     </div>
+
                 </div>
+
                 <?php endwhile; endif; ?>
+
             </div>
+
         </div>
 
 		<div class="container top-border-14 p-4">
+
             <div class="row">
+
                 <div class="col-sm-12 col-md-6">
+
                     <div class="card card-box contact-content">
+
                         <header>
+
                             <h2><?php _e('Contact Us', 'cheers')?></h2>
+
                         </header>
+
                         <div class="content">
+
                             <?php the_content(); ?>
+
                         </div>
+
                     </div>
+
                 </div>
+
                 <div class="col-sm-12 col-md-6">
+
                     <div class="card">
+
                         <form class="form" action="/mailer.php" method="POST">
+
                             <div class="form-group">
                                 <label for="name"><?php _e('Name', 'cheers'); ?><span class="required">*</span></label>
                                 <input type="text" class="form-control" name="name" id="name" placeholder="Name" data-validation="length alphanumeric" data-validation-length="min3" />
                             </div>
+
                             <div class="form-group">
                                 <label for="name"><?php _e('Email', 'cheers'); ?><span class="required">*</span></label>
                                 <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-validation="length email" data-validation-length="min8" />
                             </div>
+
                             <div class="form-group">
                                 <label for="name"><?php _e('Message', 'cheers'); ?> <span class="required">*</span></label>
                                 <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message" data-validation="length" data-validation-length="min30"></textarea>
                             </div>
+
                             <p class="form-submit">
                                 <input type="submit" id="submit" class="btn btn-secondary" value="Submit" />
                             </p>
+
                         </form>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
 
 	</div><!-- .entry-content -->
@@ -101,11 +145,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 </article><!-- #post-## -->
 
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false" type="text/javascript"></script>
+
 <script>
+// The script for the google map pins
+// Made with ACF repeater
+
     var map;
     var markers = [];
 
     var officeData = [
+
         <?php
             // check if the repeater field has rows of data
             if( have_rows('contact_location') ):
@@ -117,6 +166,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             lat: <?php the_sub_field('office_latitude'); ?>,
             lon: <?php the_sub_field('office_longitude'); ?>,
         },
+        
         <?php endwhile; endif; ?>
     ];
 

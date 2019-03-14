@@ -21,7 +21,9 @@ get_header();
 			<?php 
 			
 				while ( have_posts() ) : the_post();
+
 					get_template_part( 'loop-templates/content', 'contact' );
+
 				endwhile;
 
 			?>
@@ -29,6 +31,7 @@ get_header();
 		</main><!-- #main -->
 
 	</div><!-- #content -->
+	
 	<?php
 	
 		get_template_part( 'partials/_workflow' );

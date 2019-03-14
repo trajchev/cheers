@@ -13,7 +13,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 <article <?php post_class('cheers-post-content'); ?> id="post-<?php the_ID(); ?>">
 
     <div class="entry-thumbnail">
+
         <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+
     </div>
 
 	<header class="entry-header">
@@ -39,7 +41,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer pt-3">
+
 		<i class="fa fa-folder"></i>
+
 		<?php 
 		
 			the_category();
@@ -47,6 +51,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			the_tags('<ul class="tag-cloud"><li class="tag">', '</li><li class="tag">', '</li></ul>');
 
 		?>
+		
 	</footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->

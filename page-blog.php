@@ -14,24 +14,36 @@ get_header();
 ?>
 
 <div class="wrapper" id="archive-wrapper">
+
 	<div class="container" id="content" tabindex="-1">
 
         <main class="site-main" id="main">
+
             <header class="page-header">
+
                 <h1 class="page-title"><?php echo __('Blog', 'cheers'); ?></h1>
+
             </header><!-- .page-header -->
 
             <div class="container grey-gradient up-rounded py-3">
+
             <?php
+
                 $basic = new WP_Query( 
+
                     array(
                         'post_type' => 'post',
                         'posts_per_page' => 10
                     )
+
                 );
+
             if ( $basic->have_posts() ) : ?>
+
                 <div class="row">
+
                     <div class="col-lg-8">
+
                         <?php
                         
                             while ( $basic->have_posts() ) : $basic->the_post();
@@ -52,9 +64,13 @@ get_header();
                         <?php cheers_pagination(); ?>
                         
                     </div>
+
                     <div class="col-md-4">
+
                         <?php get_template_part( 'sidebar-templates/sidebar-right' ); ?>
+
                     </div>
+                    
                 </div>
                 
             </div>

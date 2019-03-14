@@ -25,8 +25,11 @@ get_header();
 		<main class="site-main" id="main">
 
 			<div class="container grey-gradient up-rounded py-3">
+
 				<div class="row">
+
 					<div class="col-lg-8">
+
 						<?php
 
 							while ( have_posts() ) : the_post();
@@ -39,15 +42,25 @@ get_header();
 							endif;
 
 							endwhile; // end of the loop.
+
 						?>
+
 					</div>
+
 					<div class="col-md-4">
+
 						<?php get_template_part( 'sidebar-templates/sidebar-right' ); ?>
+
 					</div>
+
 				</div>
+
 			</div>
+
 		</main><!-- #main -->
+
 	</div><!-- #content -->
+	
 	<?php
 	
 		get_template_part( 'partials/_workflow' );

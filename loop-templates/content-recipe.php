@@ -13,7 +13,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 <article <?php post_class('cheers-post-content'); ?> id="post-<?php the_ID(); ?>">
 
     <div class="entry-thumbnail">
+
         <?php the_post_thumbnail(); ?>
+        
     </div>
 
 	<header class="entry-header pt-2">
@@ -25,6 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <h4><?php esc_html_e( 'Ingredients', 'cheers' ); ?></h4>
 
             <ul class="product-stats m-0 px-0 pb-2">
+
                 <?php while ( have_rows('ingredients') ) : the_row(); ?>
 
                 <li><?php the_sub_field('quantity'); ?> <span class="value"><?php the_sub_field('ingredient'); ?></span></li>

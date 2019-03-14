@@ -29,33 +29,55 @@ $container = get_theme_mod( 'Cheers_container_type' );
 				<header class="page-header author-header">
 
 					<?php
-					if ( isset( $_GET['author_name'] ) ) {
-						$curauth = get_user_by( 'slug', $author_name );
-					} else {
-						$curauth = get_userdata( intval( $author ) );
-					}
+
+						if ( isset( $_GET['author_name'] ) ) {
+							$curauth = get_user_by( 'slug', $author_name );
+						} else {
+							$curauth = get_userdata( intval( $author ) );
+						}
+
 					?>
 
 					<h1><?php echo esc_html__( 'About:', 'Cheers' ) . ' ' . esc_html( $curauth->nickname ); ?></h1>
 
-					<?php if ( ! empty( $curauth->ID ) ) : ?>
-						<?php echo get_avatar( $curauth->ID ); ?>
-					<?php endif; ?>
+					<?php 
+					
+						if ( ! empty( $curauth->ID ) ) : 
+						
+							echo get_avatar( $curauth->ID );
+						
+						endif;
 
-					<?php if ( ! empty( $curauth->user_url ) || ! empty( $curauth->user_description ) ) : ?>
+
+						if ( ! empty( $curauth->user_url ) || ! empty( $curauth->user_description ) ) :
+						
+					?>
+
 						<dl>
+
 							<?php if ( ! empty( $curauth->user_url ) ) : ?>
+
 								<dt><?php esc_html_e( 'Website', 'Cheers' ); ?></dt>
+
 								<dd>
 									<a href="<?php echo esc_url( $curauth->user_url ); ?>"><?php echo esc_html( $curauth->user_url ); ?></a>
 								</dd>
-							<?php endif; ?>
 
-							<?php if ( ! empty( $curauth->user_description ) ) : ?>
+							<?php
+						
+								endif;
+
+								if ( ! empty( $curauth->user_description ) ) :
+								
+							?>
+
 								<dt><?php esc_html_e( 'Profile', 'Cheers' ); ?></dt>
 								<dd><?php esc_html_e( $curauth->user_description ); ?></dd>
+
 							<?php endif; ?>
+
 						</dl>
+
 					<?php endif; ?>
 
 					<h2><?php echo esc_html( 'Posts by', 'Cheers' ) . ' ' . esc_html( $curauth->nickname ); ?>:</h2>
@@ -65,30 +87,45 @@ $container = get_theme_mod( 'Cheers_container_type' );
 				<ul>
 
 					<!-- The Loop -->
-					<?php if ( have_posts() ) : ?>
-						<?php while ( have_posts() ) : the_post(); ?>
+					<?php
+					
+						if ( have_posts() ) : 
+						
+							while ( have_posts() ) : the_post();
+					
+					?>
+
 							<li>
 								<?php
-								printf(
-									'<a rel="bookmark" href="%1$s" title="%2$s %3$s">%3$s</a>',
-									esc_url( apply_filters( 'the_permalink', get_permalink( $post ), $post ) ),
-									esc_attr( __( 'Permanent Link:', 'Cheers' ) ),
-									the_title( '', '', false )
-								);
+
+									printf(
+										'<a rel="bookmark" href="%1$s" title="%2$s %3$s">%3$s</a>',
+										esc_url( apply_filters( 'the_permalink', get_permalink( $post ), $post ) ),
+										esc_attr( __( 'Permanent Link:', 'Cheers' ) ),
+										the_title( '', '', false )
+									);
+
+									cheers_posted_on();
+
+									esc_html_e( 'in', 'cheers' );
+
+									the_category( '&' );
+
 								?>
-								<?php Cheers_posted_on(); ?> 
-								<?php esc_html_e( 'in', 'Cheers' ); ?> 
-								<?php the_category( '&' ); ?>
+
 							</li>
+
 						<?php endwhile; ?>
 
-					<?php else : ?>
+					<?php
+					
+						else : 
+							
+							get_template_part( 'loop-templates/content', 'none' );
 
-						<?php get_template_part( 'loop-templates/content', 'none' ); ?>
-
-					<?php endif; ?>
-
-					<!-- End Loop -->
+						endif;
+						
+					?>
 
 				</ul>
 

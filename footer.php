@@ -12,18 +12,31 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
+
 <footer id="site-footer">
+
 	<div class="container">
+
 		<div class="dwn-rounded py-2 grey-gradient mb-4">
+
 			<div class="row">
+
 				<div class="col-sm-12">
+
 					<p class="copyright-text py-2 my-0 px-4 text-white text-center">
+
 						Copyright &copy; <?php echo date('Y'); ?> <?php echo get_bloginfo('name'); ?>
+
 					</p>
+
 				</div>
+
 			</div>
+
 		</div>
+
 	</div>
+	
 </footer>
 
 <?php wp_footer(); ?>

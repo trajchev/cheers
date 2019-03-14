@@ -20,6 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( post_password_required() ) {
 	return;
 }
+
 ?>
 
 <div class="comments-area" id="comments">
@@ -31,27 +32,34 @@ if ( post_password_required() ) {
 		<h2 class="comments-title text-white h4">
 
 			<?php
-			$comments_number = get_comments_number();
-			if ( 1 === (int) $comments_number ) {
-				printf(
-					/* translators: %s: post title */
-					esc_html_x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'Cheers' ),
-					'<span>' . get_the_title() . '</span>'
-				);
-			} else {
-				printf( // WPCS: XSS OK.
-					/* translators: 1: number of comments, 2: post title */
-					esc_html( _nx(
-						'%1$s thought on &ldquo;%2$s&rdquo;',
-						'%1$s thoughts on &ldquo;%2$s&rdquo;',
-						$comments_number,
-						'comments title',
-						'Cheers'
-					) ),
-					number_format_i18n( $comments_number ),
-					'<span>' . get_the_title() . '</span>'
-				);
-			}
+
+				$comments_number = get_comments_number();
+
+				if ( 1 === (int) $comments_number ) {
+
+					printf(
+						/* translators: %s: post title */
+						esc_html_x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'Cheers' ),
+						'<span>' . get_the_title() . '</span>'
+					);
+
+				} else {
+
+					printf( // WPCS: XSS OK.
+						/* translators: 1: number of comments, 2: post title */
+						esc_html( _nx(
+							'%1$s thought on &ldquo;%2$s&rdquo;',
+							'%1$s thoughts on &ldquo;%2$s&rdquo;',
+							$comments_number,
+							'comments title',
+							'Cheers'
+						) ),
+						number_format_i18n( $comments_number ),
+						'<span>' . get_the_title() . '</span>'
+					);
+
+				}
+
 			?>
 
 		</h2><!-- .comments-title -->
@@ -63,15 +71,23 @@ if ( post_password_required() ) {
 				<h3 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'Cheers' ); ?></h3>
 
 				<?php if ( get_previous_comments_link() ) { ?>
+
 					<div class="nav-previous">
+
 						<?php previous_comments_link( __( '&larr; Older Comments', 'Cheers' ) ); ?>
+
 					</div>
+
 				<?php } ?>
 
 				<?php	if ( get_next_comments_link() ) { ?>
+
 					<div class="nav-next">
+
 						<?php next_comments_link( __( 'Newer Comments &rarr;', 'Cheers' ) ); ?>
+
 					</div>
+
 				<?php } ?>
 
 			</nav><!-- #comment-nav-above -->
@@ -81,12 +97,14 @@ if ( post_password_required() ) {
 		<ol class="comment-list">
 
 			<?php
-			wp_list_comments(
-				array(
-					'style'      => 'ol',
-					'short_ping' => true,
-				)
-			);
+
+				wp_list_comments(
+					array(
+						'style'      => 'ol',
+						'short_ping' => true,
+					)
+				);
+
 			?>
 
 		</ol><!-- .comment-list -->
@@ -98,15 +116,23 @@ if ( post_password_required() ) {
 				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'Cheers' ); ?></h1>
 
 				<?php if ( get_previous_comments_link() ) { ?>
+
 					<div class="nav-previous">
+
 						<?php previous_comments_link( __( '&larr; Older Comments', 'Cheers' ) ); ?>
+
 					</div>
+
 				<?php } ?>
 
 				<?php	if ( get_next_comments_link() ) { ?>
+
 					<div class="nav-next">
+
 						<?php next_comments_link( __( 'Newer Comments &rarr;', 'Cheers' ) ); ?>
+
 					</div>
+
 				<?php } ?>
 
 			</nav><!-- #comment-nav-below -->
@@ -115,10 +141,7 @@ if ( post_password_required() ) {
 
 	<?php endif; // endif have_comments(). ?>
 
-	<?php
-	// If comments are closed and there are comments, let's leave a little note, shall we?
-	if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
-		?>
+	<?php if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
 
 		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'Cheers' ); ?></p>
 

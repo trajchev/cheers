@@ -13,14 +13,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 <article <?php post_class('cheers-post-content'); ?> id="post-<?php the_ID(); ?>">
 
     <div class="entry-thumbnail">
+
         <?php the_post_thumbnail(); ?>
+
     </div>
 
 	<header class="entry-header pt-2">
 
         <?php the_title( '<h1 class="entry-title text-left">', '</h1>' ); ?>
+
         <?php if (get_field('description')) : ?>
+
             <h4 class="mb-0"><?php the_field('description'); ?></h4>
+            
         <?php endif; ?>
 
         <ul class="product-stats m-0 px-0 pt-2">

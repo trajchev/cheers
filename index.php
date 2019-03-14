@@ -19,23 +19,26 @@ get_header();
 
 ?>
 
-<?php if ( is_front_page() && is_home() ) : ?>
-	<?php get_template_part( 'global-templates/hero' ); ?>
-<?php endif; ?>
-
 <div class="wrapper" id="index-wrapper">
 
 	<div class="container" id="content" tabindex="-1">
+
 		<main class="site-main" id="main">
+
 			<header class="page-header">
+
 				<h1 class="page-title"><?php the_title(); ?></h1>
+
 			</header><!-- .page-header -->
 
 			<div class="container grey-gradient up-rounded py-3">
-			<?php
-			if ( have_posts() ) : ?>
+
+			<?php if ( have_posts() ) : ?>
+
 				<div class="row">
+
 					<div class="col-lg-8">
+
 						<?php
 
 							while ( have_posts() ) : the_post();
@@ -47,7 +50,8 @@ get_header();
 							*/
 							get_template_part( 'loop-templates/content-blog', get_post_format() );
 
-							endwhile;  
+							endwhile; 
+
 							wp_reset_query();
 						
 						?>
@@ -56,25 +60,36 @@ get_header();
 						<?php cheers_pagination(); ?>
 						
 					</div>
+
 					<div class="col-md-4">
+
 						<?php get_template_part( 'sidebar-templates/sidebar-right' ); ?>
+
 					</div>
-				</div>	
+
+				</div>
+
 			</div>
-			<?php
-			
-				else : 
-					get_template_part( 'loop-templates/content', 'none' );
-				endif;
-			
-			?>
+
+				<?php
+				
+					else : 
+						get_template_part( 'loop-templates/content', 'none' );
+					endif;
+				
+				?>
+
 		</main><!-- #main -->
+
 	</div><!-- #content -->
+
 	<?php
 	
 		get_template_part( 'partials/_outro' ); 
 		get_template_part( 'partials/_pre-footer' );
 		
 	?>
+
 </div><!-- #index-wrapper -->
+
 <?php get_footer(); ?>
