@@ -50,7 +50,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<footer class="entry-footer">
 
-		<?php Cheers_entry_footer(); ?>
+		<?php cheers_entry_footer(); ?>
 
 	</footer><!-- .entry-footer -->
 

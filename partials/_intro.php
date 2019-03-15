@@ -1,34 +1,96 @@
 <div id="intro-section">
 
-    <div class="container text-center">
+    <div class="container">
 
-        <svg class="loading" version="1.1" id="intro-item" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            width="420px" height="140px" viewBox="0 0 420 140" enable-background="new 0 0 420 140" xml:space="preserve">
+        <div class="carousel-wrapper py-4 grey-gradient up-rounded dwn-rounded mb-2">
+            <?php
 
-            <defs>
+                $carousel = new WP_Query(
 
-                <pattern id="water" width=".25" height="1.1" patternContentUnits="objectBoundingBox">
+                    array(
 
-                    <path fill="#d7c362" d="M0.25,1H0c0,0,0-0.659,0-0.916c0.083-0.303,0.158,0.334,0.25,0C0.25,0.327,0.25,1,0.25,1z"/>
+                        'post_type' => array('product', 'post', 'recipe'),
+                        'category_name'  => 'carousel',
+                        'posts_per_page' => -1
 
-                </pattern>
+                    )
 
-                <text id="text" transform="matrix(1 0 0 1 -8.0684 116.7852)" font-size="161.047">Cheers</text>
+                );
 
-                <mask id="text_mask">
+            ?>
 
-                    <use x="0" y="0" xlink:href="#text" opacity="1" fill="#3e1114"/>
 
-                </mask>
+            <?php if ( $carousel->have_posts() ) : ?>
 
-            </defs>
+            <div id="demo" class="carousel slide" data-ride="carousel">
 
-            <use x="0" y="0" xlink:href="#text" fill="#3e1114"/>
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
 
-            <rect class="water-fill" mask="url(#text_mask)" fill="url(#water)" x="-400" y="0" width="1600" height="120"/>
+                <div class="carousel-inner">
 
-        </svg>
 
-    </div>
+                    <?php while ( $carousel->have_posts() ) : ?> 
+
+                    <?php $i = 0; $carousel->the_post(); ?>
+
+                    <?php
+
+                        
+                            if ($i == 0) : ?>
+                                <div class="carousel-item active">
+                                    <img src="https://www.w3schools.com/bootstrap4/la.jpg" alt="Los Angeles" width="1100" height="500">
+                                    <div class="carousel-caption">
+                                        <h3>Los Angeles</h3>
+                                        <p>We had such a great time in LA!</p>
+                                    </div>   
+                                </div>
+                            <?php else: ?>
+                                <div class="carousel-item">
+                                    <img src="https://www.w3schools.com/bootstrap4/la.jpg" alt="Los Angeles" width="1100" height="500">
+                                    <div class="carousel-caption">
+                                        <h3>Los Angeles</h3>
+                                        <p>We had such a great time in LA!</p>
+                                    </div>   
+                                </div>
+                            <?php endif;  $i++; ?>
+
+                    <?php endwhile; ?>
+
+                    <!-- <div class="carousel-item">
+                        <img src="https://www.w3schools.com/bootstrap4/chicago.jpg" alt="Chicago" width="1100" height="500">
+                        <div class="carousel-caption">
+                            <h3>Chicago</h3>
+                            <p>Thank you, Chicago!</p>
+                        </div>   
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="https://www.w3schools.com/bootstrap4/ny.jpg" alt="New York" width="1100" height="500">
+                        <div class="carousel-caption">
+                            <h3>New York</h3>
+                            <p>We love the Big Apple!</p>
+                        </div>   
+                    </div> -->
+                </div>
+
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <i class="fa fa-glass fa-rotate-90" aria-hidden="true"></i>
+                </a>
+
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <i class="fa fa-glass fa-rotate-270" aria-hidden="true"></i>
+                </a>
+
+            </div>
+
+            <?php endif; ?>
+        
+        </div>
     
+    </div>
+
 </div>

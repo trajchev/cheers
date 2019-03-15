@@ -29,7 +29,7 @@ get_header();
 
             <?php
 
-                $basic = new WP_Query(
+                $recipes = new WP_Query(
 
                     array(
                         'post_type' => 'recipe',
@@ -38,7 +38,7 @@ get_header();
 
                 );
 
-                if ( $basic->have_posts() ) : ?>
+                if ( $recipes->have_posts() ) : ?>
 
                     <div class="row">
 
@@ -46,7 +46,7 @@ get_header();
 
                             <?php
                             
-                                while ( $basic->have_posts() ) : $basic->the_post();
+                                while ( $recipes->have_posts() ) : $recipes->the_post();
                                     /*
                                     * Include the Post-Format-specific template for the content.
                                     * If you want to override this in a child theme, then include a file
