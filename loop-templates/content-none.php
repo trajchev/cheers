@@ -27,11 +27,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-			<h3 class="py-3"><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'Cheers' ), array(
+			<p><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'Cheers' ), array(
 	'a' => array(
 		'href' => array(),
 	),
-) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></h3>
+) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
 
 		<?php elseif ( is_search() ) : ?>
 
