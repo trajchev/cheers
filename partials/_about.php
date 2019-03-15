@@ -5,7 +5,11 @@
 
         <div class="grey-gradient up-rounded px-4 pb-2">
 
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
             <article class="mx-auto article-block py-4">
+
+                <?php  ?>
 
                 <div class="article-header">
 
@@ -17,11 +21,13 @@
 
                 <div class="article-content">
 
-                    <?php the_field('about_section'); ?>
+                    <?php the_excerpt(); ?>
 
                 </div>
 
             </article>
+
+            <?php endwhile; endif; ?>
 
         </div>
 
