@@ -128,7 +128,8 @@ function recipe_post_type() {
 		'has_archive'        => true,
 		'hierarchical'       => true,
 		'menu_position'      => 5,
-        'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+		'taxonomies'          => array( 'category' ),
 	);
 
 	register_post_type( 'recipe', $args );
