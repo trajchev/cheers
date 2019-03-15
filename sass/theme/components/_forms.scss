@@ -1,28 +1,29 @@
 .btn {
+
     &:focus {
         outline: none;
         box-shadow: 0 0 0 $black;
     }
-}
 
-.btn-dark {
-    color: $white;
-    background: linear-gradient($grey, $darkGrey);
-    @include borderRadiusUni(.3rem);
-    border: .07rem solid $lightGrey;
-}
-
-.btn-brown {
-    color: $white;
-    background: linear-gradient($lightBrown, $brown);
-    @include borderRadiusUni(.3rem);
-    border: .07rem solid $lightBrown;
-    padding: .2rem 1rem;
-
-    &:hover {
-        color: $banana;
+    &-dark {
+        color: $white;
+        background: linear-gradient($grey, $darkGrey);
+        @include borderRadiusUni(.3rem);
+        border: .07rem solid $lightGrey;
     }
 
+    &-brown {
+        color: $white;
+        background: linear-gradient($lightBrown, $brown);
+        @include borderRadiusUni(.3rem);
+        border: .07rem solid $lightBrown;
+        padding: .2rem 1rem;
+
+        &:hover {
+            color: $banana;
+        }
+
+    }
 }
 
 .append-border-white {
