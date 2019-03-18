@@ -15,7 +15,7 @@
                 // "loop" through query (even though it's just one page) 
                 while ( $sub_query->have_posts() ) : $sub_query->the_post();
 
-                ?>
+            ?>
 
                 <div class="col-sm-12 col-md-5">
 
@@ -53,7 +53,7 @@
 
                 </div>
 
-                <? endwhile;
+                <?php endwhile;
 
                     // reset post data (important!)
                     wp_reset_postdata();

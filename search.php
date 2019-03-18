@@ -25,11 +25,13 @@ get_header();
 
 				<h1 class="page-title">
 					<?php
-					printf(
-						/* translators: %s: query term */
-						esc_html__( 'Search Results for: %s', 'Cheers' ),
-						'<span>' . get_search_query() . '</span>'
-					);
+
+						printf(
+							/* translators: %s: query term */
+							esc_html__( 'Search Results for: %s', 'Cheers' ),
+							'<span>' . get_search_query() . '</span>'
+						);
+						
 					?>
 				</h1>
 

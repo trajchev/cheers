@@ -58,7 +58,14 @@
 
                             </div>
 
-                    <?php endwhile; ?>
+                    <?php
+
+                        endwhile;
+                        
+                        // reset post data (important!)
+                        wp_reset_postdata();
+                        
+                    ?>
                     
                 </div>
 

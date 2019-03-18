@@ -30,7 +30,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                 <?php while ( have_rows('ingredients') ) : the_row(); ?>
 
-                <li><?php the_sub_field('quantity'); ?> <span class="value"><?php the_sub_field('ingredient'); ?></span></li>
+                <li>
+                    <?php the_sub_field('quantity'); ?> 
+                    <span class="value"><?php the_sub_field('ingredient'); ?></span>
+                </li>
 
                 <?php endwhile; ?>
 

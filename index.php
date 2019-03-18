@@ -50,9 +50,7 @@ get_header();
 							*/
 							get_template_part( 'loop-templates/content-blog', get_post_format() );
 
-							endwhile; 
-
-							wp_reset_query();
+							endwhile;
 						
 						?>
 
@@ -73,8 +71,10 @@ get_header();
 
 				<?php
 				
-					else : 
+					else :
+
 						get_template_part( 'loop-templates/content', 'none' );
+						
 					endif;
 				
 				?>

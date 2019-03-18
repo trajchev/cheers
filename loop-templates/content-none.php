@@ -37,17 +37,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<h3 class="py-3"><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'Cheers' ); ?></h3>
 
-			<?php
-				get_search_form();
-		else : ?>
+		<?php get_search_form(); else : ?>
 
 			<h3 class="py-3"><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'Cheers' ); ?></h3>
 
-			<?php
-				
-				get_search_form();
-				
-			endif; ?>
+		<?php get_search_form(); endif; ?>
 
 		</section>
 

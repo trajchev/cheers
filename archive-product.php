@@ -40,23 +40,33 @@ get_header();
                                 <ul class="nav justify-content-center">
 
                                     <li class="nav-item">
-                                        <a class="nav-link grey-gradient active" onclick="getProducts('all')" href="javascript:void(0)">All</a>
+                                        <a class="nav-link grey-gradient active" onclick="getProducts('all')" href="javascript:void(0)">
+                                            <?php esc_html_e( 'All', 'cheers' ); ?>
+                                        </a>
                                     </li>
 
                                     <li class="nav-item">
-                                        <a class="nav-link grey-gradient-inverse" onclick="getProducts('wine')" href="javascript:void(0)">Wine</a>
+                                        <a class="nav-link grey-gradient-inverse" onclick="getProducts('wine')" href="javascript:void(0)">
+                                            <?php esc_html_e( 'Wine', 'cheers' ); ?>
+                                        </a>
                                     </li>
 
                                     <li class="nav-item">
-                                        <a class="nav-link grey-gradient-inverse" onclick="getProducts('whiskey')" href="javascript:void(0)">Whiskey</a>
+                                        <a class="nav-link grey-gradient-inverse" onclick="getProducts('whiskey')" href="javascript:void(0)">
+                                            <?php esc_html_e( 'Whiskey', 'cheers' ); ?>
+                                        </a>
                                     </li>
 
                                     <li class="nav-item">
-                                        <a class="nav-link grey-gradient-inverse" onclick="getProducts('vodka')" href="javascript:void(0)">Vodka</a>
+                                        <a class="nav-link grey-gradient-inverse" onclick="getProducts('vodka')" href="javascript:void(0)">
+                                            <?php esc_html_e( 'Vodka', 'cheers' ); ?>
+                                        </a>
                                     </li>
 
                                     <li class="nav-item">
-                                        <a class="nav-link grey-gradient-inverse" onclick="getProducts('beer')" href="javascript:void(0)">Beer</a>
+                                        <a class="nav-link grey-gradient-inverse" onclick="getProducts('beer')" href="javascript:void(0)">
+                                            <?php esc_html_e( 'Beer', 'cheers' ); ?>
+                                        </a>
                                     </li>
 
                                 </ul>

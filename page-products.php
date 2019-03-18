@@ -72,7 +72,9 @@ get_header();
                     <?php
                     
                         else :
+
                             get_template_part( 'loop-templates/content', 'none' );
+                            
                         endif;
 
                     ?>

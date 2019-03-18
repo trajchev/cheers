@@ -56,7 +56,8 @@ get_header();
 
                                 endwhile;
                                 
-                                wp_reset_query();
+                                // reset post data (important!)
+                                wp_reset_postdata();
                                 
                             ?>
 

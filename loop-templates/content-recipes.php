@@ -37,7 +37,9 @@
 
 		<?php the_excerpt(); ?>
 
-		<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>" class="btn btn-brown"><?php _e('Read more', 'cheers'); ?></a>
+		<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>" class="btn btn-brown">
+			<?php _e('Read more', 'cheers'); ?>
+		</a>
 
 	</div>
 

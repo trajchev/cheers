@@ -12,124 +12,117 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header();
-$container = get_theme_mod( 'Cheers_container_type' );
+
 ?>
 
 <div class="wrapper" id="author-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<main class="site-main" id="main">
 
-		<div class="row">
+		<div class="container" id="content" tabindex="-1">
 
-			<!-- Do the left sidebar check -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+			<header class="page-header author-header">
 
-			<main class="site-main" id="main">
+				<?php
 
-				<header class="page-header author-header">
+					if ( isset( $_GET['author_name'] ) ) {
+						$curauth = get_user_by( 'slug', $author_name );
+					} else {
+						$curauth = get_userdata( intval( $author ) );
+					}
 
-					<?php
+				?>
 
-						if ( isset( $_GET['author_name'] ) ) {
-							$curauth = get_user_by( 'slug', $author_name );
-						} else {
-							$curauth = get_userdata( intval( $author ) );
-						}
+				<h1><?php echo esc_html__( 'About:', 'Cheers' ) . ' ' . esc_html( $curauth->nickname ); ?></h1>
 
-					?>
-
-					<h1><?php echo esc_html__( 'About:', 'Cheers' ) . ' ' . esc_html( $curauth->nickname ); ?></h1>
-
-					<?php 
+				<?php 
+				
+					if ( ! empty( $curauth->ID ) ) : 
 					
-						if ( ! empty( $curauth->ID ) ) : 
-						
-							echo get_avatar( $curauth->ID );
-						
-						endif;
-
-
-						if ( ! empty( $curauth->user_url ) || ! empty( $curauth->user_description ) ) :
-						
-					?>
-
-						<dl>
-
-							<?php if ( ! empty( $curauth->user_url ) ) : ?>
-
-								<dt><?php esc_html_e( 'Website', 'Cheers' ); ?></dt>
-
-								<dd>
-									<a href="<?php echo esc_url( $curauth->user_url ); ?>"><?php echo esc_html( $curauth->user_url ); ?></a>
-								</dd>
-
-							<?php
-						
-								endif;
-
-								if ( ! empty( $curauth->user_description ) ) :
-								
-							?>
-
-								<dt><?php esc_html_e( 'Profile', 'Cheers' ); ?></dt>
-								<dd><?php esc_html_e( $curauth->user_description ); ?></dd>
-
-							<?php endif; ?>
-
-						</dl>
-
-					<?php endif; ?>
-
-					<h2><?php echo esc_html( 'Posts by', 'Cheers' ) . ' ' . esc_html( $curauth->nickname ); ?>:</h2>
-
-				</header><!-- .page-header -->
-
-				<ul>
-
-					<!-- The Loop -->
-					<?php
+						echo get_avatar( $curauth->ID );
 					
-						if ( have_posts() ) : 
-						
-							while ( have_posts() ) : the_post();
+					endif;
+
+
+					if ( ! empty( $curauth->user_url ) || ! empty( $curauth->user_description ) ) :
 					
-					?>
+				?>
 
-							<li>
-								<?php
+					<dl>
 
-									printf(
-										'<a rel="bookmark" href="%1$s" title="%2$s %3$s">%3$s</a>',
-										esc_url( apply_filters( 'the_permalink', get_permalink( $post ), $post ) ),
-										esc_attr( __( 'Permanent Link:', 'Cheers' ) ),
-										the_title( '', '', false )
-									);
+						<?php if ( ! empty( $curauth->user_url ) ) : ?>
 
-									cheers_posted_on();
+							<dt><?php esc_html_e( 'Website', 'Cheers' ); ?></dt>
 
-									esc_html_e( 'in', 'cheers' );
+							<dd>
+								<a href="<?php echo esc_url( $curauth->user_url ); ?>"><?php echo esc_html( $curauth->user_url ); ?></a>
+							</dd>
 
-									the_category( '&' );
-
-								?>
-
-							</li>
-
-						<?php endwhile; ?>
-
-					<?php
+						<?php
 					
-						else : 
+							endif;
+
+							if ( ! empty( $curauth->user_description ) ) :
 							
-							get_template_part( 'loop-templates/content', 'none' );
+						?>
 
-						endif;
+							<dt><?php esc_html_e( 'Profile', 'Cheers' ); ?></dt>
+							<dd><?php esc_html_e( $curauth->user_description ); ?></dd>
+
+						<?php endif; ?>
+
+					</dl>
+
+				<?php endif; ?>
+
+				<h2><?php echo esc_html( 'Posts by', 'Cheers' ) . ' ' . esc_html( $curauth->nickname ); ?>:</h2>
+
+			</header><!-- .page-header -->
+
+			<ul>
+
+				<!-- The Loop -->
+				<?php
+				
+					if ( have_posts() ) : 
+					
+						while ( have_posts() ) : the_post();
+				
+				?>
+
+					<li>
+						<?php
+
+							printf(
+								'<a rel="bookmark" href="%1$s" title="%2$s %3$s">%3$s</a>',
+								esc_url( apply_filters( 'the_permalink', get_permalink( $post ), $post ) ),
+								esc_attr( __( 'Permanent Link:', 'Cheers' ) ),
+								the_title( '', '', false )
+							);
+
+							cheers_posted_on();
+
+							esc_html_e( 'in', 'cheers' );
+
+							the_category( '&' );
+
+						?>
+
+					</li>
+
+				<?php endwhile; wp_reset_query(); ?>
+
+				<?php
+				
+					else : 
 						
-					?>
+						get_template_part( 'loop-templates/content', 'none' );
 
-				</ul>
+					endif;
+					
+				?>
 
-			</main><!-- #main -->
+			</ul>
 
 			<!-- The pagination component -->
 			<?php cheers_pagination(); ?>
@@ -137,9 +130,9 @@ $container = get_theme_mod( 'Cheers_container_type' );
 			<!-- Do the right sidebar check -->
 			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
 
-		</div> <!-- .row -->
+		</div><!-- #content -->
 
-	</div><!-- #content -->
+	</main><!-- #main -->
 
 </div><!-- #author-wrapper -->
 

@@ -29,8 +29,14 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php endif; ?>
 
         <ul class="product-stats m-0 px-0 pt-2">
-            <li><?php esc_html_e( 'Year ', 'cheers' ); ?><span class="value"><?php the_field('production_year'); ?></span></li>
-            <li><?php esc_html_e( 'Origin ', 'cheers' ); ?> <span class="value"><?php the_field('production_region'); ?></span></li>
+            <li>
+                <?php esc_html_e( 'Year ', 'cheers' ); ?>
+                <span class="value"><?php the_field('production_year'); ?></span>
+            </li>
+            <li>
+                <?php esc_html_e( 'Origin ', 'cheers' ); ?> 
+                <span class="value"><?php the_field('production_region'); ?></span>
+            </li>
         </ul>
 
 	</header><!-- .entry-header -->

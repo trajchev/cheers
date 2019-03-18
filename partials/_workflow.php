@@ -10,9 +10,9 @@
                 <?php
 
                     $args = array(
-                    'post_type' => 'recipe',
-                    'posts_per_page' => 3,
-                    'orderby' => 'menu_order'
+                        'post_type' => 'recipe',
+                        'posts_per_page' => 3,
+                        'orderby' => 'menu_order'
                     );
 
                     $child_query = new WP_Query( $args );
@@ -46,6 +46,8 @@
                 <?php 
 
                     endwhile; 
+                    
+                    // reset post data (important!)
                     wp_reset_postdata();
 
                 ?>
@@ -79,9 +81,9 @@
                         <?php
 
                             $args = array(
-                            'post_type' => array('post', 'product'),
-                            'posts_per_page' => 3,
-                            'orderby' => 'menu_order'
+                                'post_type' => array('post', 'product'),
+                                'posts_per_page' => 3,
+                                'orderby' => 'menu_order'
                             );
 
                             $child_query = new WP_Query( $args );
@@ -132,9 +134,9 @@
                         <?php
 
                             $args = array(
-                            'post_type' => 'testimonial',
-                            'posts_per_page' => 3,
-                            'orderby' => 'menu_order'
+                                'post_type' => 'testimonial',
+                                'posts_per_page' => 3,
+                                'orderby' => 'menu_order'
                             );
 
                             $child_query = new WP_Query( $args );
@@ -177,9 +179,9 @@
                         <?php
 
                             $args = array(
-                            'post_type' => 'post',
-                            'posts_per_page' => 3,
-                            'orderby' => 'menu_order'
+                                'post_type' => 'post',
+                                'posts_per_page' => 3,
+                                'orderby' => 'menu_order'
                             );
 
                             $child_query = new WP_Query( $args );

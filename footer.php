@@ -25,7 +25,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 					<p class="copyright-text py-2 my-0 px-4 text-white text-center">
 
-						Copyright &copy; <?php echo date('Y'); ?> <?php echo get_bloginfo('name'); ?>
+						<?php esc_html_e( 'Copyright &copy;', 'cheers' ); ?> 
+						<?php echo date('Y'); ?> 
+						<?php echo get_bloginfo('name'); ?>
 
 					</p>
 
