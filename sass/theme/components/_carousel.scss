@@ -14,7 +14,8 @@
         right: 0;
         bottom: 0;
         background: $transparentBlack;
-        padding-bottom: 2rem;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
 
         h3 {
             text-shadow: .07rem .07rem $black;
@@ -32,11 +33,28 @@
     }
 
     &-indicators {
+        margin-bottom: 0;
 
         .active {
             background-color: $brown;
         }
 
+    }
+
+}
+
+@media screen and (min-width: $widthMD) {
+
+    .carousel {
+    
+        &-caption {
+            padding-bottom: 2rem;
+        }
+    
+        &-indicators {
+            margin-bottom: 1rem;
+        }
+    
     }
 
 }
