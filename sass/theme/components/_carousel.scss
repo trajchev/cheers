@@ -14,6 +14,7 @@
         right: 0;
         bottom: 0;
         background: $transparentBlack;
+        padding-bottom: 2rem;
 
         h3 {
             text-shadow: .07rem .07rem $black;
@@ -26,6 +27,14 @@
         &-next,
         &-prev {
             text-shadow: 0 .07rem $black;
+        }
+
+    }
+
+    &-indicators {
+
+        .active {
+            background-color: $brown;
         }
 
     }
