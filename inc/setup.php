@@ -14,9 +14,9 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
 
-add_action( 'after_setup_theme', 'Cheers_setup' );
+add_action( 'after_setup_theme', 'cheers_setup' );
 
-if ( ! function_exists ( 'Cheers_setup' ) ) {
+if ( ! function_exists ( 'cheers_setup' ) ) {
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -24,14 +24,14 @@ if ( ! function_exists ( 'Cheers_setup' ) ) {
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function Cheers_setup() {
+	function cheers_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on Cheers, use a find and replace
 		 * to change 'Cheers' to the name of your theme in all the template files
 		 */
-		load_theme_textdomain( 'Cheers', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'cheers', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -46,7 +46,7 @@ if ( ! function_exists ( 'Cheers_setup' ) ) {
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'primary' => __( 'Primary Menu', 'Cheers' ),
+			'primary' => __( 'Primary Menu', 'cheers' ),
 		) );
 
 		/*
@@ -84,7 +84,7 @@ if ( ! function_exists ( 'Cheers_setup' ) ) {
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'Cheers_custom_background_args', array(
+		add_theme_support( 'custom-background', apply_filters( 'cheers_custom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
@@ -93,8 +93,10 @@ if ( ! function_exists ( 'Cheers_setup' ) ) {
 		add_theme_support( 'custom-logo' );
 
 		// Check and setup theme default settings.
-		Cheers_setup_theme_default_settings();
+		cheers_setup_theme_default_settings();
 
+		// Add excerpt support for pages
+		add_post_type_support( 'page', 'excerpt' );
 	}
 }
 
@@ -114,24 +116,5 @@ if ( ! function_exists( 'Cheers_custom_excerpt_more' ) ) {
 			$more = '';
 		}
 		return $more;
-	}
-}
-
-add_filter( 'wp_trim_excerpt', 'Cheers_all_excerpts_get_more_link' );
-
-if ( ! function_exists( 'Cheers_all_excerpts_get_more_link' ) ) {
-	/**
-	 * Adds a custom read more link to all excerpts, manually or automatically generated
-	 *
-	 * @param string $post_excerpt Posts's excerpt.
-	 *
-	 * @return string
-	 */
-	function Cheers_all_excerpts_get_more_link( $post_excerpt ) {
-		if ( ! is_admin() ) {
-			$post_excerpt = $post_excerpt . ' [...]<p><a class="btn btn-secondary Cheers-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Read More...',
-			'Cheers' ) . '</a></p>';
-		}
-		return $post_excerpt;
 	}
 }

@@ -1,0 +1,33 @@
+.carousel {
+
+    &-item {
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+    }
+
+    &-caption {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $transparentBlack;
+
+        h3 {
+            text-shadow: .07rem .07rem $black;
+        }
+
+    }
+
+    &-control {
+
+        &-next,
+        &-prev {
+            text-shadow: 0 .07rem $black;
+        }
+
+    }
+
+}

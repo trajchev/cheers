@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class('basic-post'); ?> id="post-<?php the_ID(); ?>">
 
 	<header class="entry-header">
 
@@ -24,7 +24,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php if ( 'post' == get_post_type() ) : ?>
 
 			<div class="entry-meta">
-				<?php Cheers_posted_on(); ?>
+
+				<?php cheers_posted_on(); ?>
+
 			</div><!-- .entry-meta -->
 
 		<?php endif; ?>
@@ -38,19 +40,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php the_excerpt(); ?>
 
 		<?php
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'Cheers' ),
-				'after'  => '</div>',
-			)
-		);
+			wp_link_pages(
+				array(
+					'before' => '<div class="page-links">' . __( 'Pages:', 'Cheers' ),
+					'after'  => '</div>',
+				)
+			);
 		?>
 
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
 
-		<?php Cheers_entry_footer(); ?>
+		<?php cheers_entry_footer(); ?>
 
 	</footer><!-- .entry-footer -->
 

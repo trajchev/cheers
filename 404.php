@@ -11,77 +11,100 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
-$container = get_theme_mod( 'Cheers_container_type' );
 ?>
 
 <div class="wrapper" id="error-404-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div class="container" id="content" tabindex="-1">
 
-		<div class="row">
+		<main class="site-main" id="main">
 
-			<div class="col-md-12 content-area" id="primary">
+			<section class="error-404 not-found">
 
-				<main class="site-main" id="main">
+				<header class="page-header">
 
-					<section class="error-404 not-found">
+					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'Cheers' ); ?></h1>
 
-						<header class="page-header">
+				</header><!-- .page-header -->
 
-							<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'Cheers' ); ?></h1>
+				<div class="page-content container grey-gradient up-rounded py-3">
 
-						</header><!-- .page-header -->
+					<p class="py-4 text-white">
+					
+						<?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'Cheers' ); ?>
+						
+					</p>
 
-						<div class="page-content">
+					<div class="pb-4">
 
-							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'Cheers' ); ?></p>
+						<?php get_search_form(); ?>
 
-							<?php get_search_form(); ?>
+					</div>
 
-							<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
+					<div class="conatiner">
 
-							<?php if ( Cheers_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
+						<div class="row">
+
+							<div class="col-sm-12 col-md-6">
+
+								<?php
+
+									the_widget( 'WP_Widget_Recent_Posts' ); 
+									if ( cheers_categorized_blog() ) : // Only show the widget if site has multiple categories.
+
+								?>
 
 								<div class="widget widget_categories">
 
 									<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'Cheers' ); ?></h2>
 
 									<ul>
+
 										<?php
-										wp_list_categories(
-											array(
-												'orderby'    => 'count',
-												'order'      => 'DESC',
-												'show_count' => 1,
-												'title_li'   => '',
-												'number'     => 10,
-											)
-										);
+
+											wp_list_categories(
+												array(
+													'orderby'    => 'count',
+													'order'      => 'DESC',
+													'show_count' => 1,
+													'title_li'   => '',
+													'number'     => 10,
+												)
+											);
+
 										?>
+
 									</ul>
 
 								</div><!-- .widget -->
 
-							<?php endif; ?>
+								<?php endif; ?>
 
-							<?php
+							</div>
 
-							/* translators: %1$s: smiley */
-							$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'Cheers' ), convert_smilies( ':)' ) ) . '</p>';
-							the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
+							<div class="col-sm-12 col-md-6">
 
-							the_widget( 'WP_Widget_Tag_Cloud' );
-							?>
+								<?php
 
-						</div><!-- .page-content -->
+									/* translators: %1$s: smiley */
+									$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'Cheers' ), convert_smilies( ':)' ) ) . '</p>';
+									the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
 
-					</section><!-- .error-404 -->
+									the_widget( 'WP_Widget_Tag_Cloud' );
 
-				</main><!-- #main -->
+								?>
 
-			</div><!-- #primary -->
+							</div>
 
-		</div><!-- .row -->
+						</div>
+						
+					</div>
+
+				</div><!-- .page-content -->
+
+			</section><!-- .error-404 -->
+
+		</main><!-- #main -->
 
 	</div><!-- #content -->
 

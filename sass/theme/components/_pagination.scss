@@ -1,0 +1,31 @@
+.archive-pagination {
+    padding: 2rem .7rem 0 .7rem;
+}
+
+.pagination {
+
+    .page-item {
+        margin: .15rem;
+
+        .page-link {
+            border-radius: 50%;
+            background-color: $banana;
+            border-color: transparent;
+            font-weight: 700;
+            color: $brown;
+
+            &.current {
+                color: $banana;
+                background-color: $brown;
+            }
+
+        }
+
+        .next,
+        .prev {
+            padding: .4rem .75rem .6rem .75rem;
+        }
+
+    }
+    
+}

@@ -1,0 +1,79 @@
+.cheers {
+
+    &-post-content,
+    &-page-content {
+
+        .entry {
+
+            &-title {
+                color: $brown;
+                font-size: 2rem;
+                text-align: center;
+                font-style: italic;
+            }
+
+            &-content {
+                color: $lightGrey;
+            }
+
+        }
+
+    }
+
+    &-blog-post,
+    &-archive-content {
+        padding: 0 0 1rem 0;
+    }
+
+}
+
+.page {
+
+    &-header {
+        padding: .769rem;
+    }
+
+    &-title {
+        color: $white;
+        font-size: 1.693em;
+        text-align: center;
+        font-style: italic;
+    }
+
+}
+
+#map {
+    height: 30rem;
+}
+
+@media screen and (min-width: $widthMD) {
+    
+    .page {
+
+        &-header {
+            padding: 1.5rem .7rem;
+        }
+
+        &-title {
+            font-size: 2.6em;
+        }
+
+    }
+
+}
+
+@media screen and (min-width: $widthLG) {
+
+    .page {
+
+        &-header {
+            padding: 2rem .7rem;
+        }
+
+        &-title {
+            font-size: 3.5em;
+        }
+
+    }
+
+}

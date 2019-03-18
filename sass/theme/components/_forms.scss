@@ -1,0 +1,106 @@
+.btn {
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 $black;
+    }
+
+    &-dark {
+        color: $white;
+        background: linear-gradient($grey, $darkGrey);
+        @include borderRadiusUni(.3rem);
+        border: .07rem solid $lightGrey;
+    }
+
+    &-brown {
+        color: $white;
+        background: linear-gradient($lightBrown, $brown);
+        @include borderRadiusUni(.3rem);
+        border: .07rem solid $lightBrown;
+        padding: .2rem 1rem;
+
+        &:hover {
+            color: $banana;
+        }
+
+    }
+}
+
+div.wpcf7 {
+    
+    &-response-output {
+        padding: 0;
+        margin: 1rem 0;
+        border: none;
+    }
+
+    &-mail-sent-ok {
+        color: $successGreen;
+    }
+
+    &-validation-errors {
+        border: none;
+        color: $errorRed;
+    }
+
+}
+
+span.wpcf7-not-valid-tip {
+    color: $errorRed;
+}
+
+.append-border-white {
+    border: .07rem solid $lightGrey;
+    border-left: none;
+    @include borderRadius(0, .3rem, .3rem, 0);
+}
+
+.input-group,
+.form-group {
+
+    label {
+        color: $lightGrey;
+    }
+
+    input,
+    textarea {
+        background-color: transparent;
+        color: $white;
+        border: .07rem solid $lightGrey;
+
+        &:focus {
+            outline: none;
+            border: .07rem solid $banana;
+            box-shadow: 0 0 .07rem $banana;
+            background-color: transparent;
+        }
+
+    }
+
+}
+
+#searchsubmit,
+#submit {
+    background: linear-gradient($lightBrown, $brown);
+    border: .07rem solid $brown;
+
+    &:focus {
+        outline: 0;
+        box-shadow: 0 0 .07rem $banana;
+    }
+
+}
+
+.form-error {
+    color: $errorRed;
+}
+
+.has-success {
+
+    input,
+    .textarea {
+
+        border-color: $successGreen;
+    }
+    
+}

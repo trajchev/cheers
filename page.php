@@ -16,42 +16,58 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
-$container = get_theme_mod( 'Cheers_container_type' );
-
 ?>
 
 <div class="wrapper" id="page-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div class="container" id="content" tabindex="-1">
 
-		<div class="row">
+		<main class="site-main" id="main">
 
-			<!-- Do the left sidebar check -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+			<div class="container grey-gradient up-rounded py-3">
 
-			<main class="site-main" id="main">
+				<div class="row">
 
-				<?php while ( have_posts() ) : the_post(); ?>
+					<div class="col-lg-8">
 
-					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
+						<?php
 
-					<?php
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-					?>
+							while ( have_posts() ) : the_post();
 
-				<?php endwhile; // end of the loop. ?>
+							get_template_part( 'loop-templates/content', 'page' );
 
-			</main><!-- #main -->
+							// If comments are open or we have at least one comment, load up the comment template.
+							if ( comments_open() || get_comments_number() ) :
+								comments_template();
+							endif;
 
-			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
+							endwhile; // end of the loop.
 
-		</div><!-- .row -->
+						?>
+
+					</div>
+
+					<div class="col-md-4">
+
+						<?php get_template_part( 'sidebar-templates/sidebar-right' ); ?>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</main><!-- #main -->
 
 	</div><!-- #content -->
+	
+	<?php
+	
+		get_template_part( 'partials/_workflow' );
+		get_template_part( 'partials/_outro' );
+		get_template_part( 'partials/_pre-footer' );
+		
+	?>
 
 </div><!-- #page-wrapper -->
 

@@ -9,9 +9,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-if ( ! function_exists( 'Cheers_pagination' ) ) {
+if ( ! function_exists( 'cheers_pagination' ) ) {
 
-	function Cheers_pagination( $args = array(), $class = 'pagination' ) {
+	function cheers_pagination( $args = array(), $class = 'pagination' ) {
 
 		if ( $GLOBALS['wp_query']->max_num_pages <= 1 ) {
 			return;
@@ -22,9 +22,9 @@ if ( ! function_exists( 'Cheers_pagination' ) ) {
 			array(
 				'mid_size'           => 2,
 				'prev_next'          => true,
-				'prev_text'          => __( '&laquo;', 'Cheers' ),
-				'next_text'          => __( '&raquo;', 'Cheers' ),
-				'screen_reader_text' => __( 'Posts navigation', 'Cheers' ),
+				'prev_text'          => __( '&laquo;', 'cheers' ),
+				'next_text'          => __( '&raquo;', 'cheers' ),
+				'screen_reader_text' => __( 'Posts navigation', 'cheers' ),
 				'type'               => 'array',
 				'current'            => max( 1, get_query_var( 'paged' ) ),
 			)
@@ -34,9 +34,9 @@ if ( ! function_exists( 'Cheers_pagination' ) ) {
 
 		?>
 
-		<nav aria-label="<?php echo $args['screen_reader_text']; ?>">
+		<nav class="archive-pagination" aria-label="<?php echo $args['screen_reader_text']; ?>">
 
-			<ul class="pagination">
+			<ul class="pagination justify-content-center" id="pagination-content">
 
 				<?php
 				foreach ( $links as $key => $link ) {

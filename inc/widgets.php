@@ -110,61 +110,13 @@ if ( ! function_exists( 'Cheers_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Left Sidebar', 'Cheers' ),
-				'id'            => 'left-sidebar',
-				'description'   => __( 'Left sidebar widget area', 'Cheers' ),
-				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</aside>',
-				'before_title'  => '<h3 class="widget-title">',
-				'after_title'   => '</h3>',
-			)
-		);
-
-		register_sidebar(
-			array(
-				'name'          => __( 'Hero Slider', 'Cheers' ),
-				'id'            => 'hero',
-				'description'   => __( 'Hero slider area. Place two or more widgets here and they will slide!', 'Cheers' ),
-				'before_widget' => '<div class="carousel-item">',
-				'after_widget'  => '</div>',
-				'before_title'  => '',
-				'after_title'   => '',
-			)
-		);
-
-		register_sidebar(
-			array(
-				'name'          => __( 'Hero Canvas', 'Cheers' ),
-				'id'            => 'herocanvas',
-				'description'   => __( 'Full size canvas hero area for Bootstrap and other custom HTML markup', 'Cheers' ),
-				'before_widget' => '',
-				'after_widget'  => '',
-				'before_title'  => '',
-				'after_title'   => '',
-			)
-		);
-
-		register_sidebar(
-			array(
-				'name'          => __( 'Top Full', 'Cheers' ),
-				'id'            => 'statichero',
-				'description'   => __( 'Full top widget with dynamic grid', 'Cheers' ),
-				'before_widget' => '<div id="%1$s" class="footer-widget %2$s dynamic-classes">',
-				'after_widget'  => '</div><!-- .static-hero-widget -->',
-				'before_title'  => '<h3 class="widget-title">',
-				'after_title'   => '</h3>',
-			)
-		);
-
-		register_sidebar(
-			array(
-				'name'          => __( 'Footer Full', 'Cheers' ),
-				'id'            => 'footerfull',
-				'description'   => __( 'Full sized footer widget with dynamic grid', 'Cheers' ),
-				'before_widget' => '<div id="%1$s" class="footer-widget %2$s dynamic-classes">',
-				'after_widget'  => '</div><!-- .footer-widget -->',
-				'before_title'  => '<h3 class="widget-title">',
-				'after_title'   => '</h3>',
+				'name'          => __( 'Prefooter', 'cheers' ),
+				'id'            => 'prefooter',
+				'description'   => __( 'Full sized pre footer', 'cheers' ),
+				'before_widget' => '<div id="%1$s" class="footer-widget col-sm-6 col-md-3"><div class="card">',
+				'after_widget'  => '</div><!-- .card-content --></div></div><!-- .footer-widget -->',
+				'before_title'  => '<header class="card-header border-bottom-grey"><h3 class="h5 block-heading text-center pb-2">',
+				'after_title'   => '</h3></header><div class="card-content">',
 			)
 		);
 

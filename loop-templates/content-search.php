@@ -10,39 +10,31 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class('cheers-blog-post'); ?> id="post-<?php the_ID(); ?>">
 
-	<header class="entry-header">
+	<header class="entry-header py-2">
 
-		<?php
-		the_title(
-			sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
-			'</a></h2>'
-		);
-		?>
+		<a href="<?php the_permalink(); ?>">
 
-		<?php if ( 'post' == get_post_type() ) : ?>
+			<h2 class="entry-title"><?php the_title(); ?></h2>
 
-			<div class="entry-meta">
-
-				<?php Cheers_posted_on(); ?>
-
-			</div><!-- .entry-meta -->
-
-		<?php endif; ?>
+		</a>
 
 	</header><!-- .entry-header -->
 
-	<div class="entry-summary">
+	<?php if ( 'post' == get_post_type() ) : ?>
 
-		<?php the_excerpt(); ?>
+	<footer class="search-entry-footer py-2">
 
-	</div><!-- .entry-summary -->
+		<div class="search-entry-meta text-white">
 
-	<footer class="entry-footer">
+			<h6><?php the_date(); ?></h6>
+			<p><?php _e('posted by ', 'cheers'); ?> <span><?php the_author(); ?></span></p>
 
-		<?php Cheers_entry_footer(); ?>
+		</div><!-- .entry-meta -->
 
 	</footer><!-- .entry-footer -->
 
+	<?php endif; ?>
+	
 </article><!-- #post-## -->

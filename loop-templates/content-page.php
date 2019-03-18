@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class('cheers-page-content'); ?> id="post-<?php the_ID(); ?>">
 
 	<header class="entry-header">
 
@@ -25,12 +25,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php the_content(); ?>
 
 		<?php
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'Cheers' ),
-				'after'  => '</div>',
-			)
-		);
+			wp_link_pages(
+				array(
+					'before' => '<div class="page-links">' . __( 'Pages:', 'Cheers' ),
+					'after'  => '</div>',
+				)
+			);
 		?>
 
 	</div><!-- .entry-content -->

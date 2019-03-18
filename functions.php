@@ -20,10 +20,11 @@ $Cheers_includes = array(
 	'/extras.php',                          // Custom functions that act independently of the theme templates.
 	'/customizer.php',                      // Customizer additions.
 	'/custom-comments.php',                 // Custom Comments file.
+	'/custom-post-types.php',               // Custom Post Types file.
 	'/jetpack.php',                         // Load Jetpack compatibility file.
 	'/class-wp-bootstrap-navwalker.php',    // Load custom WordPress nav walker.
-	'/woocommerce.php',                     // Load WooCommerce functions.
 	'/editor.php',                          // Load Editor functions.
+	'/rest-api.php',                        // Load ReST API functions.
 );
 
 foreach ( $Cheers_includes as $file ) {

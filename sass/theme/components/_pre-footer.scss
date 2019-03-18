@@ -1,0 +1,19 @@
+.pre-footer-menu {
+
+    li {
+        list-style-type: none;
+        padding-bottom: .5rem;
+
+        a {
+            color: $grey;
+
+            &:hover {
+                text-decoration: none;
+                color: $brown;
+            }
+
+        }
+
+    }
+    
+}

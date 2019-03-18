@@ -1,0 +1,89 @@
+.widget {
+    position: relative;
+    padding: 1.5rem 1rem;
+    color: $lightBrown;
+    background: $transparentBlack;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: .1rem;
+        background-color: $banana;
+    }
+
+    &:last-of-type {
+
+        &:after {
+            content: none;
+        }
+
+    }
+
+    &-title {
+        color: $white;
+        font-size: 1.2rem;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            color: $lightGrey;
+        }
+
+    }
+
+}
+
+.footer {
+
+    &-widget {
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+    
+            li {
+                text-align: center;
+            }
+
+        }
+
+    }
+
+}
+
+@media screen and (min-width: $widthMD) {
+
+    .widget {
+
+        &:after {
+            left: .7rem;
+            right: .7rem;
+        }
+
+    }
+
+    .footer {
+
+        &-widget {
+
+            a {
+
+                &:hover {
+                    color: $grey;
+                }
+
+            }
+
+        }
+
+    }
+    
+}

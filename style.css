@@ -1,19 +1,15 @@
 /*
 Theme Name: Cheers
-Theme URI: http://Cheers.com
-Author: Holger Koenemann
-Author URI: http://www.holgerkoenemann.de
-GitHub Theme URI: https://github.com/Cheers/Cheers
-Description: Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid starting point for your next theme project and WordPress website. Use it as starter theme or as a parent theme. It is up to you. Including Font Awesome support, built-in widget slider and much more you need for basic websites. IMPORTANT: All developer dependencies are not bundled with this install file. Just download the .zip, extract it and run "npm install" and "gulp copy-assets" inside the extracted /Cheers folder.
-That downloads everything and moves it in place so that you can recompile your CSS and JS files;
-A developer version (with Gulp/node and Sass sources) is available on gitHub: https://github.com/Cheers/Cheers
-A child theme is available on Github, too: https://github.com/Cheers/Cheers-child;
-Version: 0.8.9
-License: Cheers WordPress Theme, Copyright 2013-2017 Holger Koenemann
+Theme URI: git@bitbucket.org:trajchev/cheers.git
+Author: Ivan Trajchev
+Author URI: https://www.linkedin.com/in/ivan-trajchev-384493110/
+Bitbucket Theme URI:https://bitbucket.org/trajchev/cheers/src/master/
+Description: Liquor Store theme based on Understrap starter theme and built with Bootstrap 4. Utilised many WordPress features such as custom post types, WordPress REST API.
+License: Cheers WordPress Theme, Copyright 2019 Ivan Trajchev
 Cheers is distributed under the terms of the GNU GPL version 2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: Cheers
-Tags: one-column, custom-menu, featured-images, theme-options, translation-ready
+Tags: one-column, two-column, custom-menu, featured-images, theme-options, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Cheers is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
@@ -25,13 +21,4 @@ Owl Carousel 2: http://www.owlcarousel.owlgraphic.com/ | https://github.com/smas
 and of course
 jQuery: https://jquery.org | (Code licensed under MIT)
 WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
-*/
-
-/*
-This file is just used to identify the theme in WordPress.
-The compiled CSS output can be found in /css/theme.css
-The SASS sources for it can be found in /sass/
-The dependencies can be found in /src/ after running "gulp copy-assets" terminal command
-
-...and now go out and play!
 */

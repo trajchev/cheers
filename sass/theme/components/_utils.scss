@@ -1,0 +1,138 @@
+.bordered-image {
+    border: .3rem solid $brown;
+    float: right;
+    margin-left: 1rem;
+}
+
+.bordered-boxes {
+    list-style-type: none;
+    text-align: center;
+
+    &-item {
+        float: left;
+        width: 5.2rem;
+        height: 5.2rem;
+        border: .3rem solid $brown;
+        margin: .3rem;
+        background-color: $grey;
+    }
+
+}
+
+.help-block {
+    width: 100%;
+}
+
+.block-heading {
+    font-family: $exo;
+    color: $brown;
+    font-style: italic;
+    clear: right;
+}
+
+blockquote {
+    color: $banana;
+
+    cite {
+        color: $brown;
+
+        span {
+            color: $lightGrey;
+        }
+
+    }
+
+}
+
+.dwn-rounded {
+    border-bottom-left-radius: .8rem;
+    border-bottom-right-radius: .8rem;
+}
+
+.up-rounded {
+    border-top-left-radius: .8rem;
+    border-top-right-radius: .8rem;
+}
+
+.grey-gradient {
+    background: linear-gradient($grey, $darkGrey);
+
+    &-inverse {
+        background: linear-gradient($lightBlack, $grey);
+    }
+
+}
+
+.top-border {
+
+    &-14 {
+        border-top: 1rem solid $brown;
+    }
+
+    &-10 {
+        border-top: .8rem solid $brown;
+    }
+    
+}
+
+.bg-banana {
+    background-color: $banana;
+}
+
+.border-bottom-grey {
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 1rem;
+        left: 1.3rem;
+        right: 1.3rem;
+        height: .076rem;
+        background-color: $grey;
+    }
+
+}
+
+@media screen and (min-width: $widthMD) {
+
+    .border {
+
+        &-right {
+
+            &-brown {
+                position: relative;
+                border-right: .07rem solid $brown;
+    
+                &:before,
+                &:after {
+                    position: absolute;
+                    content: '';
+                    top: 50%;
+                    border-radius: 1rem;
+                }
+    
+                &:before {
+                    margin-top: -.5rem;
+                    right: -.5rem; 
+                    width: 1rem;
+                    height: 1rem;
+                    border: .15rem solid $brown;
+                    background-color: $grey;
+                }
+    
+                &:after {
+                    margin-top: -.25rem;
+                    right: -.25rem; 
+                    width: .5rem;
+                    height: .5rem;
+                    background-color: $brown;
+                }
+
+            }
+
+        }
+
+    }
+
+}

@@ -1,0 +1,87 @@
+.card {
+    background-color: transparent;
+    border: none;
+
+    &-header {
+        background-color: transparent;
+        border-bottom: none;
+    }
+
+    &-footer {
+        background-color: transparent;
+        border-top: none;
+    }
+
+    &-content {
+        color: $lightGrey;
+        padding: .75rem 1.25rem;
+
+        &-list {
+            list-style-type: none;
+            padding: .7rem 0;
+            margin: 0;
+        }
+
+    }
+
+    &-box {
+
+        header {
+
+            h2, h5 {
+                color: $brown;
+            }
+
+            h6 {
+                color: $lightGrey;
+                font-style: italic;
+                font-size: .8rem;
+            }
+
+        }
+
+        .content {
+            font-size: 1rem;
+            color: $banana;
+        }
+
+    }
+}
+
+@media screen and (min-width: $widthMD) {
+    
+    .card {
+
+        &-box {
+
+            .content {
+                padding-right: 2rem;
+            }
+
+        }
+
+    }
+
+    a {
+
+        &:hover {
+            text-decoration: none;
+
+            .card {
+
+                &-header {
+                    @include transition(.3s, color);
+                    color: $brown;
+                }
+
+                &-content {
+                    @include transition(.3s, color);
+                    color: $banana;
+                }
+
+            }
+
+        }
+
+    }
+}

@@ -1,0 +1,17 @@
+@mixin borderRadius($topLeft, $topRight, $bottomRight, $bottomLeft) {
+    -webkit-border-radius: $topLeft $topRight $bottomRight $bottomLeft;
+    -moz-border-radius: $topLeft $topRight $bottomRight $bottomLeft;
+    border-radius: $topLeft $topRight $bottomRight $bottomLeft;
+}
+
+@mixin borderRadiusUni($corner) {
+    -webkit-border-radius: $corner;
+    -moz-border-radius: $corner;
+    border-radius: $corner;
+}
+
+@mixin transition($interval, $property) {
+    -webkit-transition: $interval $property;
+    -moz-transition: $interval $property;
+    transition: $interval $property;
+}

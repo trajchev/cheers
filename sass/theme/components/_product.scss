@@ -1,0 +1,92 @@
+.product {
+    
+    &-filter {
+        padding: 1.5rem .07rem;
+
+        .nav {
+            &-item {
+                width: 100%;
+
+                &:first-of-type {
+                    border-top: .076rem solid $darkGrey;
+                    @include borderRadius(.3rem, .3rem, 0, 0);
+                    
+                }
+
+                border-left: .07rem solid $darkGrey;
+                border-right: .07rem solid $darkGrey;
+
+                &:last-of-type {
+                    border-bottom: .07rem solid $darkGrey;
+                    @include borderRadius(0, 0, .3rem, .3rem);
+                }
+
+            }
+
+            &-link {
+                color: $lightGrey;
+            }
+
+            .active {
+                color: $white;
+            }
+
+        }
+
+    }
+
+    &-stats {
+        list-style-type: none;
+        color: $lightGrey;
+
+        li {
+
+            span {
+                color: $brown;
+            }
+
+        }
+
+    }
+
+}
+
+@media screen and (min-width: $widthSM) {
+
+    .product {
+
+        &-filter {
+
+            .nav {
+
+                &-item {
+                    width: auto;
+                    border-top: .07rem solid $darkGrey;
+                    border-bottom: .07rem solid $darkGrey;
+
+                    &:first-of-type {
+                        @include borderRadius(.3rem, 0, 0, .3rem);
+                        border-left: .07rem solid $darkGrey;
+                    }
+
+                    &:last-of-type {
+                        @include borderRadius(.0, .3rem, .3rem, 0);
+                        border-right: .07rem solid $darkGrey;
+                    }
+                }
+    
+                &-link {
+
+                    &:hover {
+                        color: $white;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
