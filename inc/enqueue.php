@@ -23,7 +23,6 @@ if ( ! function_exists( 'cheers_scripts' ) ) {
 		wp_enqueue_style( 'cheers-styles', get_stylesheet_directory_uri() . '/css/theme.min.css', array(), $css_version );
 
 		wp_enqueue_script( 'jquery' );
-		wp_enqueue_script( 'validator', get_template_directory_uri() . '/js/validator.min.js', array('jquery'), $js_version, true );
 		$js_version = $theme_version . '.' . filemtime( get_template_directory() . '/js/theme.min.js' );
 		wp_enqueue_script( 'cheers-scripts', get_template_directory_uri() . '/js/theme.min.js', array(), $js_version, true );
 		wp_enqueue_script( 'app', get_template_directory_uri() . '/js/app.js', array('jquery'), $js_version, true );

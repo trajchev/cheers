@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<footer class="search-entry-footer py-2">
 
-		<div class="search-entry-meta">
+		<div class="search-entry-meta text-white">
 
 			<h6><?php the_date(); ?></h6>
 			<p><?php _e('posted by ', 'cheers'); ?> <span><?php the_author(); ?></span></p>
