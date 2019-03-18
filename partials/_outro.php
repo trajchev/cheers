@@ -45,21 +45,7 @@
 
                             <?php the_excerpt(); ?>
 
-                            <form action="subscribe.php" class="py-2">
-
-                                <div class="input-group">
-
-                                    <input type="text" class="form-control grey-gradient" placeholder="email" data-validation="length email" data-validation-length="min8">
-
-                                    <div class="input-group-append append-border-white">
-
-                                        <button class="btn btn-brown"><?php _e('Subscribe', 'cheers'); ?></button>
-
-                                    </div>
-
-                                </div>
-
-                            </form>
+                            <?php echo do_shortcode('[contact-form-7 id="310" title="Subscription"]'); ?>
 
                         </div>
 
