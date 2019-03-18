@@ -26,7 +26,9 @@ if ( ! function_exists( 'cheers_scripts' ) ) {
 		$js_version = $theme_version . '.' . filemtime( get_template_directory() . '/js/theme.min.js' );
 		wp_enqueue_script( 'cheers-scripts', get_template_directory_uri() . '/js/theme.min.js', array(), $js_version, true );
 		wp_enqueue_script( 'app', get_template_directory_uri() . '/js/app.js', array('jquery'), $js_version, true );
-		wp_enqueue_script( 'cheers-products', get_template_directory_uri() . '/js/products.js', array('jquery'), $js_version, true );
+		if(is_archive()) {
+			wp_enqueue_script( 'cheers-products', get_template_directory_uri() . '/js/products.js', array('jquery'), $js_version, true );
+		}
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
