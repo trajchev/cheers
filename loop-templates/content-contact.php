@@ -103,28 +103,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                     <div class="card">
 
-                        <form class="form" action="/mailer.php" method="POST">
-
-                            <div class="form-group">
-                                <label for="name"><?php _e('Name', 'cheers'); ?><span class="required">*</span></label>
-                                <input type="text" class="form-control" name="name" id="name" placeholder="Name" data-validation="length alphanumeric" data-validation-length="min3" />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="name"><?php _e('Email', 'cheers'); ?><span class="required">*</span></label>
-                                <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-validation="length email" data-validation-length="min8" />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="name"><?php _e('Message', 'cheers'); ?> <span class="required">*</span></label>
-                                <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message" data-validation="length" data-validation-length="min30"></textarea>
-                            </div>
-
-                            <p class="form-submit">
-                                <input type="submit" id="submit" class="btn btn-secondary" value="Submit" />
-                            </p>
-
-                        </form>
+                        <?php echo do_shortcode('[contact-form-7 id="309" title="Contact US"]'); ?>
 
                     </div>
 

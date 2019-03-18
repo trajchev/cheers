@@ -26,6 +26,26 @@
     }
 }
 
+div.wpcf7 {
+    
+    &-response-output {
+        padding: 0;
+        margin: 1rem 0;
+        border: none;
+    }
+
+    &-mail-sent-ok {
+        color: $successGreen;
+    }
+
+    &-validation-errors {
+        border: none;
+        color: $errorRed;
+    }
+
+
+}
+
 .append-border-white {
     border: .07rem solid $lightGrey;
     border-left: none;
