@@ -19,6 +19,7 @@
                 );
 
                 $i = 0;
+                $j = 0;
 
             ?>
 
@@ -26,37 +27,74 @@
 
                 <?php  if ( $carousel->have_posts() ) : ?>
 
-                <div class="carousel-inner">
+                <ul class="carousel-indicators">
 
-                    <?php while ( $carousel->have_posts() ) : ?> 
+                    <?php 
+                    
+                        while ( $carousel->have_posts() ) : 
+                        
+                        $carousel->the_post();
 
-                    <?php $carousel->the_post(); ?>
+                        if ($j == 0) :
+                        
+                    ?> 
+
+                    <li data-target="#cheers-carousel" data-slide-to="<?php echo $j; ?>" class="active"></li>
+
+                    <?php else: ?>
+
+                    <li data-target="#cheers-carousel" data-slide-to="<?php echo $j; ?>"></li>
 
                     <?php
+                
+                        endif;  $j++; 
+                        
+                        endwhile;
+                            
+                        // reset post data (important!)
+                        wp_reset_postdata();
 
-                        if ($i == 0) : ?>
+                    ?>
 
-                            <div class="carousel-item active">
+                </ul>
+
+                <div class="carousel-inner">
+
+                    <?php 
+                    
+                        while ( $carousel->have_posts() ) : 
+                        
+                            $carousel->the_post();
+
+                            if ($i == 0) :
+                        
+                    ?>
+
+                    <div class="carousel-item active">
 
                         <?php else: ?>
 
-                            <div class="carousel-item">
+                        <div class="carousel-item">
 
-                        <?php endif;  $i++; ?>
+                        <?php
+                    
+                            endif;  $i++; 
+                            
+                            the_post_thumbnail();
+                        
+                        ?>
 
-                                <?php the_post_thumbnail(); ?>
+                            <div class="carousel-caption">
 
-                                <div class="carousel-caption">
+                                <a href="<?php the_permalink(); ?>">
 
-                                    <a href="<?php the_permalink(); ?>">
+                                    <h3><?php the_title(); ?></h3>
 
-                                        <h3><?php the_title(); ?></h3>
+                                </a>
 
-                                    </a>
+                            </div>   
 
-                                </div>   
-
-                            </div>
+                        </div>
 
                     <?php
 
