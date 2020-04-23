@@ -1,8 +1,6 @@
 The Cheers theme is a WordPress theme meant to be used for liquor store.
-The theme was built as a mentoring project for performance review of Ivan Trajchev
 
 Author: Ivan Trajchev
-Mentor: Sanja Jovanovikj
 ThemeURI: git@bitbucket.org:trajchev/cheers.git
 
 The cheers theme utilises various WordPress functionalities such as:
